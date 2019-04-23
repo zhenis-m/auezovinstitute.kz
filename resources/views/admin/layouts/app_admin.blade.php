@@ -38,7 +38,7 @@
                         role="button" aria-expanded="false">Блог</a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a></li>
-                            <li><a class="dropdown-item" href="#">Материалы</a></li>
+                            <li><a class="dropdown-item" href="{{route('admin.articles.index')}}">Материалы</a></li>
                         </ul>
                     </li>
                 </ul>
