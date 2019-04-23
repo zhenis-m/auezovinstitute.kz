@@ -21,12 +21,12 @@
             <th class="text-right">Действие</th>
             </thead>
             <tbody>
-            @forelse($categories as $key => $category)
+            @forelse($categories as $category)
                 <tr>
                     <td>{{$category->title}}</td>
                     <td>{{$category->published}}</td>
                     <td>
-                        <a href="{{'admin.category.edit', ['id'=>$category->id]}}">
+                        <a href="{{route('admin.category.edit', ['id'=>$category->id])}}">
                            <i class="fa fa-edit"></i></a>
                     </td>
                 </tr>
@@ -39,7 +39,7 @@
             <tfoot>
             <tr colspan="3">
                 <ul class="pagination pull-right">
-                    {{$categories->links}}
+                    {{$categories->links()}}
                 </ul>
             </tr>
             </tfoot>
@@ -48,3 +48,5 @@
 
     </div>
     @endsection
+
+
