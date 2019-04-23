@@ -27,8 +27,9 @@
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+{{--            <a class="navbar-brand" href="{{ url('/admin') }}">Admin--}}
+{{--                {{ config('app.name', 'Laravel') }}--}}
+{{--            </a>--}}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -39,10 +40,13 @@
                 <ul class="nav navbar-nav mr-auto nav">
                     <li class="dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
-                        role="button" aria-expanded="false">Блог</a>
+                        role="button" aria-expanded="false">
+                            {{ config('app.name', 'Laravel') }}
+                           Admin</a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.articles.index')}}">Материалы</a></li>
+                            <li><a class="dropdown-item" href="{{url('/')}}">Назад к сайту</a></li>
                         </ul>
                     </li>
                 </ul>
