@@ -10,7 +10,11 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -82,6 +86,7 @@
     <main class="py-4">
         @yield('content')
     </main>
+    <script></script>
 </div>
 </body>
 </html>

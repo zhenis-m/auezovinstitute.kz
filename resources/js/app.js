@@ -7,7 +7,13 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+
+//CKEDITOR
+
+$( document ).ready(function () {
+    CKEDITOR.replace( 'description_short' );
+    CKEDITOR.replace( 'description' );
+})
 
 /**
  * The following block of code may be used to automatically register your

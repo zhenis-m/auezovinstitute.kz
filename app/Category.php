@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 
 use Carbon\Carbon;
 
+
 class Category extends Model
 {
     //Mass assigned

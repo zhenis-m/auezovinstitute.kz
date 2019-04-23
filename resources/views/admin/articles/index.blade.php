@@ -27,7 +27,7 @@
                     <td>{{$article->published}}</td>
                     <td class="text-right">
                         <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.articles.destroy',
-                        $$article)}}" method="post">
+                        $article)}}" method="post">
                             <input type="hidden" name="_method" value="DELETE">
                             {{ csrf_field() }}
 
