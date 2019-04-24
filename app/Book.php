@@ -20,4 +20,10 @@ class Book extends Model
     {
         return $this->morphToMany('App\Category', 'categoryable');
     }
+
+    public function scopeLastBooks ($query, $count)
+    {
+        return $query->orderBy('created_at', 'desc')->take($count)->get();
+    }
+
 }

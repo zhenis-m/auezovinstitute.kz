@@ -15,10 +15,10 @@
 <label for="">Slug (Уникальное значение)</label>
 <input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$book->slug ?? ""}}" readonly="">
 
-<label for="">Родительская категория</label>
-<select class="form-control" name="categories[]" multiple="">
-    @include('admin.books.partials.categories', ['categories' => $categories])
-</select>
+{{--<label for="">Родительская категория</label>--}}
+{{--<select class="form-control" name="categories[]" multiple="">--}}
+{{--    @include('admin.books.partials.categories', ['categories' => $categories])--}}
+{{--</select>--}}
 
 
 <label for="">Краткое описание</label>

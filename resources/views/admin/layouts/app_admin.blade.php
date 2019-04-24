@@ -37,19 +37,23 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav mr-auto nav">
+
+                <ul class="nav navbar-nav nav">
                     <li class="dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
-                        role="button" aria-expanded="false">
-                            {{ config('app.name', 'Laravel') }}
-                           Admin</a>
+                        <a href="#" class="nav-link " data-toggle="dropdown"
+                        role="button" aria-expanded="false">Меню</a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a class="dropdown-item" href="{{route('admin.books.index')}}">Книги</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.articles.index')}}">Новости</a></li>
-                            <li><a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a></li>
+{{--                            <li><a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a></li>--}}
                             <li><a class="dropdown-item" href="{{url('/')}}">Назад к сайту</a></li>
                         </ul>
                     </li>
+                </ul>
+
+                <ul class="nav navbar-nav  nav">
+                    <a href="{{url('/admin')}}" class="nav-link"
+                       role="button" aria-expanded="false">Панель состояния</a>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

@@ -14,6 +14,7 @@
 
         <a href="{{route('admin.books.create')}}" class="btn btn-primary pull-right">
             <i class="fa fa-plus-square-o"></i> Создать книгу</a>
+            <div><br></div>
         <table class="table table-striped">
             <thead>
             <th>Наименование</th>
@@ -44,6 +45,9 @@
                 </tr>
             @endforelse
             </tbody>
+
+        </table>
+
             <tfoot>
             <tr colspan="3">
                 <ul class="pagination pull-right">
@@ -51,9 +55,6 @@
                 </ul>
             </tr>
             </tfoot>
-        </table>
-
-
     </div>
 @endsection
 

@@ -5,12 +5,12 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="jumbotron d-flex align-items-center justify-content-center">
-                    <p><span class="badge badge-primary">Книги 0</span></p>
+                    <p><span class="badge badge-primary">Книг {{$count_books}}</span></p>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="jumbotron d-flex align-items-center justify-content-center">
-                    <p><span class="badge badge-primary">Материалов 0</span></p>
+                    <p><span class="badge badge-primary">Новостей {{$count_articles}}</span></p>
                 </div>
             </div>
             <div class="col-sm-3">
@@ -28,21 +28,25 @@
         <div class="row">
             <div class="col-sm-6">
                 <a class="btn btn-secondary btn-block" href="{{route('admin.books.index')}}">Создать книгу</a>
-                <a class="list-group-item" href="#">
-                   <h4 class="list-group-item-heading">Книги первая</h4>
-                    <p class="list-group-item-text">
-                        Кол-во материалов
-                    </p>
-                </a>
+                @foreach($books as $book)
+                    <a class="list-group-item" href="{{route('admin.books.edit', $book)}}">
+                        <h4 class="list-group-item-heading">{{$book->title}}</h4>
+                        <p class="list-group-item-text">
+                            {{$book->categories()->pluck('title')->implode(', ')}}
+                        </p>
+                    </a>
+                @endforeach
             </div>
             <div class="col-sm-6">
                 <a class="btn btn-secondary btn-block" href="{{route('admin.articles.create')}}">Создать новость</a>
-                <a class="list-group-item" href="">
-                    <h4 class="list-group-item-heading">новость первая</h4>
+                @foreach($articles as $article)
+                <a class="list-group-item" href="{{route('admin.articles.edit', $article)}}">
+                    <h4 class="list-group-item-heading">{{$article->title}}</h4>
                     <p class="list-group-item-text">
-                        Кол-во материалов
+                        {{$article->categories()->pluck('title')->implode(', ')}}
                     </p>
                 </a>
+                @endforeach
             </div>
         </div>
     </div>
