@@ -10,15 +10,21 @@
 </select>
 
 <label for="">Заголовок</label>
-<input type="text" class="form-control" name="title" placeholder="Заголовок книги" value="{{$book->title ?? ""}}" required>
+<input type="text" class="form-control" name="title" placeholder="Заголовок книги" value="{{$book->title ?? ""}}" required><br>
 
 <label for="">Slug (Уникальное значение)</label>
-<input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$book->slug ?? ""}}" readonly="">
+<input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$book->slug ?? ""}}" readonly=""><br>
 
 {{--<label for="">Родительская категория</label>--}}
 {{--<select class="form-control" name="categories[]" multiple="">--}}
 {{--    @include('admin.books.partials.categories', ['categories' => $categories])--}}
 {{--</select>--}}
+
+<div class="form-group">
+    <label for="">Изображение</label>
+    <input data-preview="#preview" name="image" type="file" id="image">{{$article->image ?? ""}}
+    <img class="col-sm-6" id="preview"  src="">
+</div>
 
 
 <label for="">Краткое описание</label>
