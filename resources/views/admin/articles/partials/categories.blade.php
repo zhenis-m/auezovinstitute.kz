@@ -20,7 +20,7 @@
 
     @if (count($category->children) > 0)
 
-        @include('admin.categories.partials.categories', [
+        @include('admin.articles.partials.categories', [
           'categories' => $category->children,
           'delimiter'  => ' - ' . $delimiter
         ])

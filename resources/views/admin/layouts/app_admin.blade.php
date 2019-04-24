@@ -44,8 +44,9 @@
                             {{ config('app.name', 'Laravel') }}
                            Admin</a>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a class="dropdown-item" href="{{route('admin.books.index')}}">Книги</a></li>
+                            <li><a class="dropdown-item" href="{{route('admin.articles.index')}}">Новости</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a></li>
-                            <li><a class="dropdown-item" href="{{route('admin.articles.index')}}">Материалы</a></li>
                             <li><a class="dropdown-item" href="{{url('/')}}">Назад к сайту</a></li>
                         </ul>
                     </li>
