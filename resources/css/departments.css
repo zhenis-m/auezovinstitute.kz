@@ -1,0 +1,98 @@
+.container_departments{
+    font-family: 'SF-Pro-Text-Regular';
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+
+
+.bar{
+    display: flex;
+    flex-direction: column;
+}
+
+.dep_text{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+}
+
+.dep_content{
+    display: flex;
+    flex-direction: column;
+    max-width: 65%;
+}
+
+.bar a {
+    padding: 12px 4px 3px 8px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #333333;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bar_line{
+    border: 2px solid #e7ebed;
+    margin-right: 40px;
+    width: 25%;
+    /*max-height: 805px;*/
+
+}
+
+.bar #btns:hover {
+    color: #064579;
+    text-decoration: none;
+}
+
+.read_more{
+    display: flex;
+    justify-content: center;
+    color: #0064be;
+    cursor: pointer;
+}
+
+#btns {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.active_1, #btns:hover {
+    background-color: #f6f6f6;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#btns:hover p {
+    color: black;
+    text-decoration: none;
+
+}
+
+
+.active_1 p {
+    color: #6689f8;
+}
+
+.dep__way {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px 0;
+}
+.dep__way, .dep__way a{
+    text-decoration: none;
+    color: #97a5b2;
+}

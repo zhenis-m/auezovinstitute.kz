@@ -1,0 +1,142 @@
+@font-face{
+    font-family: SF-Pro-Text-Regular;
+    src: url(fonts/SF-Pro-Text-Regular.otf);
+    font-weight: normal;
+}
+@font-face{
+    font-family: SF-Pro-Text-Light;
+    src: url(fonts/SF-Pro-Text-Regular.otf);
+    font-weight: lighter;
+}
+
+
+.container_1{
+    font-family: 'SF-Pro-Text-Regular';
+     max-width: 800px;
+     margin: 0 auto;
+     padding-bottom: 60px;
+     display: flex;
+     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+/*.new__state__date {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #bfc8cf;
+}
+
+.new__state__date p{
+    padding: 0;
+    margin: 0;
+}*/
+
+.director__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.social-networks_admins {
+    margin-top: -200px;
+    margin-left: -50px;
+    position: absolute;
+}
+
+.social-networks_admins a {
+    font-size: 20px;
+    color: #6f6f6f;
+    padding: 4px;
+    transition: 0.2s;
+}
+
+.social-networks_admins a:hover {
+    text-decoration: none;
+}
+
+.facebook:hover {
+    color: #0077e2;
+}
+
+.google:hover {
+    color: #ef1a1a;
+}
+
+.vk:hover {
+    color: #00aced;
+}
+
+.inst:hover {
+    color: #F77737;
+}
+
+
+.social-networks_admins ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+.social-networks_admins ul li {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+
+
+.director{
+    display: flex;
+    justify-content: center;
+}
+
+.read_more{
+    display: flex;
+    justify-content: center;
+    color: #0064be;
+    cursor: pointer;
+}
+
+.director__way {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 20px 0;
+}
+.director__way, .director__way a{
+    text-decoration: none;
+    color: #97a5b2;
+}
+
+.director__admin {
+    max-width: 100%;
+    display: flex;
+    margin: 40px 0;
+    position: relative;
+}
+
+.director__admin__photo {
+    max-width: 20%;
+}
+.director__admin__photo img {
+    width: 100%;
+    height: auto;
+}
+.director__admin__text {
+    margin-left: 40px;
+}
+.director__admin__text h3{
+    margin: 0;
+    font-size: 2.1em;
+}
+
+.director__admin__text p{
+    color: #98a6b3;
+    margin: 20px 0;
+}
