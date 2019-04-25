@@ -27,7 +27,7 @@
 </div>
 
 
-<label for="">Краткое описание</label>
+<label for="">Укажите автора</label>
 <textarea class="form-control" id="description_short" name="description_short">{{$book->description_short ?? ""}}</textarea>
 
 <label for="">Полное описание</label>

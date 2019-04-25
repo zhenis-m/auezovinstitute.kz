@@ -1,0 +1,19 @@
+.books__page {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.books__show {
+    width: 180px;
+
+}
+
+.books__show a {
+
+}
+
+.books__show a img{
+    width: 100%;
+    height: auto;
+
+}

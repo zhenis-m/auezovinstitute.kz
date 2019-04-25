@@ -1,0 +1,112 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'SF-Pro-Text-Regular'; 
+}
+/*------- подключение шрифтов --------*/
+
+@font-face{
+	font-family: SF-Pro-Text-Regular;
+	src: url(fonts/SF-Pro-Text-Regular.otf);
+	font-weight: normal;
+}
+@font-face{
+	font-family: SF-Pro-Text-Light;
+	src: url(fonts/SF-Pro-Text-Light.otf);
+	font-weight: lighter;
+}
+/*------- подключение шрифтов --------*/
+
+
+
+
+/*-------------- nwes style begin -----------------*/
+
+.structur {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 1200px;
+	padding-bottom: 60px;
+}
+.structur a:hover {
+	text-decoration: none;
+}
+
+.structur__way {
+	margin: 20px 0;
+}
+.structur__way, .structur__way a{
+	text-decoration: none;
+	color: #97a5b2;
+}
+.structur__state {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.structur__state i {
+	color: #537AF9;
+}
+
+.structur__state a {
+	text-decoration: none;
+	color: #000;
+	font-size: 18px;
+}
+
+.structur__admins {
+	width: 100%;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 20px 0;
+}
+
+.structur__admins:hover {
+	box-shadow: 0 10px 10px rgb(0,0,0,.25);
+}
+
+.structur__admins__men {
+	display: flex;
+}
+
+.structur__admins__men a {
+	text-decoration: none;
+	color: #000;
+}
+.structur__admins__men__photo {
+	margin-right: 40px;
+}
+.structur__admins__men__name {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.structur__admins__men__name__text p {
+	font-size: 24px;
+}
+.structur__admins__men__name__text .mini {
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.structur__admins__men__name__button .button__men {
+	color: #97a5b2;
+	font-size: 18px;
+	padding: 15px 20px;
+	display: block;
+	border: 1px solid #97a5b2;
+	border-radius: 5px;
+}
+
+.structur__admins__men__name__button .button__men:hover {
+	color: #537af9;
+	border: 1px solid #537af9;
+}
+
+/*-------------- nwes style end -----------------*/
+
+

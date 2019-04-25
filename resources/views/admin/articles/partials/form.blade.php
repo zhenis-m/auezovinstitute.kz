@@ -26,6 +26,11 @@
     <img class="col-sm-6" id="preview"  src="">
 </div>
 
+<form method="post" action="" enctype="multipart/form-data">
+    <input type="file" name="image"  data-preview="#preview" id="image">{{$article->image ?? ""}}
+    <img class="col-sm-6" id="preview"  src="">
+    <button type="submit">Отп</button>
+</form>
 
 <label for="">Краткое описание</label>
 <textarea class="form-control" id="description_short" name="description_short">{{$article->description_short ?? ""}}</textarea>
