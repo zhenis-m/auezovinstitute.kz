@@ -24,20 +24,13 @@
 				</div>
 			</div>
 			@endforeach
-		</div>
-		<div class="pnwes__links">
-			<a href="#">«</a>
-			<div class="pnwes__links__numbers">
-				<a href="#" class="active">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-				<a href="#">6</a>
-				<a href="#">7</a>
-				<a href="#">8</a>
-			</div>
-			<a href="#">»</a>
+                <tfoot>
+                <tr colspan="3">
+                    <ul class="pagination pull-right">
+                        {{$newses->links()}}
+                    </ul>
+                </tr>
+                </tfoot>
 		</div>
 	</div>
 </div>

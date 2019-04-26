@@ -472,17 +472,22 @@
 }
 .books__text p {
 	font-size: 16px;
+	margin-top: 30px;
 }
 
-.books__text input {
-	margin-top: 30px;
+.books__text a {
 	background-color: #537AF9;
 	color: #fff;
+	text-decoration: none;
 	padding: 10px 20px;
 	border-radius: 3px;
 	font-size: 14px;
 	font-family: 'SF-Pro-Text-Regular';
 	cursor: pointer;
+}
+
+.books__text a:hover {
+	text-decoration: none;
 }
 /*-------------- Books style end -----------------*/
 

@@ -10,7 +10,7 @@ class BooksController extends Controller
 {
     public function index()
     {
-        $books = Book::orderBy('id', 'desc')->paginate(36);
+        $books = Book::orderBy('id', 'desc')->where('published', 1)->paginate(36);
 
         return view('books.index', [
             'books' => $books
