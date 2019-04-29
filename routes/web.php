@@ -18,10 +18,6 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], 
     Route::resource('/books', 'BookController', ['as'=>'admin']);
 });
 
-Route::get('/', function () {
-    return view('main.index');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -31,7 +27,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix'=>'/', 'namespace'=>'main'], function (){
     Route::get('/', 'MainController@index');
+    Route::get('/main/history', 'HistoryController@history');
+    Route::get('/main/mass_media', 'Mass_mediaController@mass_media');
 });
+
+Route::group(['prefix'=>'structure', 'namespace'=>'structure'], function (){
+    Route::get('/administration', 'AdministrationController@administration');
+    Route::get('/director', 'AdministrationController@director');
+    Route::get('/zamdirector', 'AdministrationController@zamdirector');
+    Route::get('/zamdirector2', 'AdministrationController@zamdirector2');
+});
+
 
 Route::group(['prefix'=>'news', 'namespace'=>'news'], function (){
     Route::get('/', 'NewsController@index')->name('news.index');

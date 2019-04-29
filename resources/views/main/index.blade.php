@@ -8,7 +8,7 @@
             <div class="headline">
                 <p class="bold">Учитесь с одной только <br> целью – стать человеком!</p>
                 <p>Мухтар Ауэзов</p>
-                <input href="#" type="submit" name="institut" value="Об институте">
+                <a href="{{ URL::to('/main/history') }}">Об институте</a>
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
         <div class="nwes">
             <div class="nwes__state">
                 <a href="#"><p><i class="fas fa-newspaper"></i>&nbsp;&nbsp;Новости</p></a>
-                <input href="#" type="submit" name="state" value="АРХИВ">
+                <a href="{{ URL::to('/news') }}" class="nwes__state__archive">АРХИВ</a>
             </div>
             <div class="nwes__blog">
                 <div class="nwes__blog__mini">
@@ -151,7 +151,7 @@
         </div>
     </div>
 
-{{--    @include('posts.partials.map')--}}
+    @include('main.partials.map')
 
 @endsection
 
