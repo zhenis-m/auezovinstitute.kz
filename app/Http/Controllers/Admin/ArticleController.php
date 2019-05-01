@@ -88,7 +88,16 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        $article->update($request->except('slug'));
+        //TODO: перенести ответственность на мутатор в Request
+        $data = $request->except('slug');
+
+        $image = $request->file('image');
+
+        $data['image'] = $image->getClientOriginalName();
+        $data['image_show'] = $image->store('uploads');
+
+        //Update article with given data.
+        $article->update($data);
 
         //Categories
 

@@ -23,7 +23,7 @@
 <div class="form-group">
     <label for="">Изображение</label>
     <input data-preview="#preview" name="image" type="file" id="image">{{$article->image ?? ""}}
-    <img class="col-sm-6" id="preview"  src="">
+    <img class="col-sm-6" id="preview" src="{{ $article->image_show }}">
 </div>
 
 
