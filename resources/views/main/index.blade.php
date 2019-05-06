@@ -16,7 +16,7 @@
     <div>
         <div class="nwes">
             <div class="nwes__state">
-                <a href="#"><p><i class="fas fa-newspaper"></i>&nbsp;&nbsp;Новости</p></a>
+                <a href="{{ URL::to('/news') }}"><p><i class="fas fa-newspaper"></i>&nbsp;&nbsp;Новости</p></a>
                 <a href="{{ URL::to('/news') }}" class="nwes__state__archive">АРХИВ</a>
             </div>
             <div class="nwes__blog">
@@ -126,7 +126,7 @@
     <div class="books">
         <div class="books__haed">
             <i class="fas fa-book"></i>
-            <a href="#"><p>&nbsp;&nbsp;Книги института</p></a>
+            <a href="{{ URL::to('/books') }}"><p>&nbsp;&nbsp;Книги института</p></a>
         </div>
         <div class="cbooks_wrap">
             <div class="books__blog">

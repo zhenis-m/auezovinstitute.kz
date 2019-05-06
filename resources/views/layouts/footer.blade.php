@@ -12,20 +12,20 @@
             <div class="row-right">
                 <div class="col-sm-2">
                     <ul>
-                        <li><a href="{{ URL::to('/posts/museum') }}">Музей</a></li>
-                        <li><a href="{{ URL::to('/admins/administration') }}">Администрация</a></li>
+                        <li><a href="{{ URL::to('/main/museum') }}">Музей</a></li>
+                        <li><a href="{{ URL::to('/structure/administration') }}">Администрация</a></li>
                         <li><a href="{{ URL::to('/departments/departments_page') }}">Отделы</a></li>
                         <li><a href="{{ URL::to('/books') }}">Книги</a></li>
-                        <li><a href="{{ URL::to('/posts/history') }}">История</a></li>
+                        <li><a href="{{ URL::to('/main/history') }}">История</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2">
                     <ul>
                         <li><a href="{{ URL::to('/footer/declaration') }}">Обьявление</a></li>
-                        <li><a href="{{ URL::to('/news/news_page') }}">Новости</a></li>
+                        <li><a href="{{ URL::to('/news') }}">Новости</a></li>
                         <li><a href="{{ URL::to('/footer/conferences') }}">Конференции</a></li>
-                        <li><a href="{{ URL::to('/posts/mass_media') }}">СМИ о нас</a></li>
-                        <li><a href="{{ URL::to('/footer/contacts') }}">Контакты</a></li>
+                        <li><a href="{{ URL::to('/main/mass_media') }}">СМИ о нас</a></li>
+                        <li><a href="{{ URL::to('/main/map') }}">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2">

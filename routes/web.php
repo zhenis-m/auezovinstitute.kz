@@ -11,11 +11,14 @@
 |
 */
 
+Route::get('/search', 'Controller@search');
+
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category', 'CategoryController', ['as'=>'admin']);
     Route::resource('/articles', 'ArticleController', ['as'=>'admin']);
     Route::resource('/books', 'BookController', ['as'=>'admin']);
+//    Route::post('/image/upload', 'ArticleController@upload')->name('image.upload');
 });
 
 Auth::routes();
@@ -23,12 +26,20 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::post('/image/upload', 'ImageController@upload')->name('image.upload');
+
+
+Route::get('/default', function () {
+    return view('default');
+});
 
 
 Route::group(['prefix'=>'/', 'namespace'=>'main'], function (){
     Route::get('/', 'MainController@index');
     Route::get('/main/history', 'HistoryController@history');
     Route::get('/main/mass_media', 'Mass_mediaController@mass_media');
+    Route::get('/main/museum', 'MuseumController@museum');
+    Route::get('/main/map', 'MapController@map');
 });
 
 Route::group(['prefix'=>'structure', 'namespace'=>'structure'], function (){

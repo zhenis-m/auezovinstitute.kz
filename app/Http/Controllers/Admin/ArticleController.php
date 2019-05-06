@@ -53,6 +53,17 @@ class ArticleController extends Controller
         return redirect()->route('admin.articles.index');
     }
 
+
+//    public function upload(Request $request)
+//    {
+//        $path = $request->file('image')->store('uploads', 'public');
+//        dd($path);
+//        return  view('form', ['path' => $path]);
+//    }
+
+
+
+
     /**
      * Display the specified resource.
      *
