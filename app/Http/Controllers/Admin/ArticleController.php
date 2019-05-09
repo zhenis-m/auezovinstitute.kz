@@ -6,6 +6,7 @@ use App\Article;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -44,8 +45,14 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $article = Article::create($request->all());
-
-        //Categories
+        
+        if ($request->file('image')) {
+            $article_image = Storage::disk('uploads')
+                ->putFileAs('article/' . $article->id, $request->file('image'), 'preview_' . time() . '.' . $request->file('image')->getClientOriginalExtension());
+            $article->image = '/uploads/' . $article_image;
+            $article->update();
+        }
+        
         if ($request->input('categories')) :
             $article->categories()->attach($request->input('categories'));
         endif;
@@ -54,12 +61,12 @@ class ArticleController extends Controller
     }
 
 
-//    public function upload(Request $request)
-//    {
-//        $path = $request->file('image')->store('uploads', 'public');
-//        dd($path);
-//        return  view('form', ['path' => $path]);
-//    }
+    public function upload(Request $request)
+    {
+        $path = $request->file('image')->store('uploads', 'public');
+        dd($path);
+        return  view('form', ['path' => $path]);
+    }
 
 
 

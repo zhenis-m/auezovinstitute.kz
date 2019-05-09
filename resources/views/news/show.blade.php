@@ -16,9 +16,7 @@
                     <img src="{{ $news->image }}" alt="">
                 </div>
                 <div class="news__state__text">
-                    <?php
-                        echo nl2br( $news->description );
-                    ?>
+                    {!! $news->description !!}
                 </div>
                 <div class="news__state__date">
                     <div class="pnew__state__date">
