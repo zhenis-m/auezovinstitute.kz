@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/search', 'Controller@search');
+Route::get('/search', 'SearchController@search');
 
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
