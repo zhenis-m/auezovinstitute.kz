@@ -64,9 +64,9 @@
             </ul>
         </div>
         <div class="search search_clearfix">
-            <form action="#" method="post">
+            <form action="{{ URL::to('search') }}" method="GET" class="searchform">
                 <div class="search__text">
-                    <input type="text" value="" placeholder="Поиск"/>
+                    <input type="text" value="" placeholder="Поиск" name="search"/>
                 </div>
                 <input type="image" src="../css/img/search.png"/>
             </form>

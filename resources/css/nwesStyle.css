@@ -129,13 +129,12 @@
 	width: 100%;
 	margin: 20px 0; 
 	display: flex;
-	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
 .pnwes__page__block {
 	width: 30%;
 	height: auto;
-	margin: 20px 0; 
+	margin: 20px 20px;
 	border: 1px solid #bfc8cf; 
 	border-radius: 5px;
 	overflow: hidden;

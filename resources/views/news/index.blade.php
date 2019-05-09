@@ -14,7 +14,7 @@
 			@foreach ($newses as $news)
 			<div class="pnwes__page__block">
 				<div class="pnwes__page__block__wrap">
-					<a href="{{ route('news.show', [ 'id' => $news->id ]) }}"><img src="юю/с{{ $news["image"] }}"></a>
+					<a href="{{ route('news.show', [ 'id' => $news->id ]) }}"><img src="{{ $news["image"] }}"></a>
 					<div class="pnwes__page__block__text">
 						<p>{{ $news->title }}<a href="{{ route('news.show', [ 'id' => $news->id ]) }}">Читать дальше</a></p>
 					</div>

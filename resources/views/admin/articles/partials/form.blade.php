@@ -26,6 +26,16 @@
     <img class="col-sm-6" id="preview" src="{{ $article ? asset('uploads/article/' . $article->image_show) : ""}}">
 </div>
 
+{{--<div class="loading__img">--}}
+{{--    <h1>Загрузка изображения вариант №1</h1>--}}
+
+{{--    <form action="{{ route('image.upload') }}" method="post" enctype="multipart/form-data">--}}
+{{--        {{ csrf_field() }}--}}
+
+{{--        <div class="form-group">--}}
+{{--            <input type="file" name="image">--}}
+{{--        </div>--}}
+
 
 <label for="">Краткое описание</label>
 <textarea class="form-control" id="description_short" name="description_short">{{$article->description_short ?? ""}}</textarea>
@@ -46,3 +56,8 @@
 
 <hr />
 <input class="btn btn-primary" type="submit" value="Сохранить">
+{{--    </form>--}}
+{{--    @isset($path)--}}
+{{--        <img class="img-fluid" src="{{ asset('/storage/' . $path) }}" alt="">--}}
+{{--    @endisset--}}
+{{--</div>--}}
