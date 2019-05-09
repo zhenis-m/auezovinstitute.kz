@@ -9,7 +9,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $newses = Article::orderBy('id', 'desc')->where('published', 1)->paginate(12);
+        $newses = Article::orderBy('id', 'desc')->where('locale', app()->getLocale())->where('published', 1)->paginate(12);
 
         return view('news.index', [
             'newses' => $newses
