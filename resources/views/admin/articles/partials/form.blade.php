@@ -16,26 +16,15 @@
 <label for="">Slug (Уникальное значение)</label>
 <input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$article->slug ?? ""}}" readonly=""><br>
 
-{{--<label for="">Родительская категория</label>--}}
-{{--<select class="form-control" name="categories[]" multiple="">--}}
-{{--    @include('admin.articles.partials.categories', ['categories' => $categories])--}}
-{{--</select>--}}
+
 
 <div class="form-group">
     <label for="">Изображение</label>
-    <input data-preview="#preview" name="image" type="file" id="image">{{$article->image ?? ""}}
-    <img class="col-sm-6" id="preview" src="{{ $article ? asset('uploads/article/' . $article->image_show) : ""}}">
+    <input data-preview="#preview" name="image" type="file" id="image">{{$news->image ?? ""}}
+    <img class="col-sm-6" id="preview" src="{{ $news ? asset('uploads/article/' . $news->image_show) : ""}}">
 </div>
 
-{{--<div class="loading__img">--}}
-{{--    <h1>Загрузка изображения вариант №1</h1>--}}
 
-{{--    <form action="{{ route('image.upload') }}" method="post" enctype="multipart/form-data">--}}
-{{--        {{ csrf_field() }}--}}
-
-{{--        <div class="form-group">--}}
-{{--            <input type="file" name="image">--}}
-{{--        </div>--}}
 
 
 <label for="">Краткое описание</label>
@@ -57,8 +46,4 @@
 
 <hr />
 <input class="btn btn-primary" type="submit" value="Сохранить">
-{{--    </form>--}}
-{{--    @isset($path)--}}
-{{--        <img class="img-fluid" src="{{ asset('/storage/' . $path) }}" alt="">--}}
-{{--    @endisset--}}
-{{--</div>--}}
+

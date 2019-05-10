@@ -26,12 +26,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::post('/image/upload', 'ImageController@upload')->name('image.upload');
-
-
-Route::get('/default', function () {
-    return view('default');
-});
+//Route::post('/image/upload', 'ImageController@upload')->name('image.upload');
+//
+//
+//Route::get('/default', function () {
+//    return view('default');
+//});
 
 Route::get('/departments/index', 'DepartmentsController@index')->name('departments.index');
 Route::get('/departments/show', 'DepartmentsController@show')->name('departments.show');
