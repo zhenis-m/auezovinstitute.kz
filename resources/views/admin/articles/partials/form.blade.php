@@ -1,3 +1,4 @@
+
 <label for="">Статус</label>
 <select class="form-control" name="published">
     @if (isset($article->id))
