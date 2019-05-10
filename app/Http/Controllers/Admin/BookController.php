@@ -6,6 +6,7 @@ use App\Book;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class BookController extends Controller
 {
@@ -18,7 +19,7 @@ class BookController extends Controller
     {
         return view('admin.books.index', [
             'books' => Book::orderBy('created_at', 'desc')->paginate(10)
-            ]);
+        ]);
     }
 
     /**
@@ -43,8 +44,14 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        $book = Book::create($request->all());
 
+        $image = $request->file('image');
+        //Save article
+        $book = Book::create($request->all());
+        //Upload image and store image path in the image_show attribute.
+        $book->image = $image->getClientOriginalName();
+        $book->image_show = Storage::disk('uploads')->put($book->id, $image);
+        $book->save();
         //Categories
         if ($request->input('categories')) :
             $book->categories()->attach($request->input('categories'));
@@ -53,6 +60,8 @@ class BookController extends Controller
         return redirect()->route('admin.books.index');
 
     }
+
+
 
     /**
      * Display the specified resource.
@@ -89,10 +98,20 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-        $book->update($request->except('slug'));
+        //TODO: перенести ответственность на мутатор в Request
+        $data = $request->except('slug');
 
-        //Categories
+        //Grab the image from request.
+        $image = $request->file('image');
 
+        //Store image & put image path & image name in the dataset.
+        $data['image'] = $image->getClientOriginalName();
+        $data['image_show'] = Storage::disk('uploads')->put($book->id, $image);
+
+        //Update article with given data.
+        $book->update($data);
+
+        //Categories.
         $book->categories()->detach();
 
         if ($request->input('categories')) :
@@ -101,6 +120,7 @@ class BookController extends Controller
 
         return redirect()->route('admin.books.index');
     }
+
 
     /**
      * Remove the specified resource from storage.

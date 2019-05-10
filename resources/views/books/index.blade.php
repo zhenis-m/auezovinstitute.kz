@@ -11,12 +11,12 @@
 			<a href="#"><p><i class="fas fa-folder-open"></i>&nbsp;&nbsp;Все книги</p></a>
 		</div>
 		<div class="books__page">
-			@foreach ($books as $book)
+			@foreach ($books as $bok)
 				<div class="books__show">
-					<a class="" href="{{ route('books.show', [ 'id' => $book->id ]) }}">
-						<img src="{{ $book->image }}">
-						<p>{{ $book->title }}</p>
-						<p class="aphtor">{{ $book->description }}</p>
+					<a class="" href="{{ route('books.show', [ 'id' => $bok->id ]) }}">
+						<img src="{{ $bok ? asset('uploads/books/' . $bok->image_show) : ""}}">
+						<p>{{ $bok->title }}</p>
+						<p class="aphtor">{!! $bok->description !!}</p>
 					</a>
 				</div>
 			@endforeach
