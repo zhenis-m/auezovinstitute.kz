@@ -6,6 +6,7 @@ use App\Article;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -45,8 +46,14 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
+        //Grab image from the request
+        $image = $request->file('image');
+        //Save article
         $article = Article::create($request->all());
-
+        //Upload image and store image path in the image_show attribute.
+        $article->image = $image->getClientOriginalName();
+        $article->image_show = Storage::disk('uploads')->put($article->id, $image);
+        $article->save();
         //Categories
         if ($request->input('categories')) :
             $article->categories()->attach($request->input('categories'));
@@ -54,17 +61,6 @@ class ArticleController extends Controller
 
         return redirect()->route('admin.articles.index');
     }
-
-
-//    public function upload(Request $request)
-//    {
-//        $path = $request->file('image')->store('uploads', 'public');
-//        dd($path);
-//        return  view('form', ['path' => $path]);
-//    }
-
-
-
 
     /**
      * Display the specified resource.
@@ -101,10 +97,20 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        $article->update($request->except('slug'));
+        //TODO: перенести ответственность на мутатор в Request
+        $data = $request->except('slug');
 
-        //Categories
+        //Grab the image from request.
+        $image = $request->file('image');
 
+        //Store image & put image path & image name in the dataset.
+        $data['image'] = $image->getClientOriginalName();
+        $data['image_show'] = Storage::disk('uploads')->put($article->id, $image);
+
+        //Update article with given data.
+        $article->update($data);
+
+        //Categories.
         $article->categories()->detach();
 
         if ($request->input('categories')) :

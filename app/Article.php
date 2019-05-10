@@ -6,6 +6,14 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
+/**
+ * Class Article
+ * @package App
+ *
+ * @property int id
+ * @property string image
+ * @property string image_show
+ */
 class Article extends Model
 {
     protected $fillable = ['title', 'slug', 'description_short', 'description', 'image', 'image_show', 'meta_title', 'meta_description', 'meta_keyword', 'published', 'create_by', 'modified_by'];
