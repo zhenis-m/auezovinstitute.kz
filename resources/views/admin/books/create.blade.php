@@ -12,7 +12,7 @@
 
         <hr />
 
-        <form class="form-horizontal" action="{{route('admin.books.store')}}" method="post">
+        <form class="form-horizontal" action="{{route('admin.books.store')}}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
 
             {{-- Form include --}}

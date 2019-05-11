@@ -12,7 +12,7 @@
 
         <hr />
 
-        <form class="form-horizontal" action="{{route('admin.books.update', $book)}}" method="post">
+        <form class="form-horizontal" action="{{route('admin.books.update', $book)}}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_method" value="put">
             {{ csrf_field() }}
 
