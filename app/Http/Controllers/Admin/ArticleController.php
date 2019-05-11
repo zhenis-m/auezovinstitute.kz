@@ -52,7 +52,7 @@ class ArticleController extends Controller
         $article = Article::create($request->all());
         //Upload image and store image path in the image_show attribute.
         $article->image = $image->getClientOriginalName();
-        $article->image_show = Storage::disk('uploads')->put($article->id, $image);
+        $article->image_show = Storage::disk('uploads')->put('article/' . $article->id, $image);
         $article->save();
         //Categories
         if ($request->input('categories')) :
@@ -105,7 +105,7 @@ class ArticleController extends Controller
 
         //Store image & put image path & image name in the dataset.
         $data['image'] = $image->getClientOriginalName();
-        $data['image_show'] = Storage::disk('uploads')->put($article->id, $image);
+        $data['image_show'] = Storage::disk('uploads')->put('article/' . $article->id, $image);
 
         //Update article with given data.
         $article->update($data);
