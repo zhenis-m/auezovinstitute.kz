@@ -50,7 +50,7 @@ class BookController extends Controller
         $book = Book::create($request->all());
         //Upload image and store image path in the image_show attribute.
         $book->image = $image->getClientOriginalName();
-        $book->image_show = Storage::disk('uploads')->put($book->id, $image);
+        $book->image_show = Storage::disk('uploads')->put('book/' . $book->id, $image);
         $book->save();
         //Categories
         if ($request->input('categories')) :
@@ -106,7 +106,7 @@ class BookController extends Controller
 
         //Store image & put image path & image name in the dataset.
         $data['image'] = $image->getClientOriginalName();
-        $data['image_show'] = Storage::disk('uploads')->put($book->id, $image);
+        $data['image_show'] = Storage::disk('uploads')->put('book/'. $book ->id, $image);
 
         //Update article with given data.
         $book->update($data);
