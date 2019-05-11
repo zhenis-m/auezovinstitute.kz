@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/search', 'Controller@search');
+Route::get('/search', 'SearchController@search');
 
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
@@ -26,12 +26,15 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::post('/image/upload', 'ImageController@upload')->name('image.upload');
+//Route::post('/image/upload', 'ImageController@upload')->name('image.upload');
+//
+//
+//Route::get('/default', function () {
+//    return view('default');
+//});
 
-
-Route::get('/default', function () {
-    return view('default');
-});
+Route::get('/departments/index', 'DepartmentsController@index')->name('departments.index');
+Route::get('/departments/show', 'DepartmentsController@show')->name('departments.show');
 
 
 Route::group(['prefix'=>'/', 'namespace'=>'main'], function (){
@@ -48,6 +51,7 @@ Route::group(['prefix'=>'structure', 'namespace'=>'structure'], function (){
     Route::get('/zamdirector', 'AdministrationController@zamdirector');
     Route::get('/zamdirector2', 'AdministrationController@zamdirector2');
 });
+
 
 
 Route::group(['prefix'=>'news', 'namespace'=>'news'], function (){

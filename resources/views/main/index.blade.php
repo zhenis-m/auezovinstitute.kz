@@ -25,7 +25,7 @@
                         @foreach ($news as $newsValue)
                             <div class="new__mini">
                                 <div class="new__mini__img">
-                                    <a href="{{ route('news.show', [ 'id' => $newsValue->id ]) }}"><img src="{{ $newsValue->image }}"></a>
+                                    <a href="{{ route('news.show', [ 'id' => $newsValue->id ]) }}"><img src="{{ $newsValue ? asset('uploads/article/' . $newsValue->image_show) : ""}}"></a>
                                 </div>
                                 <div class="new__mini-blog">
                                     <div class="new__state">
@@ -33,7 +33,7 @@
                                             <p>{{ $newsValue->title }}</p>
                                         </div>
                                         <div class="new__state__text">
-                                            <p>{{ $newsValue->description_short}}<a href="{{ route('news.show', [ 'id' => $newsValue->id ]) }}">Читать дальше</a></p>
+                                            <p>{!! $newsValue->description_short !!}<a href="{{ route('news.show', [ 'id' => $newsValue->id ]) }}">Читать дальше</a></p>
                                         </div>
                                     </div>
                                     <div class="new__state__date">

@@ -1,3 +1,4 @@
+<form action="" method="post" enctype="multipart/form-data">
 <label for="">Статус</label>
 <select class="form-control" name="published">
     @if (isset($book->id))
@@ -15,16 +16,19 @@
 <label for="">Slug (Уникальное значение)</label>
 <input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$book->slug ?? ""}}" readonly=""><br>
 
-{{--<label for="">Родительская категория</label>--}}
-{{--<select class="form-control" name="categories[]" multiple="">--}}
-{{--    @include('admin.books.partials.categories', ['categories' => $categories])--}}
-{{--</select>--}}
+
 
 <div class="form-group">
     <label for="">Изображение</label>
-    <input data-preview="#preview" name="image" type="file" id="image">{{$article->image ?? ""}}
-    <img class="col-sm-6" id="preview"  src="">
+    <input data-preview="#preview" name="image" type="file" id="image">{{$book->image ?? ""}}
+    <img class="col-sm-6" id="preview" src="{{ $book ? asset('uploads/book/' . $book->image_show) : ""}}">
 </div>
+
+{{--<div class="form-group">--}}
+{{--    <label for="">Изображение</label>--}}
+{{--    <input data-preview="#preview" name="image" type="file" id="image">{{$book->image ?? ""}}--}}
+{{--    <img class="col-sm-6" id="preview"  src="">--}}
+{{--</div>--}}
 
 
 <label for="">Укажите автора</label>
@@ -46,3 +50,4 @@
 
 <hr />
 <input class="btn btn-primary" type="submit" value="Сохранить">
+</form>

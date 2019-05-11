@@ -14,7 +14,7 @@
                     <ul>
                         <li><a href="{{ URL::to('/main/museum') }}">Музей</a></li>
                         <li><a href="{{ URL::to('/structure/administration') }}">Администрация</a></li>
-                        <li><a href="{{ URL::to('/departments/departments_page') }}">Отделы</a></li>
+                        <li><a href="{{ URL::to('/departments/index') }}">Отделы</a></li>
                         <li><a href="{{ URL::to('/books') }}">Книги</a></li>
                         <li><a href="{{ URL::to('/main/history') }}">История</a></li>
                     </ul>

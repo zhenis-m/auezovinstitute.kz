@@ -33,7 +33,9 @@ class ArticleController extends Controller
             'article' => [],
             'categories' => Category::with('children')->where('parent_id', 0)->get(),
             'delimiter' => ''
+
         ]);
+
     }
 
     /**

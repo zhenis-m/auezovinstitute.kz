@@ -13,7 +13,7 @@
                     <h1>{{ $news->title }}</h1>
                 </div>
                 <div class="news__state__img">
-                    <img src="{{ $news->image }}" alt="">
+                    <img src="{{ $news ? asset('uploads/article/' . $news->image_show) : ""}}" alt="">
                 </div>
                 <div class="news__state__text">
                     <?php
