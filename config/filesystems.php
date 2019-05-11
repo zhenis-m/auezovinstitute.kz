@@ -48,7 +48,7 @@ return [
         ],
         'uploads' => [
             'driver' => 'local',
-            'root' => public_path('uploads/article'),
+            'root' => public_path('uploads'),
         ],
         'public' => [
             'driver' => 'local',
