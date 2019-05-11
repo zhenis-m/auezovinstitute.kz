@@ -17,4 +17,5 @@ composer.lock
 .DS_Store
 workspace.xml
 Thumbs.db
-.idea/*
+.idea/*.xml
+public/uploads
