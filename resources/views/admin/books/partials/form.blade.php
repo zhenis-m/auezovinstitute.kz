@@ -21,7 +21,7 @@
 <div class="form-group">
     <label for="">Изображение</label>
     <input data-preview="#preview" name="image" type="file" id="image">{{$book->image ?? ""}}
-    <img class="col-sm-6" id="preview" src="{{ $book ? asset('uploads/book/' . $book->image_show) : ""}}">
+    <img class="col-sm-6" id="preview" src="{{ $book ? asset('uploads/' . $book->image_show) : ""}}">
 </div>
 
 {{--<div class="form-group">--}}
