@@ -21,10 +21,10 @@ class BooksController extends Controller
 
     public function show($id)
     {
-        $book = Book::where('id', $id)->first();
+        $bok = Book::where('id', $id)->first();
 
         return view('books.show', [
-            'book' => $book
+            'bok' => $bok
         ]);
     }
 }

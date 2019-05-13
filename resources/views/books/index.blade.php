@@ -14,7 +14,7 @@
 			@foreach ($books as $bok)
 				<div class="books__show">
 					<a class="" href="{{ route('books.show', [ 'id' => $bok->id ]) }}">
-						<img src="{{ $bok ? asset('uploads/books/' . $bok->image_show) : ""}}">
+						<img src="{{ $bok ? asset('uploads/' . $bok->image_show) : ""}}">
 						<p>{{ $bok->title }}</p>
 						<p class="aphtor">{!! $bok->description !!}</p>
 					</a>

@@ -13,9 +13,6 @@
 
 Route::get('/search', 'SearchController@search');
 
-
-//Route::get('/search', 'Controller@search');
-
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
     'middleware' => [
@@ -83,34 +80,34 @@ Route::get('/home', 'HomeController@index')->name('home');
 //    return view('default');
 //});
 
-Route::get('/departments/index', 'DepartmentsController@index')->name('departments.index');
-Route::get('/departments/show', 'DepartmentsController@show')->name('departments.show');
-
-
-Route::group(['prefix'=>'/', 'namespace'=>'main'], function (){
-    Route::get('/', 'MainController@index');
-    Route::get('/main/history', 'HistoryController@history');
-    Route::get('/main/mass_media', 'Mass_mediaController@mass_media');
-    Route::get('/main/museum', 'MuseumController@museum');
-    Route::get('/main/map', 'MapController@map');
-});
-
-Route::group(['prefix'=>'structure', 'namespace'=>'structure'], function (){
-    Route::get('/administration', 'AdministrationController@administration');
-    Route::get('/director', 'AdministrationController@director');
-    Route::get('/zamdirector', 'AdministrationController@zamdirector');
-    Route::get('/zamdirector2', 'AdministrationController@zamdirector2');
-});
-
-
-
-Route::group(['prefix'=>'news', 'namespace'=>'news'], function (){
-    Route::get('/', 'NewsController@index')->name('news.index');
-    Route::get('/{id}', 'NewsController@show')->name('news.show');
-});
-
-Route::group(['prefix'=>'books', 'namespace'=>'books'], function (){
-    Route::get('/', 'BooksController@index')->name('books.index');
-    Route::get('/{id}', 'BooksController@show')->name('books.show');
-});
+//Route::get('/departments/index', 'DepartmentsController@index')->name('departments.index');
+//Route::get('/departments/show', 'DepartmentsController@show')->name('departments.show');
+//
+//
+//Route::group(['prefix'=>'/', 'namespace'=>'main'], function (){
+//    Route::get('/', 'MainController@index');
+//    Route::get('/main/history', 'HistoryController@history');
+//    Route::get('/main/mass_media', 'Mass_mediaController@mass_media');
+//    Route::get('/main/museum', 'MuseumController@museum');
+//    Route::get('/main/map', 'MapController@map');
+//});
+//
+//Route::group(['prefix'=>'structure', 'namespace'=>'structure'], function (){
+//    Route::get('/administration', 'AdministrationController@administration');
+//    Route::get('/director', 'AdministrationController@director');
+//    Route::get('/zamdirector', 'AdministrationController@zamdirector');
+//    Route::get('/zamdirector2', 'AdministrationController@zamdirector2');
+//});
+//
+//
+//
+//Route::group(['prefix'=>'news', 'namespace'=>'news'], function (){
+//    Route::get('/', 'NewsController@index')->name('news.index');
+//    Route::get('/{id}', 'NewsController@show')->name('news.show');
+//});
+//
+//Route::group(['prefix'=>'books', 'namespace'=>'books'], function (){
+//    Route::get('/', 'BooksController@index')->name('books.index');
+//    Route::get('/{id}', 'BooksController@show')->name('books.show');
+//});
 
