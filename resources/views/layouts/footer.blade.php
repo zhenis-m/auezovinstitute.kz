@@ -3,6 +3,9 @@
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 {{--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">--}}
 {{--<link rel="stylesheet" href="css/Footer-with-button-logo.css">--}}
+
+
+
 <footer id="myFooter">
     <div class="container">
         <div class="row">
@@ -32,16 +35,25 @@
                     <ul>
                         <li><a href="{{ URL::to('/footer/cultural') }}">Культурное наследние</a></li>
                         <li><a href="{{ URL::to('/footer/international') }}">Международные связи</a></li>
+
                         <div class="btn-group" id="lang-btn">
                             <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">Поменять язык
                                 <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
+                      <!--       <ul class="dropdown-menu">
                                 <li><a href="#">казахский</a></li>
                                 <li><a href="#">русский</a></li>
-                                <!--  <li class="divider"></li>
-                                 <li><a href="#">английский</a></li> -->
+                            </ul> -->
+                            <ul class="dropdown-menu">
+                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                    <li>
+                                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                            {{ $properties['name'] }}
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
-                        </div>
+                        </div>                       
+
                         <div class="social-networks">
                             <ul>
                                 <li> <a href="https://www.google.ru/" target="_blank" class="google"><i class="fa fa-google-plus"></i></a> </li>

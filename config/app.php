@@ -1,5 +1,9 @@
 <?php
 
+use App\Providers\ConfigServiceProvider;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider;
+
 return [
 
     /*
@@ -80,7 +84,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'kk',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +97,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -174,6 +178,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+    
+        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        App\Providers\ConfigServiceProviders::class
 
     ],
 
@@ -228,6 +235,8 @@ return [
 
         //Our packages
         Unisharp\Ckeditor\ServiceProvider::class,
+        'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+
 
     ],
 

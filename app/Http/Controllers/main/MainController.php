@@ -9,6 +9,7 @@ class MainController extends Controller
 {
     public function index()
     {
+        // dd(app()->getLocale());
         $news = Article::orderBy('id', 'desc')->take(4)->get();
         return view('main.index', [
             'news' => $news

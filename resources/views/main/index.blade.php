@@ -6,7 +6,7 @@
         <div class="banner__img">
             <img src="../css/img/banner.png">
             <div class="headline">
-                <p class="bold">Учитесь с одной только <br> целью – стать человеком!</p>
+                <p class="bold">{{ trans('main.title') }}</p>
                 <p>Мухтар Ауэзов</p>
                 <a href="{{ URL::to('/main/history') }}">Об институте</a>
             </div>
