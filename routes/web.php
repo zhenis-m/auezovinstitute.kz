@@ -64,7 +64,7 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], 
     Route::resource('/category', 'CategoryController', ['as'=>'admin']);
     Route::resource('/articles', 'ArticleController', ['as'=>'admin']);
     Route::resource('/books', 'BookController', ['as'=>'admin']);
-//    Route::post('/image/upload', 'ArticleController@upload')->name('image.upload');
+    Route::resource('/cultures', 'CultureController', ['as'=>'admin']);
 });
 
 Auth::routes();
