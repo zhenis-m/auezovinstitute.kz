@@ -9,7 +9,7 @@
 
     <div class="tittle">
         <div class="iconstyle">
-            <span class="contact100-form-title" id="maptitle"><i class="fas fa-rocket">&nbsp;&nbsp;</i><p>Контакты</p></span>
+            <span class="contact100-form-title" id="maptitle"><i class="fas fa-rocket">&nbsp;&nbsp;</i><p>{{ trans('main.contacts') }}</p></span>
         </div>
         <div class="container-contact100">
             <div class="map">
@@ -34,11 +34,11 @@
             <div class="wrap-contact100">
                 <form class="contact100-form validate-form">
         				<span class="contact100-form-title">
-                           Написать нам
+                           {{ trans('main.write_to_us') }}
         				</span>
 
                     <div class="wrap-input100 validate-input" data-validate="Name is required">
-                        <input class="input100" id="name" type="text" name="name" placeholder="Имя">
+                        <input class="input100" id="name" type="text" name="name" placeholder="{{ trans('main.name') }}">
                         <label class="label-input100" for="name">
                             <span class="lnr lnr-user"></span>
                         </label>
@@ -52,13 +52,13 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate = "Message is required">
-                        <textarea class="input100" name="message" placeholder="Ваше сообщение"></textarea>
+                        <textarea class="input100" name="message" placeholder="{{ trans('main.your_message') }}"></textarea>
                     </div>
                     <div class="container-contact100-form-btn">
                         <div class="wrap-contact100-form-btn">
                             <div class="contact100-form-bgbtn"></div>
                             <button class="contact100-form-btn">
-                                Отправить
+                                {{ trans('main.to_send') }}
                             </button>
                         </div>
                     </div>

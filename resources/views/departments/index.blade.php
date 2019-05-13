@@ -9,11 +9,9 @@
     <div class="container_departments">
         <div class="bar_line">
             <div class="bar">
-                <!-- @foreach ($departs as $depart)
-                    <div><a href="#" onclick="openbox3('box'); return false" id="{{ $depart->title }}" class="active_1"><p>{{ $depart->title }}</p></a></div>
-                @endforeach -->
+
                 <div><a href="#1" onclick="openbox('box'); return false" id="btns" class="active_1"><p>Отделы института</p></a></div>
-                <div><a href="#2" onclick="openbox2('box'); return false" id="btns"><p>Отдел фольклора</p></a></div>
+                <div><a href="#2" onclick="openbox2('box'); return false" id="btns" class="fun2"><p>Отдел фольклора</p></a></div>
                 <div><a href="#3" onclick="openbox3('box'); return false" id="btns"><p>Отдел древней и средневековой<br>литературы</p></a></div>
                 <div><a href="#4" onclick="openbox4('box'); return false" id="btns"><p>Отдел абаеведения и литературы<br>новой эпохи</p></a></div>
                 <div><a href="#5" onclick="openbox5('box'); return false" id="btns"><p>Отдел литературы и художественной<br>публицистики эпохи независимости</p></a></div>
@@ -51,6 +49,7 @@
 
         var display = document.getElementById(1).style.display;
 
+
         if (display == "none") {
             document.getElementById(1).style.display = "block";
             document.getElementById(2).style.display = "none";
@@ -65,6 +64,7 @@
             document.getElementById(11).style.display = "none";
             document.getElementById(12).style.display = "none";
             document.getElementById(13).style.display = "none";
+
         }
         // else {
         //     document.getElementById(1).style.display = "none";
@@ -74,6 +74,7 @@
     function openbox2(box) {
 
         var display2 = document.getElementById(2).style.display;
+
 
 
         if (display2 == "none") {

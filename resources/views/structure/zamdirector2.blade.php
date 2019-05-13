@@ -16,7 +16,7 @@
             <div>
                 <div class="director__admin">
                     <div class="director__admin__photo">
-                        <img src="../css/img/admins/ZamDir2.jpg" alt="альтернативный текст">
+                        <img src="../../images/admins/ZamDir2.jpg" alt="альтернативный текст">
                     </div>
                     <div class="director__admin__text">
                         <h3>Султан Ертай</h3>

@@ -17,7 +17,7 @@
             <div>
                 <div class="director__admin">
                     <div class="director__admin__photo">
-                        <img src="../css/img/admins/ZamDir.jpg" alt="альтернативный текст">
+                        <img src="../../images/admins/ZamDir.jpg" alt="альтернативный текст">
                     </div>
                     <div class="director__admin__text">
                         <h3>Калиева Альмира Кайыртаевна</h3>

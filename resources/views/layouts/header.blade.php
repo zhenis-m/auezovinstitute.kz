@@ -1,7 +1,7 @@
 <div class="header">
     <div class="header__nav">
         <div class="logo">
-            <a href="{{ URL::to('/') }}"><img src="../css/img/logo-litart.png"></a>
+            <a href="{{ URL::to('/') }}"><img src="../../images/logo-litart.png"></a>
 
         </div>
         <div class="nav">
@@ -66,9 +66,9 @@
         <div class="search search_clearfix">
             <form action="{{ URL::to('search') }}" method="GET" class="searchform">
                 <div class="search__text">
-                    <input type="text" value="" placeholder="Поиск" name="search"/>
+                    <input type="text" value="" placeholder="{{ trans('main.search') }}" name="search"/>
                 </div>
-                <input type="image" src="../css/img/search.png"/>
+                <input type="image" src="../../images/search.png"/>
             </form>
         </div>
     </div>

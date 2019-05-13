@@ -7,7 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="shortcut icon" href="../../images/footer-logo.png" type="image/png">
+    {{--    <title>{{ config('app.name', 'Laravel') }}</title>--}}
+    <title>Институт им. М. Ауэзова</title>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>

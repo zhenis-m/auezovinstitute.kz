@@ -20,7 +20,7 @@
         </div>
         <div>
             <h1 style="margin-top:15px; font-size: 3em;">Институт литературы и искусства имени. М. О. Ауэзова</h1>
-            <img src="../css/img/banner33.png" alt="альтернативный текст">
+            <img src="../../images/banner33.png" alt="альтернативный текст">
             <div class="new__state__date">
                 <i class="far fa-calendar-alt"></i><p>&nbsp;&nbsp;12.02.2019&nbsp;&nbsp;&nbsp;&nbsp;</p><i class="far fa-eye"></i><p>&nbsp;&nbsp;1222</p>
             </div>

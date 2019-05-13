@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <img src="../css/img/footer-logo.png" alt="">
+                <img src="../../images/footer-logo.png" alt="">
             </div>
             <div class="row-right">
                 <div class="col-sm-2">
@@ -37,7 +37,7 @@
                         <li><a href="{{ URL::to('/footer/international') }}">Международные связи</a></li>
 
                         <div class="btn-group" id="lang-btn">
-                            <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">Поменять язык
+                            <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">{{ trans('main.language') }}
                                 <span class="caret"></span></button>
                       <!--       <ul class="dropdown-menu">
                                 <li><a href="#">казахский</a></li>

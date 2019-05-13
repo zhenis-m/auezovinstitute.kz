@@ -80,8 +80,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 //    return view('default');
 //});
 
-//Route::get('/departments/index', 'DepartmentsController@index')->name('departments.index');
-//Route::get('/departments/show', 'DepartmentsController@show')->name('departments.show');
+Route::get('/departments/index', 'DepartmentsController@index')->name('departments.index');
+Route::get('/departments/show', 'DepartmentsController@show')->name('departments.show');
 //
 //
 //Route::group(['prefix'=>'/', 'namespace'=>'main'], function (){

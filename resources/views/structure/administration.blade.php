@@ -14,7 +14,7 @@
 				<a href="{{ URL::to('/structure/director') }}">
 					<div class="structur__admins__men">
 						<div class="structur__admins__men__photo">
-							<img src="../css/img/admins/director.jpg">
+							<img src="../../images/admins/director.jpg">
 						</div>
 						<div class="structur__admins__men__name">
 							<div class="structur__admins__men__name__text">
@@ -32,7 +32,7 @@
 				<a href="{{ URL::to('/structure/zamdirector') }}">
 					<div class="structur__admins__men">
 						<div class="structur__admins__men__photo">
-							<img src="../css/img/admins/ZamDir.jpg">
+							<img src="../../images/admins/ZamDir.jpg">
 						</div>
 						<div class="structur__admins__men__name">
 							<div class="structur__admins__men__name__text">
@@ -50,7 +50,7 @@
 				<a href="{{ URL::to('/structure/zamdirector2') }}">
 					<div class="structur__admins__men">
 						<div class="structur__admins__men__photo">
-							<img src="../css/img/admins/ZamDir2.jpg">
+							<img src="../../images/admins/ZamDir2.jpg">
 						</div>
 						<div class="structur__admins__men__name">
 							<div class="structur__admins__men__name__text">
