@@ -2,23 +2,23 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Article;
+use App\Inst;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
-class ArticleController extends Controller
+class InstController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('admin.articles.index', [
-            'articles' => Article::orderBy('created_at', 'desc')->paginate(10)
+        return view('admin.insts.index', [
+            'insts' => Inst::orderBy('created_at', 'desc')->paginate(10)
         ]);
     }
 
@@ -29,8 +29,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('admin.articles.create', [
-            'article' => [],
+        return view('admin.insts.create', [
+            'inst' => [],
             'categories' => Category::with('children')->where('parent_id', 0)->get(),
             'delimiter' => ''
 
@@ -41,7 +41,7 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -49,28 +49,28 @@ class ArticleController extends Controller
         //Grab image from the request
         $image = $request->file('image');
         //Save article
-        $article = Article::create($request->all());
+        $inst = Inst::create($request->all());
         //Upload image and store image path in the image_show attribute.
-        if ($image !== null) {
-            $article->image = $image->getClientOriginalName();
-            $article->image_show = Storage::disk('uploads')->put('article/' . $article->id, $image);
-            $article->save();
+        if($image !== null) {
+        $inst->image = $image->getClientOriginalName();
+        $inst->image_show = Storage::disk('uploads')->put('inst/' . $inst->id, $image);
+        $inst->save();
         }
         //Categories
         if ($request->input('categories')) :
-            $article->categories()->attach($request->input('categories'));
+            $inst->categories()->attach($request->input('categories'));
         endif;
 
-        return redirect()->route('admin.articles.index');
+        return redirect()->route('admin.insts.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param \App\Article $article
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show(Inst $inst)
     {
         //
     }
@@ -78,13 +78,13 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Article $article
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit(Inst $inst)
     {
-        return view('admin.articles.edit', [
-            'article' => $article,
+        return view('admin.insts.edit', [
+            'inst' => $inst,
             'categories' => Category::with('children')->where('parent_id', 0)->get(),
             'delimiter' => ''
         ]);
@@ -93,11 +93,11 @@ class ArticleController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Article $article
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, Inst $inst)
     {
         //TODO: перенести ответственность на мутатор в Request
         $data = $request->except('slug');
@@ -106,35 +106,35 @@ class ArticleController extends Controller
         $image = $request->file('image');
 
         //Store image & put image path & image name in the dataset.
-        if ($image !== null) {
-            $data['image'] = $image->getClientOriginalName();
-            $data['image_show'] = Storage::disk('uploads')->put('article/' . $article->id, $image);
+        if($image !== null) {
+        $data['image'] = $image->getClientOriginalName();
+        $data['image_show'] = Storage::disk('uploads')->put('inst/' . $inst->id, $image);
         }
 
         //Update article with given data.
-        $article->update($data);
+        $inst->update($data);
 
         //Categories.
-        $article->categories()->detach();
+        $inst->categories()->detach();
 
         if ($request->input('categories')) :
-            $article->categories()->attach($request->input('categories'));
+            $inst->categories()->attach($request->input('categories'));
         endif;
 
-        return redirect()->route('admin.articles.index');
+        return redirect()->route('admin.insts.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Article $article
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy(Inst $inst)
     {
-        $article->categories()->detach();
-        $article->delete();
+        $inst->categories()->detach();
+        $inst->delete();
 
-        return redirect()->route('admin.articles.index');
+        return redirect()->route('admin.insts.index');
     }
 }

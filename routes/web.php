@@ -31,11 +31,17 @@ Route::group([
 //        return view('default');
 //    });
 //
+
+    Route::get('/main/history', 'main\HistoryController@history');
+    Route::get('/main/history', 'main\HistoryController@index');
+
+    Route::get('/main/mass_media', 'main\Mass_mediaController@mass_media');
+    Route::get('/main/mass_media', 'main\Mass_mediaController@index');
+
+    Route::get('/culture/{id}', 'main\MainController@show')->name('main.show');
     
     Route::group(['prefix'=>'/', 'namespace'=>'main'], function (){
         Route::get('/', 'MainController@index');
-        Route::get('/main/history', 'HistoryController@history');
-        Route::get('/main/mass_media', 'Mass_mediaController@mass_media');
         Route::get('/main/museum', 'MuseumController@museum');
         Route::get('/main/map', 'MapController@map');
     });
@@ -48,11 +54,6 @@ Route::group([
     });
 
 
-    Route::group(['prefix'=>'layouts', 'namespace'=>'header'], function (){
-        Route::get('/', 'HeaderController@header')->name('layouts.header');
-        Route::get('/{id}', 'HeaderController@show')->name('layouts.show');
-    });
-
     Route::group(['prefix'=>'news', 'namespace'=>'news'], function (){
         Route::get('/', 'NewsController@index')->name('news.index');
         Route::get('/{id}', 'NewsController@show')->name('news.show');
@@ -64,21 +65,26 @@ Route::group([
     });
 });
 
+
+    Route::group(['prefix'=>'abouts', 'namespace'=>'abouts'], function (){
+        Route::get('/', 'AboutController@index')->name('abouts.index');
+        Route::get('/{id}', 'AboutController@show')->name('abouts.show');
+    });
+
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category', 'CategoryController', ['as'=>'admin']);
     Route::resource('/articles', 'ArticleController', ['as'=>'admin']);
     Route::resource('/books', 'BookController', ['as'=>'admin']);
     Route::resource('/cultures', 'CultureController', ['as'=>'admin']);
+    Route::resource('/insts', 'InstController', ['as'=>'admin']);
 });
+
 
 Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-//Route::get('/', 'HeaderController@header')->name('layouts.header');
-//Route::get('/{id}', 'HeaderController@show')->name('layouts.show');
 
 
 Route::get('/departments/index', 'DepartmentsController@index')->name('departments.index');
