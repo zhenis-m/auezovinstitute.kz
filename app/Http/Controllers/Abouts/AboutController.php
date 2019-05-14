@@ -12,11 +12,8 @@ class AboutController extends Controller
     {
        // $newses = Article::orderBy('id', 'desc')->where('locale', app()->getLocale())->where('published', 1)->paginate(12);
         $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-
-
-
         return view('abouts.index', [
-            'aboutses' => $aboutses
+            'aboutses' => $aboutses,
         ]);
     }
 
@@ -24,10 +21,11 @@ class AboutController extends Controller
 
     public function show($id)
     {
-        $abouts = Inst::where('id', $id)->first();
-
+        $about = Inst::where('id', $id)->first();
+        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
         return view('abouts.show', [
-            'abouts' => $abouts
+            'about' => $about,
+             'aboutses' => $aboutses,
         ]);
     }
 }
