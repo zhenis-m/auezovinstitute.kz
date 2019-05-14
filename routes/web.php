@@ -23,20 +23,8 @@ Route::group([
 ], function() {
     Route::get('/home', 'HomeController@index')->name('home');
     
-    
-//    Route::post('/image/upload', 'ImageController@upload')->name('image.upload');
-//
-//
-//    Route::get('/default', function () {
-//        return view('default');
-//    });
-//
 
-    Route::get('/main/history', 'main\HistoryController@history');
-    Route::get('/main/history', 'main\HistoryController@index');
 
-    Route::get('/main/mass_media', 'main\Mass_mediaController@mass_media');
-    Route::get('/main/mass_media', 'main\Mass_mediaController@index');
 
     Route::get('/culture/{id}', 'main\MainController@show')->name('main.show');
     
