@@ -51,9 +51,11 @@ class CultureController extends Controller
         //Save article
         $culture = Culture::create($request->all());
         //Upload image and store image path in the image_show attribute.
+        if($image !== null) {
         $culture->image = $image->getClientOriginalName();
         $culture->image_show = Storage::disk('uploads')->put('culture/' . $culture->id, $image);
         $culture->save();
+        }
         //Categories
         if ($request->input('categories')) :
             $culture->categories()->attach($request->input('categories'));
@@ -104,8 +106,10 @@ class CultureController extends Controller
         $image = $request->file('image');
 
         //Store image & put image path & image name in the dataset.
+        if($image !== null) {
         $data['image'] = $image->getClientOriginalName();
         $data['image_show'] = Storage::disk('uploads')->put('culture/' . $culture->id, $image);
+        }
 
         //Update article with given data.
         $culture->update($data);

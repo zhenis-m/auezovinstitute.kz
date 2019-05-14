@@ -18,6 +18,10 @@
                         <li>
                             <a href="{{ URL::to('/news') }}">Новости</a>
                         </li>
+
+                        <li>
+                          
+                        </li>
                     </ul>
                 </li>
                 <li class="menu-item">

@@ -59,13 +59,21 @@ Route::group([
     });
 });
 
+
+    Route::group(['prefix'=>'abouts', 'namespace'=>'abouts'], function (){
+        Route::get('/', 'AboutController@index')->name('abouts.index');
+        Route::get('/{id}', 'AboutController@show')->name('abouts.show');
+    });
+
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category', 'CategoryController', ['as'=>'admin']);
     Route::resource('/articles', 'ArticleController', ['as'=>'admin']);
     Route::resource('/books', 'BookController', ['as'=>'admin']);
     Route::resource('/cultures', 'CultureController', ['as'=>'admin']);
+    Route::resource('/insts', 'InstController', ['as'=>'admin']);
 });
+
 
 Auth::routes();
 
