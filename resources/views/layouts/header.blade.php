@@ -10,12 +10,6 @@
                     <a href="#">Институт &#9662;</a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="{{ URL::to('/main/history') }}">История</a>
-                        </li>
-                        <li>
-                            <a href="{{ URL::to('/main/mass_media') }}">СМИ о нас</a>
-                        </li>
-                        <li>
                             <a href="{{ URL::to('/news') }}">Новости</a>
                         </li>
                          <li>
