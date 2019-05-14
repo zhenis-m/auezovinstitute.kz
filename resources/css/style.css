@@ -36,7 +36,8 @@ body {
 }
 
 .logo {
-	width: 18%;
+	width: 15%;
+	padding: 10px;
 }
 
 .logo img {
@@ -157,6 +158,10 @@ body {
         outline: 0; 
 }
 
+.search__wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
 /*-------------- serch style end -----------------*/
 
 /*-------------- banner style begin -----------------*/
