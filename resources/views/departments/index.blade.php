@@ -36,9 +36,7 @@
                 @foreach ($departs as $depart)
                     <div id="{{ $depart->id }}" style="display: none;">
                         <h2>{{ $depart->title }}</h2>
-                        <?php
-                        echo nl2br( $depart->body );
-                        ?>
+                        {!! $depart->description !!}
                     </div>
                 @endforeach
             </div>

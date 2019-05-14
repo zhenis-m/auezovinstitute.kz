@@ -66,6 +66,7 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], 
     Route::resource('/books', 'BookController', ['as'=>'admin']);
     Route::resource('/cultures', 'CultureController', ['as'=>'admin']);
     Route::resource('/insts', 'InstController', ['as'=>'admin']);
+    Route::resource('/departments', 'DepartmentsController', ['as'=>'admin']);
 });
 
 

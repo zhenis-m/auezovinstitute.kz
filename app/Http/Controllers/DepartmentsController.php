@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 use App\Culture;
-use App\Departaments;
+use App\Departments;
 use Illuminate\Http\Request;
 use App\Inst;
 class DepartmentsController extends Controller
 {
     public function index()
     {
-        $departs = Departaments::all();
+        $departs = Departments::all();
         $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->get();
         return view('departments.index', [
@@ -23,8 +23,8 @@ class DepartmentsController extends Controller
 
     public function show($id)
     {
-        $depart = Departaments::where('id', $id)->first();
-         $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
+        $depart = Departments::where('id', $id)->first();
+        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->get();
         return view('departments.show', [
             'depart' => $depart,

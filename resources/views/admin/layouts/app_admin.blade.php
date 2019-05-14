@@ -49,6 +49,7 @@
                             <li><a class="dropdown-item" href="{{route('admin.articles.index')}}">Новости</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.insts.index')}}">Институт</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.cultures.index')}}">Культурное наследие</a></li>
+                            <li><a class="dropdown-item" href="{{route('admin.departments.index')}}">Отделы института</a></li>
 {{--                            <li><a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a></li>--}}
                             <li><a class="dropdown-item" href="{{url('/')}}">Назад к сайту</a></li>
                         </ul>
