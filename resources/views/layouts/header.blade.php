@@ -34,31 +34,38 @@
                 <li class="menu-item">
                     <a href="#">Культурное наследие &#9662;</a>
                     <ul class="sub-menu">
-                        <li>
-                            <a href="{{ URL::to('/cultural/childrens') }}">БАБАЛАР СӨЗ</a>
-                        </li>
-                        <li>
-                            <a href="{{ URL::to('/cultural/literary_history') }}">История казахской литературы</a>
-                        </li>
-                        <li>
-                            <a href="{{ URL::to('/cultural/anthology_music') }}">Анталогия казахской музыки</a>
-                        </li>
-                        <li>
-                            <a href="{{ URL::to('/cultural/art_history') }}">История искуства казахов</a>
-                        </li>
-                        <li>
-                            <a href="{{ URL::to('/cultural/monuments') }}">Литературные памятники</a>
-                        </li>
-                        <li>
-                            <a href="{{ URL::to('/cultural/folklore') }}">Мировая фольклористика</a>
-                        </li>
-                        <li>
-                            <a href="{{ URL::to('/cultural/literary_studies') }}">Мировое литературоведение</a>
-                        </li>
 
-                        <li>
-                            <a href="{{ URL::to('/cultural/magazine') }}">Журнал «Керуен»</a>
-                        </li>
+                            @foreach ($cultures as $cultur)
+                                <li>
+                                    <a href="{{ route('layouts.show', [ 'id' => $cultur->id ]) }}">{{ $cultur->title }}</a>
+                                </li>
+                            @endforeach
+
+{{--                        <li>--}}
+{{--                            <a href="{{ URL::to('/cultural/childrens') }}">БАБАЛАР СӨЗ</a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="{{ URL::to('/cultural/literary_history') }}">История казахской литературы</a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="{{ URL::to('/cultural/anthology_music') }}">Анталогия казахской музыки</a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="{{ URL::to('/cultural/art_history') }}">История искуства казахов</a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="{{ URL::to('/cultural/monuments') }}">Литературные памятники</a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="{{ URL::to('/cultural/folklore') }}">Мировая фольклористика</a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="{{ URL::to('/cultural/literary_studies') }}">Мировое литературоведение</a>--}}
+{{--                        </li>--}}
+
+{{--                        <li>--}}
+{{--                            <a href="{{ URL::to('/cultural/magazine') }}">Журнал «Керуен»</a>--}}
+{{--                        </li>--}}
                     </ul>
                 </li>
             </ul>
