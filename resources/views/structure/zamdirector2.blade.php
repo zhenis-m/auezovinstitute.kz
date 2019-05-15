@@ -8,7 +8,7 @@
 <div class="director__way">
     <a href="{{ URL::to('/') }}">Главная</a>&nbsp;/
     <a href="{{ URL::to('/structure/administration') }}">Административно-управленческий аппарат</a>&nbsp;/
-    <a href="{{ URL::to('/structure/zamdirector2') }}">Султан Ертай</a>
+    <a>Султан Ертай</a>
 </div>
 <div>
     <div class="container_1">

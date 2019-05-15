@@ -5,15 +5,15 @@
     <div class="container">
 
         @component('admin.components.breadcrumb')
-            @slot('title') Список новостей @endslot
+            @slot('title') Список отделов @endslot
             @slot('parent') Главная @endslot
-            @slot('active')  &nbsp;/ Новости @endslot
+            @slot('active')  &nbsp;/ отделы @endslot
         @endcomponent
 
         <hr>
 
         <a href="{{route('admin.departments.create')}}" class="btn btn-primary pull-right">
-            <i class="fa fa-plus-square-o"></i> Создать новость</a>
+            <i class="fa fa-plus-square-o"></i> Создать отдел</a>
             <div><br></div>
             <div></div>
         <table class="table table-striped">

@@ -5,7 +5,7 @@
     <div class="container">
 
         @component('admin.components.breadcrumb')
-            @slot('title') Редактирование новости @endslot
+            @slot('title') Редактирование страницы @endslot
             @slot('parent') Главная @endslot
             @slot('active') &nbsp;/ Культурное наследие @endslot
         @endcomponent

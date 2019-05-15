@@ -9,7 +9,7 @@
 <div class="director__way">
     <a href="{{ URL::to('/') }}">Главная</a>&nbsp;/
     <a href="{{ URL::to('/structure/administration') }}">Административно-управленческий аппарат</a>&nbsp;/
-    <a href="{{ URL::to('/structure/zamdirector') }}">Калиева Альмира</a>
+    <a>Калиева Альмира</a>
 </div>
 <div>
     <div class="container_1">

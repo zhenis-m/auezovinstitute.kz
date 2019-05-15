@@ -4,7 +4,7 @@
     <div class="news_page__way">
         <a href="{{ URL::to('/') }}">Главная</a>&nbsp;/
         <a href="{{ URL::to('/news') }}">Новости</a>&nbsp;/
-        <a href="#">{{ $news->title }}</a>
+        <a>{{ $news->title }}</a>
     </div>
     <div>
         <div class="news">

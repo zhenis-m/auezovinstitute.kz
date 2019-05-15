@@ -5,7 +5,7 @@
 		<div class="structur">
 			<div class="structur__way">
 				<a href="{{ URL::to('/') }}">Главная</a>&nbsp;/&nbsp;
-				<a href="{{ URL::to('/structure/administration') }}">Административно-управленческий аппарат</a>
+				<a>Административно-управленческий аппарат</a>
 			</div>
 			<div class="structur__state">
 				<a href="#"><p><i class="fas fa-users"></i>&nbsp;&nbsp;Структура</p></a>

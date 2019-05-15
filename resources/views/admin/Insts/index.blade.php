@@ -5,15 +5,15 @@
     <div class="container">
 
         @component('admin.components.breadcrumb')
-            @slot('title') Список новостей @endslot
+            @slot('title') Создание страниц @endslot
             @slot('parent') Главная @endslot
-            @slot('active')  &nbsp;/ Новости @endslot
+            @slot('active')  &nbsp;/ Институт @endslot
         @endcomponent
 
         <hr>
 
         <a href="{{route('admin.insts.create')}}" class="btn btn-primary pull-right">
-            <i class="fa fa-plus-square-o"></i> Создать новость22</a>
+            <i class="fa fa-plus-square-o"></i> Создать страницу</a>
             <div><br></div>
             <div></div>
         <table class="table table-striped">
