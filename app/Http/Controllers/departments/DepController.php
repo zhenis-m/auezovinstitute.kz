@@ -31,8 +31,10 @@ class DepController extends Controller
         $depart = Departments::where('id', $id)->first();
         $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->get();
+         $departs = Departments::all();
         return view('departments.show', [
             'depart' => $depart,
+            'departs' => $departs,
             'aboutses' => $aboutses,
             'cultures' => $cultures,
         ]);

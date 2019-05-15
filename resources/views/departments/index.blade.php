@@ -2,31 +2,25 @@
 
 @section('content')
 <div>
-    <div class="dep__way">
+    <div class="pnwes">
+        <div class="dep__way">
         <a href="{{ URL::to('/') }}">Главная</a>&nbsp;/&nbsp;
-        <a href="{{ URL::to('/departments/index') }}">Отделы института</a>
+        <a>Отделы института</a>
     </div>
-    <div class="container_departments">
-        <div class="bar_line">
-            <div class="bar">
+        <div class="pnwes__page">
+            @foreach ($departs as $depart)
+            <div class="pnwes__page__block">
+                <div class="pnwes__page__block__wrap">
+                    <div class="pnwes__page__block__text">
+                        <p><a href="{{ route('departments.show', [ 'id' => $depart->id ]) }}">{{ $depart->title }}</p> </a>
+                        <p>{!! $depart->description_short !!}</p>
+                    </div>
+                </div>
+            </div>
 
-                <!-- <div><a href="#1" onclick="openbox('box'); return false" id="btns" class="active_1"><p>Отделы института</p></a></div> -->
-
-                <li>
-                @foreach ($departs as $depart)
-                        <p>{{ $depart->title }}<a href="{{ route('departments.show', [ 'id' => $depart->id ]) }}"></a></p>
             @endforeach
-                </li>
-            </div>
         </div>
-            <style>
-                #1 {
-                    display: block;
-                }
-            </style>
-            <div class="dep_text">     
-            </div>
-            </div>
-       </div>
+    </div>
 </div>
+{{--<script src="js/script.js"></script>--}}
 @endsection
