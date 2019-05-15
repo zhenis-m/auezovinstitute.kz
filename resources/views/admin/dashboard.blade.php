@@ -27,6 +27,30 @@
 
         <div class="row">
             <div class="col-sm-6">
+                <a class="btn btn-secondary btn-block" href="{{route('admin.insts.index')}}">Институт</a>            
+            </div>
+
+            <br><br>
+
+            <div class="col-sm-6">
+                <a class="btn btn-secondary btn-block" href="{{route('admin.cultures.index')}}">Культурное наследие</a>            
+            </div>
+
+            <br><br>
+
+             <div class="col-sm-6">
+                <a class="btn btn-secondary btn-block" href="{{route('admin.departments.index')}}">Отделы института</a>            
+            </div>
+
+            <br><br>
+
+            <div class="col-sm-6">
+                <a class="btn btn-secondary btn-block" href="#">Администрация института</a>            
+            </div>
+
+            <br><br>
+
+            <div class="col-sm-6">
                 <a class="btn btn-secondary btn-block" href="{{route('admin.books.index')}}">Создать книгу</a>
                 @foreach($books as $book)
                     <a class="list-group-item" href="{{route('admin.books.edit', $book)}}">
@@ -46,8 +70,10 @@
                         {{$article->categories()->pluck('title')->implode(', ')}}
                     </p>
                 </a>
-                @endforeach
+                @endforeach  
+                <br><br>             
             </div>
+
         </div>
     </div>
     @endsection
