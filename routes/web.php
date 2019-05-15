@@ -34,12 +34,7 @@ Route::group([
         Route::get('/main/map', 'MapController@map');
     });
     
-    Route::group(['prefix'=>'structure', 'namespace'=>'structure'], function (){
-        Route::get('/administration', 'AdministrationController@administration');
-        Route::get('/director', 'AdministrationController@director');
-        Route::get('/zamdirector', 'AdministrationController@zamdirector');
-        Route::get('/zamdirector2', 'AdministrationController@zamdirector2');
-    });
+  
 
 
     Route::group(['prefix'=>'news', 'namespace'=>'news'], function (){
@@ -65,6 +60,11 @@ Route::group([
         Route::get('/{id}', 'DepController@show')->name('departments.show');
     });
 
+    Route::group(['prefix'=>'structure', 'namespace'=>'structure'], function (){
+        Route::get('/administration', 'AdministrationController@administration');
+        Route::get('/{id}', 'DirController@show')->name('structure.show');
+    });
+
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category', 'CategoryController', ['as'=>'admin']);
@@ -73,6 +73,7 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], 
     Route::resource('/cultures', 'CultureController', ['as'=>'admin']);
     Route::resource('/insts', 'InstController', ['as'=>'admin']);
     Route::resource('/departments', 'DepartmentsController', ['as'=>'admin']);
+    Route::resource('/directors', 'DirectorController', ['as'=>'admin']);
 });
 
 

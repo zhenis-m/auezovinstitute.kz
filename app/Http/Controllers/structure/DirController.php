@@ -1,22 +1,23 @@
 <?php
 
-namespace App\Http\Controllers\news;
-use App\Article;
+namespace App\Http\Controllers\structure;
+
+use App\Director;
 use App\Culture;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Inst;
 
-class NewsController extends Controller
+class DirController extends Controller
 {
-    public function index()
+   public function index()
     {
        // $newses = Article::orderBy('id', 'desc')->where('locale', app()->getLocale())->where('published', 1)->paginate(12);
-        $newses = Article::orderBy('id', 'desc')->where('published', 1)->paginate(12);
+        $directors = Director::orderBy('id', 'desc')->where('published', 1)->paginate(12);
         $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->get();
-        return view('news.index', [
-            'newses' => $newses,
+        return view('structure.index', [
+            'directors' => $directors,
             'aboutses' => $aboutses,
             'cultures' => $cultures,
         ]);
@@ -26,15 +27,15 @@ class NewsController extends Controller
 
     public function show($id)
     {
-        $news = Article::where('id', $id)->first();
+        $director = Director::where('id', $id)->first();
         $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->get();
-        return view('news.show', [
-            'news' => $news,
+        return view('structure.show', [
+            'director' => $director,
             'aboutses' => $aboutses,
             'cultures' => $cultures,
         ]);
     }
-
-
 }
+
+
