@@ -5,7 +5,7 @@
 	<div class="pnwes">
 		<div class="pnwes__way">
 			<a href="{{ URL::to('/') }}">Главная</a>&nbsp;/&nbsp;
-			<a href="{{ URL::to('/books') }}">Книги</a>
+			<a>Книги</a>
 		</div>
 		<div class="pnwes__state">
 			<a href="#"><p><i class="fas fa-folder-open"></i>&nbsp;&nbsp;Все книги</p></a>

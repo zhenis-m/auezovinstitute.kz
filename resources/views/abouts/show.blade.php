@@ -3,8 +3,7 @@
 @section('content')
     <div class="news_page__way">
         <a href="{{ URL::to('/') }}">Главная</a>&nbsp;/
-        <a href="{{ URL::to('/news') }}">Новости</a>&nbsp;/
-        <a href="#">{{ $about->title }}</a>
+        <a>{{ $about->title }}</a>
     </div>
 <div class="container_1">
     <div class="social_and_banner">

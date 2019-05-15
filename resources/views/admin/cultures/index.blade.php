@@ -5,7 +5,7 @@
     <div class="container">
 
         @component('admin.components.breadcrumb')
-            @slot('title') Список новостей @endslot
+            @slot('title') Список страниц @endslot
             @slot('parent') Главная @endslot
             @slot('active')  &nbsp;/ Культурное наследие @endslot
         @endcomponent
@@ -13,7 +13,7 @@
         <hr>
 
         <a href="{{route('admin.cultures.create')}}" class="btn btn-primary pull-right">
-            <i class="fa fa-plus-square-o"></i> Создать новость</a>
+            <i class="fa fa-plus-square-o"></i> Создать страницу</a>
             <div><br></div>
             <div></div>
         <table class="table table-striped">
