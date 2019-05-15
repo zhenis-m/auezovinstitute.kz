@@ -45,7 +45,7 @@
             <br><br>
 
             <div class="col-sm-6">
-                <a class="btn btn-secondary btn-block" href="#">Администрация института</a>            
+                <a class="btn btn-secondary btn-block"  href="{{route('admin.directors.index')}}">Администрация института</a>            
             </div>
 
             <br><br>
@@ -62,7 +62,7 @@
                 @endforeach
             </div>
             <div class="col-sm-6">
-                <a class="btn btn-secondary btn-block" href="{{route('admin.articles.create')}}">Создать новость</a>
+                <a class="btn btn-secondary btn-block" href="{{route('admin.articles.index')}}">Создать новость</a>
                 @foreach($articles as $article)
                 <a class="list-group-item" href="{{route('admin.articles.edit', $article)}}">
                     <h4 class="list-group-item-heading">{{$article->title}}</h4>
