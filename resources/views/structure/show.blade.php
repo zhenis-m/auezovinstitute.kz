@@ -15,7 +15,8 @@
                         <img src="{{ $director ? asset('uploads/' . $director->image_show) : ""}}" alt="">
                     </div>
                     <div class="director__admin__text">
-                         <h1>{{ $director->title }}</h1>
+                        <h1>{{ $director->title }}</h1>
+                        <p class="aphtor">{!! $director->description_short !!}</p>
                            
                     </div>
                 </div>

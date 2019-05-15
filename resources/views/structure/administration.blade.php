@@ -20,7 +20,7 @@
 						<div class="structur__admins__men__name">
 							<div class="structur__admins__men__name__text">
 								<p>{{ $director->title }}</p>
-								<p class="aphtor">{!! $director->description !!}</p>
+								<p class="aphtor">{!! $director->description_short !!}</p>
 							</div>
 							<div class="structur__admins__men__name__button">
 									<a href="{{ route('structure.show', [ 'id' => $director->id ]) }}" class="button__men"><i class="fas fa-book-reader"></i>&nbsp;&nbsp;Узнать больше</a>
