@@ -12,6 +12,9 @@
                         <li>
                             <a href="{{ URL::to('/news') }}">Новости</a>
                         </li>
+                        <li>
+                            <a href="{{ URL::to('/books') }}">Книги</a>
+                        </li>
                          <li>
                              @foreach ($aboutses as $abouts)
                                 <li>
