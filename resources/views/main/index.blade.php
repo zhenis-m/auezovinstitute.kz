@@ -8,7 +8,7 @@
             <div class="headline">
                 <p class="bold">{{ trans('main.title') }}</p>
                 <p>Мухтар Ауэзов</p>
-                <a href="{{ URL::to('/main/history') }}">{{ trans('main.about_institute') }}</a>
+{{--                <a href="{{ URL::to('/main/history') }}">{{ trans('main.about_institute') }}</a>--}}
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
         <div class="education">
             <div class="education__haed">
                 <i class="fas fa-graduation-cap"></i>
-                <a href=""><p>&nbsp;&nbsp;{{ trans('main.education') }}</p></a>
+                <p>&nbsp;&nbsp;{{ trans('main.education') }}</p>
             </div>
             <div class="education__text">
                 <p>Мы предлагаем вам уникальную возможность получить академическую степень, сочетающую в себе научные традиции и современные стандарты образования, по специальностям Маоистратуры и Докторантуры PhD:</p>

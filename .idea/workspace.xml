@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20394049-a048-4266-855a-c5f0e1079604" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/departments.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/departments.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/newsShow.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/newsShow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/books/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/books/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/main/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,17 +22,7 @@
     <favorites_list name="auezovinstitute.kz" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/header.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -54,10 +49,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/lang/kk/main.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/lang/ru/search.php" />
-        <option value="$PROJECT_DIR$/resources/lang/kk/search.php" />
         <option value="$PROJECT_DIR$/resources/views/structure/administration.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/structure/director.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/structure/zamdirector.blade.php" />
@@ -92,7 +83,6 @@
         <option value="$PROJECT_DIR$/resources/views/departments/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/departments/partials/form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/departments/index.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/verify.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
@@ -105,6 +95,11 @@
         <option value="$PROJECT_DIR$/resources/views/admin/departments/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DepartmentsController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/main/index.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/books/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/css/newsShow.css" />
+        <option value="$PROJECT_DIR$/resources/css/departments.css" />
       </list>
     </option>
   </component>
@@ -195,10 +190,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="379" />
-    <option name="y" value="200" />
+    <option name="x" value="377" />
+    <option name="y" value="124" />
     <option name="width" value="1505" />
-    <option name="height" value="895" />
+    <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -219,6 +214,11 @@
             <path>
               <item name="auezovinstitute.kz" type="b2602c69:ProjectViewProjectNode" />
               <item name="auezovinstitute.kz" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auezovinstitute.kz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auezovinstitute.kz" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -226,13 +226,6 @@
               <item name="auezovinstitute.kz" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="auezovinstitute.kz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="auezovinstitute.kz" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -307,7 +300,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162286000" />
+    <option name="totallyTimeSpent" value="165886000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -319,14 +312,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="343" y="183" width="1505" height="825" extended-state="0" />
-    <editor active="true" />
+    <frame x="377" y="124" width="1505" height="825" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.8730703" visible="true" weight="0.23581682" />
       <window_info id="Structure" order="3" sideWeight="0.12692967" side_tool="true" weight="0.23308271" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4989224" visible="true" weight="0.29058662" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4989224" visible="true" weight="0.36425647" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010776" side_tool="true" weight="0.20123456" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -348,27 +340,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/books/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CultureController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-574">
-          <caret line="68" column="40" lean-forward="true" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
-          <folding>
-            <element signature="e#46#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/main/HeaderController.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/cultures/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/cultures/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -386,13 +357,6 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/header/HeaderController.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/news/show.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/main/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/main/show/ShowController.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/news/index.blade.php">
@@ -432,16 +396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
           <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/structure/AdministrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-          <folding>
-            <element signature="e#50#66#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -530,9 +484,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/departments/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -629,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/DepartmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1659">
@@ -667,10 +611,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/departments/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+        <state relative-caret-position="360">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/structure/AdministrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="e#50#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/main/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="10" column="100" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/books/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/departments.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="89" column="11" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/newsShow.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/abouts/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

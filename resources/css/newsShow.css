@@ -29,6 +29,12 @@
 
 .news__state__headline {
     width: 100%;
+    margin-bottom: 20px;
+}
+
+.news__state__headline h1{
+    text-align: center;
+    font-size: 2.25rem;
 }
 
 .news__state {
@@ -41,8 +47,19 @@
 .news__state__text {
     width: 100%;
 }
+
+.news__state__text p {
+    font-size: 1.2em;
+}
+
 .news__state__img {
     width: 45%;
+    margin-bottom: 20px;
+}
+
+.news__books__img {
+    width: 20%;
+    margin-bottom: 20px;
 }
 
 .news__state__img img{
@@ -52,4 +69,8 @@
 }
 .news__state__date {
     width: 100%;
+}
+
+.text_review p {
+    font-size: 1.2em;
 }
