@@ -88,6 +88,7 @@
 
 .pnew__state__date p {
 	margin: 0;
+	font-family: 'SF-Pro-Text-Regular';
 }
 
 .pnwes__blog__mini {
@@ -152,6 +153,10 @@
 
 .pnwes__page__block__text {
 	padding: 10px 20px;
+}
+
+.pnwes__page__block__text p{
+	font-family: 'SF-Pro-Text-Regular';
 }
 
 .pnwes__links {

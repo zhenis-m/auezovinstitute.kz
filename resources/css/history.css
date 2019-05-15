@@ -9,9 +9,11 @@
     font-weight: lighter;
 }
 
+.container_1 p, .container_1 h1 {
+    font-family: 'SF-Pro-Text-Regular';
+}
 
 .container_1{
-    font-family: 'SF-Pro-Text-Regular';
      max-width: 800px;
      margin: 0 auto;
      padding-bottom: 60px;

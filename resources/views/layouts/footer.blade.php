@@ -16,7 +16,7 @@
                 <div class="col-sm-2">
                     <ul>
                         <li><a href="{{ URL::to('/structure/administration') }}">Администрация</a></li>
-                        <li><a href="{{ URL::to('/departments/index') }}">Отделы</a></li>
+                        <li><a href="{{ route('departments.index') }}">Отделы</a></li>
                         <li><a href="{{ URL::to('/books') }}">Книги</a></li>
                     </ul>
                 </div>

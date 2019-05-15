@@ -1,7 +1,10 @@
 *{
 	margin: 0;
 	padding: 0;
-	font-family: 'SF-Pro-Text-Regular'; 
+}
+
+p, a, h1, h2, h3 {
+	font-family: 'SF-Pro-Text-Regular';
 }
 
 body {
@@ -287,6 +290,14 @@ body {
 
 .new__state__text {
 	padding: 10px 20px;
+}
+
+.new__state__text p{
+	font-family: 'SF-Pro-Text-Regular';
+}
+
+.new__state__date p{
+	font-family: 'SF-Pro-Text-Regular';
 }
 
 .new__state__date {
