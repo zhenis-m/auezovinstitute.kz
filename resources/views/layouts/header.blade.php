@@ -29,7 +29,8 @@
                             <a href="{{ URL::to('/structure/administration') }}">Административно–управленческий апарат</a>
                         </li>
                         <li>
-                            <a href="{{ URL::to('/departments/index') }}">Отделы института</a>
+                            <a href="{{ route('departments.index') }}">Отделы института</a>
+
                         </li>
                     </ul>
                 </li>

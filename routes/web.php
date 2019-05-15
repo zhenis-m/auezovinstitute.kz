@@ -59,6 +59,12 @@ Route::group([
         Route::get('/{id}', 'AboutController@show')->name('abouts.show');
     });
 
+
+    Route::group(['prefix'=>'departments', 'namespace'=>'departments'], function (){
+        Route::get('/', 'DepController@index')->name('departments.index');
+        Route::get('/{id}', 'DepController@show')->name('departments.show');
+    });
+
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category', 'CategoryController', ['as'=>'admin']);
@@ -76,6 +82,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/departments/index', 'DepartmentsController@index')->name('departments.index');
-Route::get('/departments/show', 'DepartmentsController@show')->name('departments.show');
+// Route::get('/departments/index', 'DepartmentsController@index')->name('departments.index');
+// Route::get('/departments/show', 'DepartmentsController@show')->name('departments.show');
 
