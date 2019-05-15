@@ -1,53 +1,55 @@
 <div class="header">
     <div class="header__nav">
-        <div class="logo">
-            <a href="{{ URL::to('/') }}"><img src="../../images/logo-litart.png"></a>
+        <div class="header__nav__logo">
+            <div class="logo">
+                <a href="{{ URL::to('/') }}"><img src="../../images/logo-litart.png"></a>
 
-        </div>
-        <div class="nav">
-            <ul class="menu">
-                <li class="menu-item">
-                    <a href="#">Институт &#9662;</a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="{{ URL::to('/news') }}">Новости</a>
-                        </li>
-                        <li>
-                            <a href="{{ URL::to('/books') }}">Книги</a>
-                        </li>
-                         <li>
-                             @foreach ($aboutses as $abouts)
+            </div>
+            <div class="nav">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#">Институт &#9662;</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{{ URL::to('/news') }}">Новости</a>
+                            </li>
+                            <li>
+                                <a href="{{ URL::to('/books') }}">Книги</a>
+                            </li>
+                            <li>
+                            @foreach ($aboutses as $abouts)
                                 <li>
-                                   <a href="{{ route('abouts.show', [ 'id' => $abouts->id ]) }}">{{ $abouts->title }}</a>
-                                </li>                             
-                             @endforeach
-                        </li>
-                    </ul>
-                        </li>
-                                 
-                <li class="menu-item">
-                    <a href="#">Структура &#9662;</a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="{{ URL::to('/structure/administration') }}">Административно–управленческий апарат</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('departments.index') }}">Отделы института</a>
+                                    <a href="{{ route('abouts.show', [ 'id' => $abouts->id ]) }}">{{ $abouts->title }}</a>
+                                </li>
+                                @endforeach
+                                </li>
+                        </ul>
+                    </li>
 
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    <a href="#">Культурное наследие &#9662;</a>
-                    <ul class="sub-menu">
+                    <li class="menu-item">
+                        <a href="#">Структура &#9662;</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{{ URL::to('/structure/administration') }}">Административно–управленческий апарат</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('departments.index') }}">Отделы института</a>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Культурное наследие &#9662;</a>
+                        <ul class="sub-menu">
                             @foreach ($cultures as $cultur)
                                 <li>
                                     <a href="{{ route('main.show', [ 'id' => $cultur->id ]) }}">{{ $cultur->title }}</a>
                                 </li>
                             @endforeach
-                    </ul>
-                </li>
-            </ul>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="search search_clearfix">
             <form action="{{ URL::to('search') }}" method="GET" class="searchform">
