@@ -14,9 +14,9 @@ class AdministrationController extends Controller
     public function administration()
     {
 
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
-        $directors = Director::orderBy('id', 'desc')->where('published', 1)->paginate(12);
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
+        $directors = Director::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         return view('structure.administration', [
             'directors' => $directors,
             'aboutses' => $aboutses,
@@ -25,9 +25,9 @@ class AdministrationController extends Controller
     }
     public function director($id)
     {
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
-        $director = Director::where('id', $id)->first();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
+        $director = Director::where('id', $id)->where('locale', \App::getLocale())->first();
         return view('structure.director', [
             'director' => $director,
             'aboutses' => $aboutses,
@@ -36,8 +36,8 @@ class AdministrationController extends Controller
     }
     public function zamdirector()
     {
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('structure.zamdirector', [
             'director' => $director,
             'aboutses' => $aboutses,
@@ -46,8 +46,8 @@ class AdministrationController extends Controller
     }
     public function zamdirector2()
     {
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('structure.zamdirector2', [
             'aboutses' => $aboutses,
             'cultures' => $cultures,
@@ -58,9 +58,9 @@ class AdministrationController extends Controller
      public function index()
     {
        // $newses = Article::orderBy('id', 'desc')->where('locale', app()->getLocale())->where('published', 1)->paginate(12);
-        $directors = Director::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $directors = Director::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('structure.index', [
             'directors' => $directors,
             'aboutses' => $aboutses,
@@ -73,8 +73,8 @@ class AdministrationController extends Controller
     public function show($id)
     {
         $director = Director::where('id', $id)->first();
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('structure.show', [
             'director' => $director,
             'aboutses' => $aboutses,

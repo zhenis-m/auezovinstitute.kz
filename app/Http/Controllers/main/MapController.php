@@ -11,8 +11,8 @@ class MapController extends Controller
 {
     public function map()
     {
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('main.map', [
             'aboutses' => $aboutses,
             'cultures' => $cultures
@@ -24,8 +24,8 @@ class MapController extends Controller
     public function show($id)
     {
         $cultur = Culture::where('id', $id)->first();
-        $cultures = Culture::orderBy('id', 'desc')->get();
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         return view('culture.show', [
             'cultur' => $cultur,
             'cultures' => $cultures,

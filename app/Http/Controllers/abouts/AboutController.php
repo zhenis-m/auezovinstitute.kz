@@ -12,8 +12,8 @@ class AboutController extends Controller
     public function index()
     {
        // $newses = Article::orderBy('id', 'desc')->where('locale', app()->getLocale())->where('published', 1)->paginate(12);
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('abouts.index', [
             'aboutses' => $aboutses,
             'cultures' => $cultures,
@@ -25,8 +25,8 @@ class AboutController extends Controller
     public function show($id)
     {
         $about = Inst::where('id', $id)->first();
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('abouts.show', [
             'about' => $about,
             'aboutses' => $aboutses,

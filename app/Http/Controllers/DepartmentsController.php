@@ -9,9 +9,9 @@ class DepartmentsController extends Controller
 {
     public function index()
     {
-        $departs = Departments::all();
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $departs = Departments::all()->where('locale', \App::getLocale());
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('locale', \App::getLocale())->get();
         return view('departments.index', [
             'departs' => $departs,
             'aboutses' => $aboutses,
@@ -24,8 +24,8 @@ class DepartmentsController extends Controller
     public function show($id)
     {
         $depart = Departments::where('id', $id)->first();
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('departments.index', [
             'depart' => $depart,
             'aboutses' => $aboutses,

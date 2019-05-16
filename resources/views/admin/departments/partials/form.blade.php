@@ -13,6 +13,14 @@
 <label for="">Заголовок</label>
 <input type="text" class="form-control" name="title" placeholder="Заголовок новости" value="{{$department->title ?? ""}}" required><br>
 
+<label for="">Выбрать язык поста</label>
+<select name="locale" class="form-control" required>
+                 <option value="">Выбрать</option>
+                 <option value="ru" {{$department->locale ?? ""}}>ru</option>
+                 <option value="kk" {{ $department->locale ?? ""}}>kk</option>                                                         
+              </select>  
+              <br>
+
 <label for="">Slug (Уникальное значение)</label>
 <input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$department->slug ?? ""}}" readonly=""><br>
 
