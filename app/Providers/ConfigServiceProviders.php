@@ -15,13 +15,15 @@ class ConfigServiceProviders extends ServiceProvider
     {
         config([
             'laravellocalization.supportedLocales' => [
-                'kk'  => array( 'name' => 'kk', 'script' => 'Cyrl', 'native' => 'kk' ),
-                'ru'  => array( 'name' => 'ru', 'script' => 'Cyrl', 'native' => 'ru' ),
+                'kk'  => array( 'name' => 'kk', 'name2' => 'Казахский', 'script' => 'Cyrl', 'native' => 'kk' ),
+                'ru'  => array( 'name' => 'ru', 'name2' => 'Русский', 'script' => 'Cyrl', 'native' => 'ru' ),
             ],
         
             'laravellocalization.useAcceptLanguageHeader' => true,
         
             'laravellocalization.hideDefaultLocaleInURL' => false
+
+
         ]);
     }
 }
