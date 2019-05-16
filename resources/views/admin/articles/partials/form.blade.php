@@ -9,9 +9,17 @@
         <option value="1">Опубликовано</option>
     @endif
 </select>
-
+<br>
 <label for="">Заголовок</label>
 <input type="text" class="form-control" name="title" placeholder="Заголовок новости" value="{{$article->title ?? ""}}" required><br>
+
+<label for="">Выбрать язык поста</label>
+<select name="locale" class="form-control" required>
+                 <option value="">Выбрать</option>
+                 <option value="ru" {{$article->locale ?? ""}}>ru</option>
+                 <option value="kk" {{ $article->locale ?? ""}}>kk</option>                                                         
+              </select>  
+              <br>
 
 <label for="">Slug (Уникальное значение)</label>
 <input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$article->slug ?? ""}}" readonly=""><br>

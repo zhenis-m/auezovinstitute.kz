@@ -220,7 +220,6 @@ body {
 .banner {
 	background-color: #F9F9F9;
 	z-index: 1;
-	margin-top: 60px;
 }
 
 .banner__img {
@@ -570,4 +569,8 @@ body {
 .magazine_social{
     padding-top: 0;
     padding-top: 60px;
+}
+
+.py-4 {
+	margin-top: 60px;
 }
