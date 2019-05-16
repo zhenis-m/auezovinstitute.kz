@@ -12,10 +12,10 @@ class SearchController extends Controller
     public function search(Request $request)
     {
         $query = strval($request->search);
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('locale', \App::getLocale())->get();
       
-        $article = Article::where('title', 'LIKE', '%' . $query . '%')->get();
+        $article = Article::where('title', 'LIKE', '%' . $query . '%')->where('locale', \App::getLocale())->get();
         
       return  view('search', [
           'newses' => $article,

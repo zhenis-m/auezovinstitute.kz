@@ -14,9 +14,9 @@ class DepController extends Controller
     public function index()
     {
        // $newses = Article::orderBy('id', 'desc')->where('locale', app()->getLocale())->where('published', 1)->paginate(12);
-        $departs = Departments::all();
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $departs = Departments::all()->where('locale', \App::getLocale());
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('departments.index', [
             'departs' => $departs,
             'aboutses' => $aboutses,
@@ -29,8 +29,8 @@ class DepController extends Controller
     public function show($id)
     {
         $depart = Departments::where('id', $id)->first();
-        $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
-        $cultures = Culture::orderBy('id', 'desc')->get();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         $departs = Departments::all();
         return view('departments.show', [
             'depart' => $depart,

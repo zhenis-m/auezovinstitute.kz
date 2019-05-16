@@ -46,7 +46,6 @@ Route::group([
         Route::get('/', 'BooksController@index')->name('books.index');
         Route::get('/{id}', 'BooksController@show')->name('books.show');
     });
-});
 
 
     Route::group(['prefix'=>'abouts', 'namespace'=>'abouts'], function (){
@@ -65,6 +64,10 @@ Route::group([
         Route::get('/{id}', 'DirController@show')->name('structure.show');
     });
 
+});
+
+
+    
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category', 'CategoryController', ['as'=>'admin']);
