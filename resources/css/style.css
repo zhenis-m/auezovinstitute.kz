@@ -120,6 +120,46 @@ body {
 }
 /*-------------- menu style end -----------------*/
 
+/*-------------- header__lang style begin -----------------*/
+
+.header__lang {
+	display: flex;
+	margin-right: 20px;
+}
+
+.header__lang li {
+	/*width: 35px;*/
+	/*height: 35px;*/
+	/*background: #d3d9df;*/
+	/*border-radius: 50%;*/
+	/*display:flex;*/
+	/*justify-content: center;*/
+	/*align-items: center;*/
+	margin-left: 4px;
+}
+
+.header__lang li a {
+	color: #fff;
+	width: 35px;
+	height: 35px;
+	background: #d3d9df;
+	border-radius: 50%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__lang li a:hover {
+	text-decoration: none;
+	background: #98a6b3;
+}
+
+.header__lang li a:active {
+	background: #98a6b3;
+}
+
+/*-------------- header__lang style end -----------------*/
+
 /*-------------- serch style begin -----------------*/
 
 .search_clearfix:after {

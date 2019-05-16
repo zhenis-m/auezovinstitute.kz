@@ -19,7 +19,7 @@
                             <li>
                             @foreach ($aboutses as $abouts)
                                 <li>
-                                    <a href="{{ route('abouts.show', [ 'id' => $abouts->id ]) }}">{{ $abouts->title }}</a>
+                                    <a href="{{ route('abouts.show', [ 'id' => $abouts->id ]) }}" onclick="">{{ $abouts->title }}</a>
                                 </li>
                                 @endforeach
                                 </li>
@@ -50,6 +50,15 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="header__lang">
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                <li>
+                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        {{ $properties['name'] }}
+                    </a>
+                </li>
+            @endforeach
         </div>
         <div class="search search_clearfix">
             <form action="{{ URL::to('search') }}" method="GET" class="searchform">
@@ -89,4 +98,5 @@
             return false;
         }
     }
+
 </script>
