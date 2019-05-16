@@ -29,11 +29,12 @@
                                 </div>
                                 <div class="new__mini-blog">
                                     <div class="new__state">
+{{--                                        <div class="new__state__text">--}}
+{{--                                            <p>{{ $newsValue->title }}</p>--}}
+{{--                                        </div>--}}
                                         <div class="new__state__text">
-                                            <p>{{ $newsValue->title }}</p>
-                                        </div>
-                                        <div class="new__state__text">
-                                            <p>{!! $newsValue->description_short !!}<a href="{{ route('news.show', [ 'id' => $newsValue->id ]) }}">Читать дальше</a></p>
+                                            <p>{!! $newsValue->description_short !!}</p>
+                                            <a href="{{ route('news.show', [ 'id' => $newsValue->id ]) }}">Читать дальше</a>
                                         </div>
                                     </div>
                                     <div class="new__state__date">

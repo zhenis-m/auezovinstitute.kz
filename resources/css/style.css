@@ -337,13 +337,32 @@ body {
 
 .new__state__text {
 	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start
 }
 
-.new__state__text p{
+.new__state__text p {
 	font-family: 'SF-Pro-Text-Regular';
 }
 
-.new__state__date p{
+.new__state__text a {
+	display: block;
+	background-color: #537AF9;
+	color: #fff;
+	text-decoration: none;
+	margin-top: 10px;
+	padding: 5px 20px;
+	border-radius: 3px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.new__state__text a:hover {
+	text-decoration: none;
+}
+
+.new__state__date p {
 	font-family: 'SF-Pro-Text-Regular';
 }
 

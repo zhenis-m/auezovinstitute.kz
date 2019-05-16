@@ -11,8 +11,8 @@
             @foreach ($departs as $depart)
             <div class="pnwes__page__block">
                 <div class="pnwes__page__block__wrap">
-                    <div class="pnwes__page__block__text">
-                        <p><a href="{{ route('departments.show', [ 'id' => $depart->id ]) }}">{{ $depart->title }}</p> </a>
+                    <div class="pnwes__page__block__title">
+                        <a href="{{ route('departments.show', [ 'id' => $depart->id ]) }}">{{ $depart->title }}</a>
                         <p>{!! $depart->description_short !!}</p>
                     </div>
                 </div>
