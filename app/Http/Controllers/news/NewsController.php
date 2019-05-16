@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\news;
 use App\Article;
 use App\Culture;
@@ -11,8 +10,9 @@ class NewsController extends Controller
 {
     public function index()
     {
+
        // $newses = Article::orderBy('id', 'desc')->where('locale', app()->getLocale())->where('published', 1)->paginate(12);
-        $newses = Article::orderBy('id', 'desc')->where('published', 1)->paginate(12);
+        $newses = Article::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->get();
         return view('news.index', [
