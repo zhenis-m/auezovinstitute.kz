@@ -192,20 +192,6 @@ body{
     margin-left: 4px;
 }
 
-.btn-group .dropdown-menu {
-    background-color: #fdfdfe;
-}
-
-.dropdown-menu li a {
-    margin-left: 10px;
-    color: #999 !important;
-    font-size: 1.4em;
-}
-
-.dropdown-menu li a:hover {
-    color: #1b4b72 !important;
-}
-
 .col-sm-2{
     width: 30%;
 }

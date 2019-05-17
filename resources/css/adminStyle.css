@@ -111,3 +111,16 @@
 /*-------------- nwes style end -----------------*/
 
 
+/*-------------- admin-panel style begin -----------------*/
+.admin__panel {
+
+}
+
+.admin__panel li a {
+	font-size: 1em !important;
+	margin-left: 0 !important;
+	color: #000 !important;
+}
+
+
+/*-------------- admin-panel style end -----------------*/

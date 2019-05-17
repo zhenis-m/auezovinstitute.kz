@@ -9,7 +9,7 @@
                 <ul class="menu">
                     <li class="menu-item">
                         <a href="#">Институт &#9662;</a>
-                        <ul class="sub-menu">
+                        <ul class="sub-menu sub-menu-mod">
                             <li>
                                 <a href="{{ URL::to('/news') }}">Новости</a>
                             </li>
@@ -28,7 +28,7 @@
 
                     <li class="menu-item">
                         <a href="#">Структура &#9662;</a>
-                        <ul class="sub-menu">
+                        <ul class="sub-menu sub-menu2-mod">
                             <li>
                                 <a href="{{ URL::to('/structure/administration') }}">Административно–управленческий апарат</a>
                             </li>
@@ -51,14 +51,28 @@
                 </ul>
             </div>
         </div>
-        <div class="header__lang">
-            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                <li>
-                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                        {{ $properties['name'] }}
-                    </a>
-                </li>
-            @endforeach
+{{--        <div class="header__lang">--}}
+{{--            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)--}}
+{{--                <li>--}}
+{{--                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">--}}
+{{--                        {{ $properties['name'] }}--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+        <div class="btn-group" id="lang-btn">
+            <button type="button" data-toggle="dropdown" id="header__local" class="btn btn-info dropdown-toggle">{{ trans('main.language') }}
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                    <li>
+                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                            {{ $properties['name2'] }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
         </div>
         <div class="search search_clearfix">
             <form action="{{ URL::to('search') }}" method="GET" class="searchform">

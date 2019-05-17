@@ -173,7 +173,7 @@
 
 .pnwes__page__block__text a {
 	display: block;
-	background-color: #537AF9;
+	background-color: #227dc7;
 	color: #fff;
 	text-decoration: none;
 	margin-top: 10px;
@@ -185,6 +185,7 @@
 
 .pnwes__page__block__text a:hover {
 	text-decoration: none;
+	color: #000;
 }
 
 .pnwes__page__block__text p{

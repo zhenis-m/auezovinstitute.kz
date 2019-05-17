@@ -64,7 +64,11 @@ body {
 	transition: all 0.5s ease-in;
 }
 .menu-item {
-	margin-right: 50px;
+	margin-right: 80px;
+}
+
+.menu-item:last-child {
+	margin-right: 0;
 }
 
 .menu-item a{
@@ -75,6 +79,7 @@ body {
 .menu {
 	display: flex;
 	padding: 0;
+	margin-bottom: 0;
 }
 
 .menu li {
@@ -95,7 +100,7 @@ body {
 
 .sub-menu {
 	position: absolute;
-	left: 20px;
+	left: 0px;
 	width: 100%;
 	z-index: 2;
 
@@ -107,12 +112,42 @@ body {
 }*/
 
 .sub-menu li {
-	background-color: #e6e6e6;
+	background-color: #e9ecef;
 	width: 225px;
 }
 
+.sub-menu li:first-child {
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+
+.sub-menu li:last-child {
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	border-bottom: none;
+}
+
+.menu .menu-item .sub-menu:first-child li{
+	width: 160px;
+}
+
 .sub-menu li:hover {
-	background-color: #dddddd;
+	background-color: #227dc7;
+	transition: all 0.5s ease-in;
+}
+
+.sub-menu li:hover a {
+	color: #fff;
+}
+
+.sub-menu-mod li {
+	width: 180px;
+}
+
+.sub-menu2-mod li {
+	width: 200px;
 }
 
 .sub-menu li a {
@@ -156,6 +191,34 @@ body {
 
 .header__lang li a:active {
 	background: #98a6b3;
+}
+
+#lang-btn {
+	margin-right: 20px;
+}
+
+#lang-btn button {
+	background-color: #227dc7;
+	color: #fff;
+}
+
+#lang-btn button:hover {
+	color: #999;
+}
+
+.btn-group .dropdown-menu {
+	background-color: #fdfdfe;
+	transform: translate3d(-10px, 40px, 0px) !important;
+}
+
+.dropdown-menu li a {
+	margin-left: 30px;
+	color: #999;
+	font-size: 1.2em;
+}
+
+.dropdown-menu li a:hover {
+	color: #1b4b72 !important;
 }
 
 /*-------------- header__lang style end -----------------*/
@@ -348,7 +411,7 @@ body {
 
 .new__state__text a {
 	display: block;
-	background-color: #537AF9;
+	background-color: #227dc7;
 	color: #fff;
 	text-decoration: none;
 	margin-top: 10px;
@@ -360,6 +423,7 @@ body {
 
 .new__state__text a:hover {
 	text-decoration: none;
+	color: #000;
 }
 
 .new__state__date p {
@@ -568,7 +632,7 @@ body {
 }
 
 .books__text a {
-	background-color: #537AF9;
+	background-color: #227dc7;
 	color: #fff;
 	text-decoration: none;
 	padding: 10px 20px;
@@ -580,6 +644,7 @@ body {
 
 .books__text a:hover {
 	text-decoration: none;
+	color: #000;
 }
 /*-------------- Books style end -----------------*/
 
