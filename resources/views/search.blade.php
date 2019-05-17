@@ -9,7 +9,8 @@
                     <div class="pnwes__page__block__wrap">
                         <a href="{{ route('news.show', [ 'id' => $news->id ]) }}"><img src="{{ $news ? asset('uploads/' . $news->image_show) : ""}}"></a>
                         <div class="pnwes__page__block__text">
-                            <p>{{ $news->title }}<a href="{{ route('news.show', [ 'id' => $news->id ]) }}">Читать дальше</a></p>
+                            <p>{{ $news->title }}</p>
+                            <a href="{{ route('news.show', [ 'id' => $news->id ]) }}">Читать дальше</a>
                         </div>
                     </div>
                     <div class="pnew__state__date">

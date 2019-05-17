@@ -47,7 +47,6 @@ Route::group([
         Route::get('/{id}', 'BooksController@show')->name('books.show');
     });
 
-
     Route::group(['prefix'=>'abouts', 'namespace'=>'abouts'], function (){
         Route::get('/', 'AboutController@index')->name('abouts.index');
         Route::get('/{id}', 'AboutController@show')->name('abouts.show');
@@ -63,9 +62,7 @@ Route::group([
         Route::get('/administration', 'AdministrationController@administration');
         Route::get('/{id}', 'DirController@show')->name('structure.show');
     });
-
 });
-
 
     
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function (){
@@ -85,7 +82,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-// Route::get('/departments/index', 'DepartmentsController@index')->name('departments.index');
-// Route::get('/departments/show', 'DepartmentsController@show')->name('departments.show');
 

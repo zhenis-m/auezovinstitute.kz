@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="shortcut icon" href="../../images/footer-logo.png" type="image/png">
+    <link rel="shortcut icon" href="../../images/auezov.png" type="image/png" style="height: 180%">
 {{--    <title>{{ config('app.name', 'Laravel') }}</title>--}}
     <title>Институт им. М. Ауэзова</title>
 
