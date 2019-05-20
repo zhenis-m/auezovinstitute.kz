@@ -25,6 +25,15 @@
             </div>
         </div>
 
+
+        <div class="row">
+            <div class="col-sm-12">
+                <a class="btn btn-secondary btn-block" href="{{route('admin.banners.index')}}">Баннер</a>            
+            </div>
+        </div>
+
+        <br>
+
         <div class="row">
             <div class="col-sm-6">
                 <a class="btn btn-secondary btn-block" href="{{route('admin.insts.index')}}">Институт</a>            

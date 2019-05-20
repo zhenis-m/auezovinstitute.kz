@@ -12,23 +12,17 @@
 </head>
 
 <body>
-<div class="main-slider">
-	<div class="t-slide current-t-slide">
-			<img src="https://picsum.photos/1800/900?image=868" alt="" />
-		</div>
-		<div class="t-slide">
-			<img src="https://picsum.photos/1800/900?image=838" alt="" />
-		</div>
-		<div class="t-slide">
-			<img src="https://picsum.photos/1800/900?image=841" alt="" />
-		</div>
-		<div class="t-slide">
-			<img src="https://picsum.photos/1800/900?image=839" alt="" />
-		</div>
-        <div class="t-slide">
-			<img src="https://picsum.photos/1800/900?image=821" alt="" />
-		</div>
-
+<div class="main-slider">		
+		@foreach ($banners as $banner)
+   					   <div class="t-slide current-t-slide">
+   					   	
+					      <img src="{{ $banner ? asset('uploads/' . $banner->image_show) : ""}}">
+					      <div class=" banner__img__text">
+					        <h1>{!! $banner->description !!}</h1>
+					        <p>{!! $banner->description_short !!}</p>
+					      </div>
+					   </div>
+			@endforeach	
 	<div class="t-slider-controls">
 		<div class="arrow right-arrow">
 			<div class="arrow-container">
@@ -46,7 +40,6 @@
 		<div class="t-dots-container">
 			<div class="t-slide-dots-wrap">
 				<div class="t-slide-dots">
-
 				</div>
 			</div>
 		</div>
