@@ -11,10 +11,10 @@
                         <a href="#">Институт &#9662;</a>
                         <ul class="sub-menu sub-menu-mod">
                             <li>
-                                <a href="{{ URL::to('/news') }}">Новости</a>
+                                <a href="{{ URL::to('/news') }}">{{ trans('header.news') }}</a>
                             </li>
                             <li>
-                                <a href="{{ URL::to('/books') }}">Книги</a>
+                                <a href="{{ URL::to('/books') }}">{{ trans('header.books') }}</a>
                             </li>
                             <li>
                             @foreach ($aboutses as $abouts)
@@ -30,16 +30,16 @@
                         <a href="#">Структура &#9662;</a>
                         <ul class="sub-menu sub-menu2-mod">
                             <li>
-                                <a href="{{ URL::to('/structure/administration') }}">Административно–управленческий апарат</a>
+                                <a href="{{ URL::to('/structure/administration') }}">{{ trans('header.admins') }}</a>
                             </li>
                             <li>
-                                <a href="{{ route('departments.index') }}">Отделы института</a>
+                                <a href="{{ route('departments.index') }}">{{ trans('header.departmens') }}</a>
 
                             </li>
                         </ul>
                     </li>
                     <li class="menu-item">
-                        <a href="#">Культурное наследие &#9662;</a>
+                        <a href="#">{{ trans('header.culture') }} &#9662;</a>
                         <ul class="sub-menu">
                             @foreach ($cultures as $cultur)
                                 <li>
@@ -76,7 +76,7 @@
 {{--        </div>--}}
 
         <div class="header__local">
-            <a href="#box" onclick="openbox('box'); return false">{{ trans('main.language') }}</a>
+            <a href="#box" onclick="openbox('box'); return false">{{ trans('header.language') }}</a>
             <div id="box" class="header__local__item" style="display: none">
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                     <li>

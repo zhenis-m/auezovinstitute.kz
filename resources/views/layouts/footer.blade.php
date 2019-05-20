@@ -15,15 +15,15 @@
             <div class="row-right">
                 <div class="col-sm-3 col-sm-3-mod">
                     <ul>
-                        <li><a href="{{ URL::to('/structure/administration') }}">Администрация</a></li>
-                        <li><a href="{{ route('departments.index') }}">Отделы</a></li>
-                        <li><a href="{{ URL::to('/books') }}">Книги</a></li>
+                        <li><a href="{{ URL::to('/structure/administration') }}">{{ trans('footer.admins') }}</a></li>
+                        <li><a href="{{ route('departments.index') }}">{{ trans('footer.departmens') }}</a></li>
+                        <li><a href="{{ URL::to('/books') }}">{{ trans('footer.books') }}</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3 col-sm-3-mod">
                     <ul>
-                        <li><a href="{{ URL::to('/news') }}">Новости</a></li>
-                        <li><a href="{{ URL::to('/main/map') }}">Контакты</a></li>
+                        <li><a href="{{ URL::to('/news') }}">{{ trans('footer.news') }}</a></li>
+                        <li><a href="{{ URL::to('/main/map') }}">{{ trans('footer.contacts') }}</a></li>
                     </ul>
                 </div>
 {{--                <div class="col-sm-2">--}}
