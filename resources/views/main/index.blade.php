@@ -3,21 +3,17 @@
 @section('content')
 
     <div class="banner">
-        <div class="banner__img">
+       <!--  <div class="banner__img">
             <img src="../../images/banner.png">
             <div class="headline">
                 <p class="bold">{{ trans('main.title') }}</p>
                 <p>Мухтар Ауэзов</p>
             </div>
-        </div>
-{{--        <ul class="bxslider">--}}
-{{--            <li><img src="../../images/book1.jpg"></li>--}}
-{{--            <li><img src="../../images/book2.jpg"></li>--}}
-{{--            <li><img src="../../images/book3.jpg"></li>--}}
-{{--            <li><img src="../../images/book2.jpg"></li>--}}
-{{--        </ul>--}}
-    </div>
+        </div> -->
+         @include('layouts.banner')
+<!--     </div> -->
     <div>
+        
         <div class="nwes">
             <div class="nwes__state">
                 <a href="{{ URL::to('/news') }}"><p><i class="fas fa-newspaper"></i>&nbsp;&nbsp;{{ trans('main.news') }}</p></a>
