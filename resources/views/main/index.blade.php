@@ -13,7 +13,6 @@
          @include('layouts.banner')
 <!--     </div> -->
     <div>
-        
         <div class="nwes">
             <div class="nwes__state">
                 <a href="{{ URL::to('/news') }}"><p><i class="fas fa-newspaper"></i>&nbsp;&nbsp;{{ trans('main.news') }}</p></a>

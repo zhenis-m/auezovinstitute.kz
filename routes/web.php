@@ -74,6 +74,7 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], 
     Route::resource('/insts', 'InstController', ['as'=>'admin']);
     Route::resource('/departments', 'DepartmentsController', ['as'=>'admin']);
     Route::resource('/directors', 'DirectorController', ['as'=>'admin']);
+    Route::resource('/banners', 'BannerController', ['as'=>'admin']);
 });
 
 
