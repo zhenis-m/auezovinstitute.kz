@@ -60,11 +60,24 @@
 {{--                </li>--}}
 {{--            @endforeach--}}
 {{--        </div>--}}
-        <div class="btn-group" id="lang-btn">
-            <button type="button" data-toggle="dropdown" id="header__local" class="btn btn-info dropdown-toggle">{{ trans('main.language') }}
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
+{{--        <div class="btn-group" id="lang-btn">--}}
+{{--            <button type="button" data-toggle="dropdown" id="header__local" >{{ trans('main.language') }}--}}
+{{--                <span class="caret"></span>--}}
+{{--            </button>--}}
+{{--            <ul class="dropdown-menu">--}}
+{{--                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)--}}
+{{--                    <li>--}}
+{{--                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">--}}
+{{--                            {{ $properties['name2'] }}--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                @endforeach--}}
+{{--            </ul>--}}
+{{--        </div>--}}
+
+        <div class="header__local">
+            <a href="#box" onclick="openbox('box'); return false">{{ trans('main.language') }}</a>
+            <div id="box" class="header__local__item" style="display: none">
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                     <li>
                         <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
@@ -72,7 +85,7 @@
                         </a>
                     </li>
                 @endforeach
-            </ul>
+            </div>
         </div>
         <div class="search search_clearfix">
             <form action="{{ URL::to('search') }}" method="GET" class="searchform">
@@ -112,5 +125,22 @@
             return false;
         }
     }
+
+    function openbox(box) {
+        var display = document.getElementById('box').style.display;
+        if (display == "none") {
+            document.getElementById('box').style.display = "block";
+        } else {
+            document.getElementById('box').style.display = "none";
+        }
+    }
+
+    // function closebox(box) {
+    //     var display = document.getElementById('.container').style.display;
+    //     if (display == "block") {
+    //         document.getElementById('box').style.display = "none";
+    //     }
+    // }
+
 
 </script>

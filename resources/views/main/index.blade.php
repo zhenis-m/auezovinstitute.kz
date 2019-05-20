@@ -8,11 +8,15 @@
             <div class="headline">
                 <p class="bold">{{ trans('main.title') }}</p>
                 <p>Мухтар Ауэзов</p>
-{{--                <a href="{{ URL::to('/main/history') }}">{{ trans('main.about_institute') }}</a>--}}
             </div>
         </div>
+{{--        <ul class="bxslider">--}}
+{{--            <li><img src="../../images/book1.jpg"></li>--}}
+{{--            <li><img src="../../images/book2.jpg"></li>--}}
+{{--            <li><img src="../../images/book3.jpg"></li>--}}
+{{--            <li><img src="../../images/book2.jpg"></li>--}}
+{{--        </ul>--}}
     </div>
-
     <div>
         <div class="nwes">
             <div class="nwes__state">

@@ -134,7 +134,7 @@
 }
 .pnwes__page__block {
 	width: 30%;
-	height: auto;
+	height: 400px;
 	margin: 20px 20px;
 	border: 1px solid #bfc8cf; 
 	border-radius: 5px;
@@ -144,9 +144,15 @@
 	justify-content: space-between;
 }
 .pnwes__page__block__wrap {
-
+	height: 90%;
 }
-.pnwes__page__block__wrap img {
+
+.pnwes__page__block__wrap__img {
+	height: 60%;
+	overflow: hidden;
+}
+
+.pnwes__page__block__wrap__img img {
 	width: 100%;
 	height: auto;
 }
@@ -190,6 +196,7 @@
 
 .pnwes__page__block__text p{
 	font-family: 'SF-Pro-Text-Regular';
+	margin-bottom: 0;
 }
 
 .pnwes__links {
