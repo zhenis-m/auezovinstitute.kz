@@ -12,7 +12,7 @@ class MainController extends Controller
     public function index()
     {
         // dd(app()->getLocale());
-        $news = Article::orderBy('id', 'desc')->where('locale', \App::getLocale())->take(4)->get();
+        $news = Article::orderBy('id', 'desc')->where('locale', \App::getLocale())->take(3)->get();
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('main.index', [
