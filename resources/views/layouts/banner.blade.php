@@ -18,7 +18,7 @@
    					   	
 					      <img src="{{ $banner ? asset('uploads/' . $banner->image_show) : ""}}">
 					      <div class=" banner__img__text">
-					        <h1>{!! $banner->description !!}</h1>
+					        <H1>{!! $banner->description !!}</H1>
 					        <p>{!! $banner->description_short !!}</p>
 					      </div>
 					   </div>
