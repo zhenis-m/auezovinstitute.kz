@@ -45,6 +45,7 @@
                         <a href="#" class="nav-link " data-toggle="dropdown"
                         role="button" aria-expanded="false">Меню</a>
                         <ul class="dropdown-menu admin__panel" role="menu">
+                            <li><a class="dropdown-item" href="{{route('admin.banners.index')}}">Баннер</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.books.index')}}">Книги</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.articles.index')}}">Новости</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.insts.index')}}">Институт</a></li>
