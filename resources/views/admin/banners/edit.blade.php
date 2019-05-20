@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        @component('admin.banners.breadcrumb')
+        @component('admin.components.breadcrumb')
             @slot('title') Редактирование баннера @endslot
             @slot('parent') Главная @endslot
             @slot('active') &nbsp;/ баннер @endslot
