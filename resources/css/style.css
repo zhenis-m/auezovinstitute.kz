@@ -218,7 +218,7 @@ body {
 
 .btn-group .dropdown-menu {
 	background-color: #fdfdfe;
-	transform: translate3d(-1px, 45px, 0px) !important;
+	transform: translate3d(-5px, 55px, 0px) !important;
 }
 
 .dropdown-menu li a {
@@ -593,12 +593,17 @@ body {
 	width: 80%;
 	margin-top: 30px;
 }
+
+.education__text p {
+	font-size: 1em;
+}
+
 .education__icons{
 	display: flex;
 	width: 90%;
 }
 .education__icons p{
-	font-size: 12px;
+	font-size: 1em;
 }
 .education__icons__blog {
 	width: 30%;
@@ -612,6 +617,9 @@ body {
 .eicon {
 	width: 30%;
 	margin-right: 20px; 
+}
+.eicon img {
+	width: 100%;
 }
 .etext {
 	width: 70%;
@@ -718,5 +726,5 @@ body {
 }
 
 .py-4 {
-	margin-top: 60px;
+	margin-top: 45px;
 }

@@ -135,12 +135,9 @@
         }
     }
 
-    // function closebox(box) {
-    //     var display = document.getElementById('.container').style.display;
-    //     if (display == "block") {
-    //         document.getElementById('box').style.display = "none";
-    //     }
-    // }
+    window.onscroll = function() {
+        document.getElementById('box').style.display = "none";
+    }
 
 
 </script>

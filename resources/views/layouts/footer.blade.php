@@ -13,14 +13,14 @@
 {{--                <img src="../../images/footer-logo.png" alt="">--}}
 {{--            </div>--}}
             <div class="row-right">
-                <div class="col-sm-2">
+                <div class="col-sm-3 col-sm-3-mod">
                     <ul>
                         <li><a href="{{ URL::to('/structure/administration') }}">Администрация</a></li>
                         <li><a href="{{ route('departments.index') }}">Отделы</a></li>
                         <li><a href="{{ URL::to('/books') }}">Книги</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3 col-sm-3-mod">
                     <ul>
                         <li><a href="{{ URL::to('/news') }}">Новости</a></li>
                         <li><a href="{{ URL::to('/main/map') }}">Контакты</a></li>
@@ -31,25 +31,7 @@
 {{--                        <li><a href="{{ URL::to('/footer/international') }}">Международные связи</a></li>--}}
 {{--                    </ul>--}}
 {{--                </div>--}}
-                <div class="col-sm-2">
-                    <div class="btn-group" id="lang-btn">
-                        <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">{{ trans('main.language') }}
-                            <span class="caret"></span></button>
-                        <!--       <ul class="dropdown-menu">
-                                  <li><a href="#">казахский</a></li>
-                                  <li><a href="#">русский</a></li>
-                              </ul> -->
-                        <ul class="dropdown-menu">
-                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                <li>
-                                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                        {{ $properties['name2'] }}
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-
+                <div class="col-sm-3 col-sm-3-mod">
                     <div class="social-networks">
                         <ul>
                             <li> <a href="https://www.google.ru/" target="_blank" class="google"><i class="fa fa-google-plus"></i></a> </li>

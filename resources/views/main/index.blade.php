@@ -146,7 +146,6 @@
                 <div class="books__blog__book">
                     <img src="../../images/book3.jpg">
                     <p>Адам жөне табиғат.<br>Қазақ әдебиетінің<br>антологиясы</p>
-                    <p class="aphtor">А.Т.Қалиасқарова,<br>Е.Сұлтан.</p>
                 </div>
             </div>
             <div class="books__text">

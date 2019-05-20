@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/search', 'SearchController@search');
+
 
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
@@ -35,7 +35,7 @@ Route::group([
     });
     
   
-
+    Route::get('/search', 'SearchController@search');
 
     Route::group(['prefix'=>'news', 'namespace'=>'news'], function (){
         Route::get('/', 'NewsController@index')->name('news.index');
