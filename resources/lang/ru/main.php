@@ -15,5 +15,5 @@ return [
     'name' => 'Имя',
     'your_message' => 'Ваше сообщение',
     'search' => 'Поиск',
-    'language' => 'Язык',
+    'language' => 'Русский',
 ];

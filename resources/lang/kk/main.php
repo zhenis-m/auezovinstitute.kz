@@ -15,5 +15,5 @@ return [
     'name' => 'Аты-жөні',
     'your_message' => 'Сіздің хабарламаңыз',
     'search' => 'Іздеу',
-    'language' => 'Тілі',
+    'language' => 'Казақша',
 ];
