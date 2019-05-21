@@ -19,6 +19,7 @@
         <table class="table table-striped">
             <thead>
             <th>Наименование</th>
+            <th>язык</th>
             <th>Публикация</th>
             <th class="text-right">Действие</th>
             </thead>
@@ -26,6 +27,7 @@
             @forelse($insts as $inst)
                 <tr>
                     <td>{{$inst->title}}</td>
+                    <td>{{$inst->locale}}</td>
                     <td>{{$inst->published}}</td>
                     <td class="text-right">
                         <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.insts.destroy',

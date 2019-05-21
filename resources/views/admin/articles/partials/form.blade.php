@@ -15,7 +15,7 @@
 
 <label for="">Выбрать язык поста</label>
 <select name="locale" class="form-control" required>
-                 <option value="">Выбрать</option>
+                 <option value=" ">выбрать</option>
                  <option value="ru" {{$article->locale ?? ""}}>ru</option>
                  <option value="kk" {{ $article->locale ?? ""}}>kk</option>                                                         
               </select>  

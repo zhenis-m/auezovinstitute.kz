@@ -13,11 +13,11 @@
 <label for="">Заголовок</label>
 <input type="text" class="form-control" name="title" placeholder="Заголовок новости" value="{{$banner->title ?? ""}}" required><br>
 
-<label for="">Выбрать язык баннера</label>
+<label for="">Выбрать язык поста</label>
 <select name="locale" class="form-control" required>
-                 <option value="">Выбрать</option>
+                 <option value=" ">выбрать</option>
                  <option value="ru" {{$banner->locale ?? ""}}>ru</option>
-                 <option value="kk" {{ $banner->locale ?? ""}}>kk</option>                                                         
+                 <option value="kk" {{$banner->locale ?? ""}}>kk</option>                                                         
               </select>  
               <br>
 
