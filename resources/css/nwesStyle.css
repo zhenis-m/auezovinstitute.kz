@@ -178,7 +178,7 @@
 }
 
 .pnwes__page__block__text a {
-	display: block;
+	display: none;
 	background-color: #227dc7;
 	color: #fff;
 	text-decoration: none;

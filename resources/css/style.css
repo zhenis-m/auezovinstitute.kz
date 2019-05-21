@@ -292,7 +292,7 @@ body {
 .header__local__item {
 	position: absolute;
 	width: 100%;
-	background-color: #d3d9df;
+	/*background-color: #d3d9df;*/
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -372,6 +372,7 @@ body {
 .search__wrap {
 	width: 1200px;
 	margin: 0 auto;
+	margin-top: 20px;
 }
 /*-------------- serch style end -----------------*/
 
@@ -507,7 +508,7 @@ body {
 }
 
 .new__state__text a {
-	display: block;
+	display: none;
 	background-color: #227dc7;
 	color: #fff;
 	text-decoration: none;
@@ -550,6 +551,10 @@ body {
 
 .nwes__blog__mini .new__mini:nth-child(1) div{
 	height: 50%;
+}
+
+.nwes__blog__mini .new__mini:first-child .new__mini-blog .new__state a {
+	display: block;
 }
 
 .nwes__blog__mini .new__mini:first-child {
@@ -761,5 +766,5 @@ body {
 }
 
 .py-4 {
-	margin-top: 45px;
+	margin-top: 49px;
 }

@@ -13,5 +13,6 @@ return [
     'read_more' => 'Читать дальше',
     'structure' => 'Структура',
     'to_learn_more' => 'Узнать больше',
+    'all_books' => 'Все книги',
     
 ];

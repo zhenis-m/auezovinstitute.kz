@@ -14,15 +14,15 @@
                                 <a href="{{ URL::to('/news') }}">{{ trans('header.news') }}</a>
                             </li>
                             <li>
-                                <a href="{{ URL::to('/books') }}">{{ trans('header.books') }}</a>
-                            </li>
-                            <li>
                             @foreach ($aboutses as $abouts)
                                 <li>
                                     <a href="{{ route('abouts.show', [ 'id' => $abouts->id ]) }}" onclick="">{{ $abouts->title }}</a>
                                 </li>
                                 @endforeach
                                 </li>
+                            <li>
+                                <a href="{{ URL::to('/books') }}">{{ trans('header.books') }}</a>
+                            </li>
                         </ul>
                     </li>
 

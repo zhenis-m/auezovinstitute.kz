@@ -15,7 +15,7 @@ class ConfigServiceProviders extends ServiceProvider
     {
         config([
             'laravellocalization.supportedLocales' => [
-                'kk'  => array( 'name' => 'kk', 'name2' => 'Казахский', 'script' => 'Cyrl', 'native' => 'kk' ),
+                'kk'  => array( 'name' => 'kk', 'name2' => 'Казақша', 'script' => 'Cyrl', 'native' => 'kk' ),
                 'ru'  => array( 'name' => 'ru', 'name2' => 'Русский', 'script' => 'Cyrl', 'native' => 'ru' ),
             ],
         
