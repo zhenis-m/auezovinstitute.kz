@@ -19,6 +19,7 @@
         <table class="table table-striped">
             <thead>
             <th>Наименование</th>
+            <th>язык</th>
             <th>Публикация</th>
             <th class="text-right">Действие</th>
             </thead>
