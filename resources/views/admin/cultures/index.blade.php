@@ -19,6 +19,7 @@
         <table class="table table-striped">
             <thead>
             <th>Наименование</th>
+            <th>язык</th>
             <th>Публикация</th>
             <th class="text-right">Действие</th>
             </thead>
@@ -26,6 +27,7 @@
             @forelse($cultures as $culture)
                 <tr>
                     <td>{{$culture->title}}</td>
+                    <td>{{$culture->locale}}</td>
                     <td>{{$culture->published}}</td>
                     <td class="text-right">
                         <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.cultures.destroy',

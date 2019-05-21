@@ -26,6 +26,7 @@
             @forelse($departments as $department)
                 <tr>
                     <td>{{$department->title}}</td>
+                    <td>{{$department->locale}}</td>
                     <td>{{$department->published}}</td>
                     <td class="text-right">
                         <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.departments.destroy',

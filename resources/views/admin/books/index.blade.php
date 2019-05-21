@@ -18,6 +18,7 @@
         <table class="table table-striped">
             <thead>
             <th>Наименование</th>
+            <th>язык</th>
             <th>Публикация</th>
             <th class="text-right">Действие</th>
             </thead>
@@ -25,6 +26,7 @@
             @forelse($books as $book)
                 <tr>
                     <td>{{$book->title}}</td>
+                    <td>{{$book->locale}}</td>
                     <td>{{$book->published}}</td>
                     <td class="text-right">
                         <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.books.destroy',
