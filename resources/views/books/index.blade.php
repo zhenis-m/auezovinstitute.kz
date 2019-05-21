@@ -4,8 +4,8 @@
 <div>
 	<div class="pnwes">
 		<div class="pnwes__way">
-			<a href="{{ URL::to('/') }}">Главная</a>&nbsp;/&nbsp;
-			<a>Книги</a>
+			<a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/&nbsp;
+			<a>{{ trans('content.books') }}</a>
 		</div>
 		<div class="pnwes__state">
 			<a href="#"><p><i class="fas fa-folder-open"></i>&nbsp;&nbsp;Все книги</p></a>

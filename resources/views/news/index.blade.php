@@ -4,11 +4,11 @@
 <div>
 	<div class="pnwes">
 		<div class="pnwes__way">
-			<a href="{{ URL::to('/') }}">Главная</a>&nbsp;/&nbsp;
-			<a>Новости</a>
+			<a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/&nbsp;
+			<a>{{ trans('content.news') }}</a>
 		</div>
 		<div class="pnwes__state">
-			<a href="#"><p><i class="fas fa-folder-open"></i>&nbsp;&nbsp;Все новости</p></a>
+			<a href="#"><p><i class="fas fa-folder-open"></i>&nbsp;&nbsp;{{ trans('content.all_news') }}</p></a>
 		</div>
 		<div class="pnwes__page">
 			@foreach ($newses as $news)
@@ -19,7 +19,7 @@
 					</div>
 					<div class="pnwes__page__block__text">
 						<p>{!! $news->description_short !!}</p>
-						<a href="{{ route('news.show', [ 'id' => $news->id ]) }}">Читать дальше</a>
+						<a href="{{ route('news.show', [ 'id' => $news->id ]) }}">{{ trans('content.read_more') }}</a>
 					</div>
 				</div>
 				<div class="pnew__state__date">

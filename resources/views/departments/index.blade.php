@@ -4,8 +4,8 @@
 <div>
     <div class="pnwes">
         <div class="dep__way">
-        <a href="{{ URL::to('/') }}">Главная</a>&nbsp;/&nbsp;
-        <a>Отделы института</a>
+        <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/&nbsp;
+        <a>{{ trans('content.departmens') }}</a>
     </div>
         <div class="pnwes__page">
             @foreach ($departs as $depart)

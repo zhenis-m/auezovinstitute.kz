@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="news_page__way">
-        <a href="{{ URL::to('/') }}">Главная</a>&nbsp;/
-        <a href="{{ URL::to('structure/administration') }}">Административно-управленческий аппарат</a>&nbsp;/
+        <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/
+        <a href="{{ URL::to('structure/administration') }}">{{ trans('content.admins') }}</a>&nbsp;/
         <a>{{ $director->title }}</a>
     </div>
 <div>

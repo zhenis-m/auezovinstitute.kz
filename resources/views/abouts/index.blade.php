@@ -4,10 +4,10 @@
 <div>
 	<div class="pnwes">
 		<div class="pnwes__way">
-			<a href="{{ URL::to('/') }}">Главная</a>&nbsp;/&nbsp;
+			<a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/&nbsp;
 		</div>
 		<div class="pnwes__state">
-			<a href="#"><p><i class="fas fa-folder-open"></i>&nbsp;&nbsp;Все новости</p></a>
+			<a href="#"><p><i class="fas fa-folder-open"></i>&nbsp;&nbsp;{{ trans('content.all_news') }}</p></a>
 		</div>
 		<div class="pnwes__page">
 			@foreach ($aboutses as $abouts)
@@ -15,7 +15,7 @@
 				<div class="pnwes__page__block__wrap">
 					<a href="{{ route('abouts.show', [ 'id' => $abouts->id ]) }}"><img src="{{ $abouts ? asset('uploads/' . $abouts->image_show) : ""}}"></a>
 					<div class="pnwes__page__block__text">
-						<p>{{ $abouts->title }}<a href="{{ route('abouts.show', [ 'id' => $abouts->id ]) }}">Читать дальше</a></p>
+						<p>{{ $abouts->title }}<a href="{{ route('abouts.show', [ 'id' => $abouts->id ]) }}">{{ trans('content.read_more') }}</a></p>
 					</div>
 				</div>
 				<div class="pnew__state__date">

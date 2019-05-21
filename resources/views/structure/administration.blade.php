@@ -4,11 +4,11 @@
   	<div>
 		<div class="structur">
 			<div class="structur__way">
-				<a href="{{ URL::to('/') }}">Главная</a>&nbsp;/&nbsp;
-				<a>Административно-управленческий аппарат</a>
+				<a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/&nbsp;
+				<a>{{ trans('content.admins') }}</a>
 			</div>
 			<div class="structur__state">
-				<a href="#"><p><i class="fas fa-users"></i>&nbsp;&nbsp;Структура</p></a>
+				<a href="#"><p><i class="fas fa-users"></i>&nbsp;&nbsp;{{ trans('content.structure') }}</p></a>
 			</div>
 			
 
@@ -25,7 +25,7 @@
 									<p class="aphtor">{!! $director->description_short !!}</p>
 								</div>
 								<div class="structur__admins__men__name__button">
-										<a href="{{ route('structure.show', [ 'id' => $director->id ]) }}" class="button__men"><i class="fas fa-book-reader"></i>&nbsp;&nbsp;Узнать больше</a>
+										<a href="{{ route('structure.show', [ 'id' => $director->id ]) }}" class="button__men"><i class="fas fa-book-reader"></i>&nbsp;&nbsp;{{ trans('content.to_learn_more') }}</a>
 								</div>
 							</div>
 						</div>

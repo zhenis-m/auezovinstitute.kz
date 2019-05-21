@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="news_page__way">
-        <a href="{{ URL::to('/') }}">Главная</a>&nbsp;/
-        <a href="{{ URL::to('/news') }}">Новости</a>&nbsp;/
+        <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/
+        <a href="{{ URL::to('/news') }}">{{ trans('content.news') }}</a>&nbsp;/
         <a>{{ $news->title }}</a>
     </div>
     <div>

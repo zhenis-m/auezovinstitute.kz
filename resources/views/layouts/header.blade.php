@@ -27,7 +27,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="#">Структура &#9662;</a>
+                        <a href="#">{{ trans('header.structure') }} &#9662;</a>
                         <ul class="sub-menu sub-menu2-mod">
                             <li>
                                 <a href="{{ URL::to('/structure/administration') }}">{{ trans('header.admins') }}</a>
