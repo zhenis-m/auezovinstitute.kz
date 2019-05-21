@@ -230,17 +230,52 @@ body {
 .dropdown-menu li a:hover {
 	color: #1b4b72 !important;
 }
+
+.header__local a:before {
+   content: '';
+   display: inline-block;
+   width: 35px;
+   height: 25px;
+   background-size: cover;
+   background-position: 0 5px;
+   background-repeat: no-repeat;
+}
+.header__local a.lang-flag.ru:before {
+   background-image: url("../../public/images/russia_640_1.png");
+}
+.header__local a.lang-flag.kk:before {
+   background-image: url("../../public/images/kazakhstan_640_1.png");
+}
+
+.header__local__item li.lang-flag a:before {
+   content: '';
+   display: inline-block;
+   width: 30px;
+   height: 25px;
+   background-size: cover;
+   background-position: 0 6px;
+   background-repeat: no-repeat;
+}
+
+.header__local__item li.lang-flag.ru a:before {
+   background-image: url("../../public/images/russia_640_1.png");
+}
+.header__local__item li.lang-flag.kk a:before {
+   background-image: url("../../public/images/kazakhstan_640_1.png");
+}
+
 /*-------------- вариант 2 -----------------*/
 
 .header__local {
 	margin-right: 20px;
 	position: relative;
+	width: 190px;
 }
 
 .header__local a {
 	display: block;
 	background-color: #d3d9df;
-	padding: 10px 50px;
+	padding: 6px 20px 10px;
 	color: #000;
 	font-size: 1em;
 	-webkit-border-radius: 5px;
@@ -271,7 +306,7 @@ body {
 
 .header__local__item li a {
 	color: #000;
-	padding: 10px 30px;
+	padding: 10px 10px;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;

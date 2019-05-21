@@ -76,10 +76,10 @@
 {{--        </div>--}}
 
         <div class="header__local">
-            <a href="#box" onclick="openbox('box'); return false">{{ trans('header.language') }}</a>
+            <a href="#box" class="lang-flag {{ app()->getLocale() }}" onclick="openbox('box'); return false">{{ trans('header.language') }}</a>
             <div id="box" class="header__local__item" style="display: none">
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                    <li>
+                    <li class="lang-flag {{ $localeCode }}" data="{{ $localeCode }}">
                         <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                             {{ $properties['name2'] }}
                         </a>
