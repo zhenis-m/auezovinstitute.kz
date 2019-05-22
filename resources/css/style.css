@@ -4,7 +4,7 @@
 }
 
 p, a, h1, h2, h3 {
-	font-family: 'SF-Pro-Text-Regular';
+	font-family: 'OpenSans-Regular';
 }
 
 body {
@@ -13,8 +13,8 @@ body {
 /*------- подключение шрифтов --------*/
 
 @font-face{
-	font-family: SF-Pro-Text-Regular;
-    src: url(fonts/SF-Pro-Text-Regular.otf);
+	font-family: OpenSans-Regular;
+    src: url(fonts/OpenSans-Regular.ttf);
 	font-weight: normal;
 }
 @font-face{
@@ -75,7 +75,7 @@ body {
 
 .menu-item a{
 	width: 100%;
-	font-family: 'SF-Pro-Text-Light';
+	font-family: 'OpenSans-Regular';
 	font-size: 1.05em;
 }
 
@@ -408,7 +408,7 @@ body {
 	border-radius: 3px;
 	font-size: 14px;
 	margin-top: 30px;
-	font-family: 'SF-Pro-Text-Regular';
+	font-family: 'OpenSans-Regular';
 	cursor: pointer;
 }
 
@@ -419,13 +419,13 @@ body {
 
 .headline .bold {
 	font-size: 24px;
-	font-family: 'SF-Pro-Text-Light';
+	font-family: 'OpenSans-Regular';
 }
 
 .headline p {
 	margin-top: 20px;
 	font-size: 16px;
-	font-family: 'SF-Pro-Text-Light';
+	font-family: 'OpenSans-Regular';
 }
 
 /*-------------- banner style end -----------------*/
@@ -460,7 +460,7 @@ body {
 	/*color: #000;*/
 	font-size: 24px;
 	margin-bottom: 0;
-	font-family: 'SF-Pro-Text-Regular';
+	font-family: 'OpenSans-Regular';
 }
 
 .nwes__state__archive {
@@ -504,7 +504,7 @@ body {
 }
 
 .new__state__text p {
-	font-family: 'SF-Pro-Text-Regular';
+	font-family: 'OpenSans-Regular';
 }
 
 .new__state__text a {
@@ -525,7 +525,7 @@ body {
 }
 
 .new__state__date p {
-	font-family: 'SF-Pro-Text-Regular';
+	font-family: 'OpenSans-Regular';
 }
 
 .new__state__date {
@@ -608,7 +608,7 @@ body {
 }
 .education p {
 	margin-bottom: 0;
-	font-family: 'SF-Pro-Text-Regular';
+	font-family: 'OpenSans-Regular';
 }
 .education__haed a {
 	text-decoration: none;
@@ -677,7 +677,7 @@ body {
 
 .books p {
 	margin-bottom: 0;
-	font-family: 'SF-Pro-Text-Regular';
+	font-family: 'OpenSans-Regular';
 }
 
 .books__haed {
@@ -749,7 +749,7 @@ body {
 	padding: 10px 20px;
 	border-radius: 3px;
 	font-size: 14px;
-	font-family: 'SF-Pro-Text-Regular';
+	font-family: 'OpenSans-Regular';
 	cursor: pointer;
 }
 

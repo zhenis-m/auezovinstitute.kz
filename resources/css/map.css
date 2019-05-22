@@ -14,7 +14,7 @@ body, html {
 
 /*---------------------------------------------*/
 a {
-    font-family: Oswald-Regular;
+    font-family: 'OpenSans-Regular';
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -39,7 +39,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-    font-family: Oswald-Regular;
+    font-family: 'OpenSans-Regular';
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -257,7 +257,7 @@ iframe {
     display: block;
     width: 100%;
     background: transparent;
-    font-family: 'SF-Pro-Text-Regular';
+    font-family: 'OpenSans-Regular';
     font-size: 15px;
     color: #43383e;
     line-height: 1.2;
@@ -295,7 +295,7 @@ textarea.input100 {
     position: relative;
     padding-left: 32px;
     cursor: pointer;
-    font-family: 'SF-Pro-Text-Regular';
+    font-family: 'OpenSans-Regular';
     font-size: 15px;
     color: #43383e;
     line-height: 1.2;
@@ -385,7 +385,7 @@ textarea.input100 {
     min-width: 100%;
     height: 62px;
 
-    font-family: Oswald-Medium;
+    font-family: 'OpenSans-Regular';
     font-size: 16px;
     color: #fff;
     background-color: #227dc7;
@@ -425,7 +425,7 @@ textarea.input100 {
     right: 2px;
     pointer-events: none;
 
-    font-family: Oswald-Regular;
+    font-family: 'OpenSans-Regular';
     color: #c80000;
     font-size: 13px;
     line-height: 1.4;

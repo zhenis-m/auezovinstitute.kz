@@ -1,5 +1,5 @@
 .container_departments{
-    font-family: 'SF-Pro-Text-Regular';
+    font-family: 'OpenSans-Regular';
     max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 60px;
@@ -11,7 +11,7 @@
 }
 
 .container_departments p, .container_departments a{
-    font-family: 'SF-Pro-Text-Regular';
+    font-family: 'OpenSans-Regular';
 
 
 }

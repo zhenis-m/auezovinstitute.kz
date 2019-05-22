@@ -35,7 +35,7 @@
 .news__state__headline h1{
     text-align: center;
     font-size: 2.25rem;
-    font-family: 'SF-Pro-Text-Regular';
+    font-family: 'OpenSans-Regular';
 }
 
 .news__state {
@@ -51,7 +51,7 @@
 
 .news__state__text p {
     font-size: 1.2em;
-    font-family: 'SF-Pro-Text-Regular';
+    font-family: 'OpenSans-Regular';
 }
 
 .news__state__img {
@@ -75,5 +75,5 @@
 
 .text_review p {
     font-size: 1.2em;
-    font-family: 'SF-Pro-Text-Regular';
+    font-family: 'OpenSans-Regular';
 }
