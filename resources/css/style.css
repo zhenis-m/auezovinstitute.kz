@@ -19,7 +19,7 @@ body {
 }
 @font-face{
 	font-family: SF-Pro-Text-Light;
-    src: url(fonts/SF-Pro-Text-Regular.otf);
+    src: url(fonts/SF-Pro-Text-Light.otf);
 	font-weight: lighter;
 }
 /*------- подключение шрифтов --------*/
@@ -534,6 +534,7 @@ body {
 	align-items: center;
 	font-size: 12px;
 	color: #bfc8cf;
+	height: 40px !important;
 }
 
 .nwes__blog__mini {
