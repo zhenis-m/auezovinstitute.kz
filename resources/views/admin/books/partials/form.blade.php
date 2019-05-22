@@ -13,11 +13,23 @@
 <label for="">Заголовок</label>
 <input type="text" class="form-control" name="title" placeholder="Заголовок книги" value="{{$book->title ?? ""}}" required><br>
 
-<label for="">Выбрать язык поста</label>
+<!-- <label for="">Выбрать язык поста</label>
 <select name="locale" class="form-control" required>
                  <option value=" ">выбрать</option>
                  <option value="ru" {{$book->locale ?? ""}}>ru</option>
                  <option value="kk" {{$book->locale ?? ""}}>kk</option>                                                        
+              </select>  
+              <br> -->
+
+<label for="">Выбрать язык поста</label>
+<select name="locale" class="form-control" required>
+                 @if (isset($book->id))
+                    <option value="ru" @if ($book->locale == 'ru') selected="" @endif>ru</option>
+                    <option value="kk" @if ($book->locale == 'kk') selected="" @endif>kk</option>
+                @else
+                    <option value="ru">ru</option>
+                    <option value="kk">kk</option>
+                @endif                                                    
               </select>  
               <br>
 
