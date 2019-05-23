@@ -64,7 +64,11 @@ Route::group([
     });
 });
 
-    
+ 
+Route::get('/reader', function () {
+    return view('reader.index');
+});
+
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category', 'CategoryController', ['as'=>'admin']);
