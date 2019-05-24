@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'fontello';
   src: url('../font/fontello.eot?60518104');
   src: url('../font/fontello.eot?60518104#iefix') format('embedded-opentype'),
@@ -13,7 +13,7 @@ body {
   background: #4e4e4e;
   overflow: hidden;
 }
-
+*/
 #main {
   /* height: 500px; */
   position: absolute;

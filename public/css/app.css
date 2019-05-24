@@ -2565,13 +2565,13 @@ body {
 
 /*close slider css*/
 @media screen and (min-width:768px) {.t-slider-controls .arrow:hover {background:rgba(0,0,0,0.32);}}@charset "UTF-8";
-@font-face {
+/*@font-face {
   font-family: 'fontello';
-  src: url(/fonts/fontello.eot?e796fb906012eb27550e723a86234e8a);
-  src: url(/fonts/fontello.eot?e796fb906012eb27550e723a86234e8a#iefix) format('embedded-opentype'),
-       url(/fonts/fontello.woff?bacb56f34326d2154be151c3970ec7fd) format('woff'),
-       url(/fonts/fontello.ttf?139f15c9b9a9b2b31aa4159077134970) format('truetype'),
-       url(/fonts/fontello.svg?df01ed214af3a1cf1f54f63aac3c821e#fontello) format('svg');
+  src: url('../font/fontello.eot?60518104');
+  src: url('../font/fontello.eot?60518104#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?60518104') format('woff'),
+       url('../font/fontello.ttf?60518104') format('truetype'),
+       url('../font/fontello.svg?60518104#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2580,7 +2580,7 @@ body {
   background: #4e4e4e;
   overflow: hidden;
 }
-
+*/
 #main {
   /* height: 500px; */
   position: absolute;
