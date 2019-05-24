@@ -77,3 +77,25 @@
     font-size: 1.2em;
     font-family: 'OpenSans-Regular';
 }
+
+.news__state__reader {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.news__state__reader a {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #227dc7;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.news__state__reader a:hover {
+    color: #fff;
+    background-color: #f38727;
+    transition: all 0.3s ease-in;
+    text-decoration: none;
+    
+}
