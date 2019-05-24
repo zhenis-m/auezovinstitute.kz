@@ -44,11 +44,11 @@
     <img class="col-sm-6" id="preview" src="{{ $book ? asset('uploads/' . $book->image_show) : ""}}">
 </div>
 
-{{--<div class="form-group">--}}
+<!-- {{--<div class="form-group">--}}
 {{--    <label for="">Изображение</label>--}}
 {{--    <input data-preview="#preview" name="image" type="file" id="image">{{$book->image ?? ""}}--}}
 {{--    <img class="col-sm-6" id="preview"  src="">--}}
-{{--</div>--}}
+{{--</div>--}} -->
 
 
 <label for="">Укажите автора</label>
@@ -58,6 +58,13 @@
 <textarea class="form-control" id="description" name="description">{{$book->description ?? ""}}</textarea>
 
 <hr />
+
+<div class="form-group">
+    <label for="">загрузить epub книгу</label>
+    <input data-preview="#preview" name="ebook" type="file" id="ebook">{{$book->ebook ?? ""}}
+    <img class="col-sm-6" id="preview" src="{{ $book ? asset('uploads/' . $book->ebook_show) : ""}}">
+</div>
+
 
 <label for="">Мета Заголовок</label>
 <input type="text" class="form-control" name="meta_title" placeholder="Мета заголовок" value="{{$book->meta_title ?? ""}}">
