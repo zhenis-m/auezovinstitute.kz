@@ -65,7 +65,7 @@ Route::group([
 });
 
  
-Route::get('/reader', function () {
+Route::get('/reader/{path}', function () {
     return view('reader.index');
 });
 
