@@ -3672,13 +3672,13 @@ EPUBJS.reader.ControlsController = function(book) {
 		if(bookmarked === -1) { //-- Add bookmark
 			reader.addBookmark(cfi);
 			$bookmark
-				.addClass("icon-bookmark")
-				.removeClass("icon-bookmark-empty");
+				// .addClass("icon-fas fa-bookmark")
+				// .removeClass("fas fa-bookmark");
 		} else { //-- Remove Bookmark
 			reader.removeBookmark(cfi);
 			$bookmark
-				.removeClass("icon-bookmark")
-				.addClass("icon-bookmark-empty");
+				// .removeClass("fas fa-bookmark")
+				// .addClass("fas fa-bookmark");
 		}
 
 	});
@@ -3690,12 +3690,12 @@ EPUBJS.reader.ControlsController = function(book) {
 		var bookmarked = reader.isBookmarked(cfi);
 		if(bookmarked === -1) { //-- Not bookmarked
 			$bookmark
-				.removeClass("icon-bookmark")
-				.addClass("icon-bookmark-empty");
+				// .removeClass("fas fa-bookmark")
+				// .addClass("fas fa-bookmark");
 		} else { //-- Bookmarked
 			$bookmark
-				.addClass("icon-bookmark")
-				.removeClass("icon-bookmark-empty");
+				// .addClass("fas fa-bookmark")
+				// .removeClass("fas fa-bookmark");
 		}
 
 		reader.currentLocationCfi = cfi;

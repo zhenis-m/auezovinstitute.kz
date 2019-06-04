@@ -14,7 +14,6 @@
   <!--       <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/popup.css"> -->
-
         <link href="{{ asset('css/normalize.css') }}" rel="stylesheet">
         <link href="{{ asset('css/popup.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -27,7 +26,7 @@
             // "use strict"
             document.onreadystatechange = function () {
                 if (document.readyState == "complete") {
-                    window.reader = ePubReader("http://auezov.loc/uploads/book/2/book_file.epub", {
+                    window.reader = ePubReader("http://127.0.0.1:8000/uploads/book/1/book_file.epub", {
                         restore: true
                     });
                 }
@@ -37,9 +36,10 @@
         </script>
 
 
-        <script src="{{ asset('js/libs/screenfull.min.js') }}"></script>
+        <script src="{{ asset('js/libs/screenfull.js') }}"></script>
         <script src="{{ asset('js/epub.min.js') }}"></script>
         <script src="{{ asset('js/reader.min.js') }}"></script>
+        <link href="{{ asset('https://use.fontawesome.com/releases/v5.8.1/css/all.css') }}" rel="stylesheet">
     </head>
     <body>
     <div id="sidebar">
@@ -47,8 +47,8 @@
             <!-- <input id="searchBox" placeholder="search" type="search"> -->
 
             <!-- <a id="show-Search" class="show_view icon-search" data-view="Search">Search</a> -->
-            <a id="show-Toc" class="show_view icon-list-1 active" data-view="Toc">TOC</a>
-            <a id="show-Bookmarks" class="show_view icon-bookmark" data-view="Bookmarks">Bookmarks</a>
+            <a id="show-Toc" class="show_view fas fa-book" data-view="Toc">TOC</a>
+            <a id="show-Bookmarks" class="show_view fas fa-bookmark" data-view="Bookmarks">Bookmarks</a>
             <!-- <a id="show-Notes" class="show_view icon-edit" data-view="Notes">Notes</a> -->
 
         </div>
@@ -72,7 +72,7 @@
 
         <div id="titlebar">
             <div id="opener">
-                <a id="slider" class="icon-menu">Menu</a>
+                <a id="slider" class="show_view fas fa-bars">Menu</a>
             </div>
             <div id="metainfo">
                 <span id="book-title"></span>
@@ -80,9 +80,9 @@
                 <span id="chapter-title"></span>
             </div>
             <div id="title-controls">
-                <a id="bookmark" class="icon-bookmark-empty">Bookmark</a>
-                <a id="setting" class="icon-cog">Settings</a>
-                <a id="fullscreen" class="icon-resize-full">Fullscreen</a>
+                <a id="bookmark" class="fas fa-bookmark">Bookmark</a>
+{{--                <a id="setting" class="fas fa-cog">Settings</a>--}}
+{{--                <a id="fullscreen" class="fas fa-compress-arrows-alt">Fullscreen</a>--}}
             </div>
         </div>
 

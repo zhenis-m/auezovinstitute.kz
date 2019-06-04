@@ -64,8 +64,13 @@ Route::group([
     });
 });
 
- 
-Route::get('/reader/{path}', function () {
+//
+//Route::get('/reader/{path}', function () {
+//    return view('reader.index');
+//});
+
+
+Route::get('/reader', function () {
     return view('reader.index');
 });
 
