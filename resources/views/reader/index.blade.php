@@ -21,11 +21,11 @@
 
         <script>
             "use strict";
-            var bookReader = document.getElemetById('link').attr('name');
+
 
             document.onreadystatechange = function () {
               if (document.readyState == "complete") {
-                window.reader = ePubReader(bookReader, {
+                window.reader = ePubReader("https://s3.amazonaws.com/moby-dick/", {
                    restore: true
                  });
               }

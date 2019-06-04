@@ -119,6 +119,7 @@ body {
 .sub-menu li {
 	background-color: #e9ecef;
 	width: 225px;
+    margin-left: -40px;
 }
 
 .sub-menu li:first-child a {
