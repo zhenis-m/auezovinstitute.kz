@@ -74,26 +74,27 @@
 {{--                @endforeach--}}
 {{--            </ul>--}}
 {{--        </div>--}}
-
-        <div class="header__local">
-            <a href="#box" class="lang-flag {{ app()->getLocale() }}" onclick="openbox('box'); return false">{{ trans('header.language') }}</a>
-            <div id="box" class="header__local__item" style="display: none">
-                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                    <li class="lang-flag {{ $localeCode }}" data="{{ $localeCode }}">
-                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                            {{ $properties['name2'] }}
-                        </a>
-                    </li>
-                @endforeach
-            </div>
-        </div>
-        <div class="search search_clearfix">
-            <form action="{{ URL::to('search') }}" method="GET" class="searchform">
-                <div class="search__text">
-                    <input type="text" value="" placeholder="{{ trans('main.search') }}" name="search"/>
+        <div class="header__wrap">
+            <div class="header__local">
+                <a href="#box" class="lang-flag {{ app()->getLocale() }}" onclick="openbox('box'); return false">{{ trans('header.language') }}</a>
+                <div id="box" class="header__local__item" style="display: none">
+                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                        <li class="lang-flag {{ $localeCode }}" data="{{ $localeCode }}">
+                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                {{ $properties['name2'] }}
+                            </a>
+                        </li>
+                    @endforeach
                 </div>
-                <input type="image" src="../../images/search.png"/>
-            </form>
+            </div>
+            <div class="search search_clearfix">
+                <form action="{{ URL::to('search') }}" method="GET" class="searchform">
+                    <div class="search__text">
+                        <input type="text" value="" placeholder="{{ trans('main.search') }}" name="search"/>
+                    </div>
+                    <input type="image" src="../../images/search.png"/>
+                </form>
+            </div>
         </div>
     </div>
 </div>
