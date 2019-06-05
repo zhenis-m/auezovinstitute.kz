@@ -35,4 +35,16 @@ class BooksController extends Controller
             'cultures' => $cultures
         ]);
     }
+
+    public function show_book($id)
+    {
+        $bok = Book::where('id', $id)->first();
+        $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
+        return view('reader.index', [
+            'bok' => $bok,
+            'aboutses' => $aboutses,
+            'cultures' => $cultures
+        ]);
+    }
 }

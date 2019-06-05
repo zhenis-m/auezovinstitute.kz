@@ -23,10 +23,9 @@
 
 
         <script>
-            // "use strict"
             document.onreadystatechange = function () {
                 if (document.readyState == "complete") {
-                    window.reader = ePubReader("http://127.0.0.1:8000/uploads/book/1/book_file.epub", {
+                    window.reader = ePubReader("{{ URL::to($bok ? asset('uploads/' . $bok->ebook_show) : "") }}", {
                         restore: true
                     });
                 }
