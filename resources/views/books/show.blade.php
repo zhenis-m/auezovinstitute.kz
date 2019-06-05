@@ -19,7 +19,9 @@
                     {!! $bok->description !!}
                 </div>
                 <div class="news__state__reader">
-                    <a href="{{ URL::to('/reader') }}?name={{ $bok ? asset('uploads/' . $bok->ebook_show) : ''}}"" name="{{ $bok ? asset('uploads/' . $bok->ebook_show) : ""}}" id="link" target="_blank">Читать книгу</a>
+{{--                    <a href="{{ URL::to('/reader/index') }}" target="_blank">Читать книгу</a>--}}
+
+                    <a href="{{ route('reader.index', [ 'id' => $bok->id ]) }}" target="_blank">Читать книгу</a>
                 </div>
                 <div class="news__state__date">
                     <div class="pnew__state__date">

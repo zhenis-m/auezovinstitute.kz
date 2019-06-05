@@ -15,36 +15,45 @@
     <div>
         <div class="nwes">
             <div class="nwes__state">
-                <a href="{{ URL::to('/news') }}"><p><i class="fas fa-newspaper"></i>&nbsp;&nbsp;{{ trans('main.news') }}</p></a>
-                <a href="{{ URL::to('/news') }}" class="nwes__state__archive">{{ trans('main.archive') }}</a>
+                <a href="{{ URL::to('/news') }}"><p><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;{{ trans('main.news') }}</p></a>
+                <div class="line">
+                    <hr/>
+                </div>
             </div>
             <div class="nwes__blog">
                 <div class="nwes__blog__mini">
                     @if ($news)
                         @foreach ($news as $newsValue)
-                            <div class="new__mini">
-                                <div class="new__mini__img">
-                                    <a href="{{ route('news.show', [ 'id' => $newsValue->id ]) }}"><img src="{{ $newsValue ? asset('uploads/' . $newsValue->image_show) : ""}}"></a>
-                                </div>
-                                <div class="new__mini-blog">
-                                    <div class="new__state">
-{{--                                        <div class="new__state__text">--}}
-{{--                                            <p>{{ $newsValue->title }}</p>--}}
-{{--                                        </div>--}}
-                                        <div class="new__state__text">
-                                            <p>{!! $newsValue->description_short !!}</p>
-                                            <a href="{{ route('news.show', [ 'id' => $newsValue->id ]) }}">Читать дальше</a>
+                            <a href="{{ route('news.show', [ 'id' => $newsValue->id ]) }}" class="new__mini-wrap">
+                                <div class="new__mini">
+                                    <div class="new__mini__img">
+                                        <img src="{{ $newsValue ? asset('uploads/' . $newsValue->image_show) : ""}}">
+                                    </div>
+                                    <div class="new__mini-blog">
+                                        <div class="new__state">
+    {{--                                        <div class="new__state__text">--}}
+    {{--                                            <p>{{ $newsValue->title }}</p>--}}
+    {{--                                        </div>--}}
+                                            <div class="new__state__text">
+                                                <h4>{{$newsValue->title}}</h4>
+                                                <p>{!! $newsValue->description_short !!}</p>
+    {{--                                            <a href="{{ route('news.show', [ 'id' => $newsValue->id ]) }}">Читать дальше</a>--}}
+                                            </div>
+                                        </div>
+                                        <div class="new__state__date">
+                                            <div class="new__state__date__wrap"><i class="far fa-calendar-check"></i><p>&nbsp;&nbsp;{{ $newsValue->created_at }}&nbsp;&nbsp;</p></div>
+                                            <div class="new__state__date__wrap"><i class="far fa-eye"></i><p>&nbsp;&nbsp;1222</p></div>
                                         </div>
                                     </div>
-                                    <div class="new__state__date">
-                                        <i class="far fa-calendar-alt"></i><p>&nbsp;&nbsp;{{ $newsValue->created_at }}&nbsp;&nbsp;</p><i class="far fa-eye"></i><p>&nbsp;&nbsp;1222</p>
-                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         @endforeach
                     @endif
 
                 </div>
+            </div>
+            <div class="news__archive">
+                <a href="{{ URL::to('/news') }}" class="news__archive__state">{{ trans('main.archive') }}</a>
             </div>
         </div>
     </div>

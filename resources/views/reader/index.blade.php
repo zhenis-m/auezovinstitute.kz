@@ -23,11 +23,10 @@
 
 
         <script>
-            // "use strict"
             document.onreadystatechange = function () {
 
                 if (document.readyState == "complete") {
-                    window.reader = ePubReader("http://127.0.0.1:8000/uploads/book/1/book_file.epub", {
+                    window.reader = ePubReader("{{ URL::to($bok ? asset('uploads/' . $bok->ebook_show) : "") }}", {
                         restore: true
                     });
                 }
@@ -92,7 +91,7 @@
         <div id="viewer"></div>
         <div id="next" class="arrow">›</div>
 
-        <div id="loader"><img src="img/loader.gif"></div>
+        <div id="loader"><img src="{{ asset('img/loader.gif') }}""></div>
     </div>
     <div class="modal md-effect-1" id="settings-modal">
         <div class="md-content">

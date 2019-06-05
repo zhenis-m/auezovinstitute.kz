@@ -8,7 +8,7 @@
             <div class="nav">
                 <ul class="menu">
                     <li class="menu-item">
-                        <a href="#">Институт &#9662;</a>
+                        <a href="#" class="menu-link">Институт <i class="fas fa-chevron-down"></i></a>
                         <ul class="sub-menu sub-menu-mod">
                             <li>
                                 <a href="{{ URL::to('/news') }}">{{ trans('header.news') }}</a>
@@ -27,7 +27,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="#">{{ trans('header.structure') }} &#9662;</a>
+                        <a href="#" class="menu-link">{{ trans('header.structure') }} <i class="fas fa-chevron-down"></i></a>
                         <ul class="sub-menu sub-menu2-mod">
                             <li>
                                 <a href="{{ URL::to('/structure/administration') }}">{{ trans('header.admins') }}</a>
@@ -39,8 +39,8 @@
                         </ul>
                     </li>
                     <li class="menu-item">
-                        <a href="#">{{ trans('header.culture') }} &#9662;</a>
-                        <ul class="sub-menu">
+                        <a href="#" class="menu-link">{{ trans('header.culture') }} <i class="fas fa-chevron-down"></i></a>
+                        <ul class="sub-menu sub-menu3-mod">
                             @foreach ($cultures as $cultur)
                                 <li>
                                     <a href="{{ route('main.show', [ 'id' => $cultur->id ]) }}">{{ $cultur->title }}</a>

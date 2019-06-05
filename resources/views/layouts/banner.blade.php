@@ -17,9 +17,11 @@
    					   <div class="t-slide current-t-slide">
    					   	
 					      <img src="{{ $banner ? asset('uploads/' . $banner->image_show) : ""}}">
-					      <div class=" banner__img__text">
-					        <H1>{!! $banner->description !!}</H1>
-					        <p>{!! $banner->description_short !!}</p>
+					      <div class=" block__text">
+                              <div class="block__text__style">
+                                  <H1>{!! $banner->description !!}</H1>
+                                  <p>{!! $banner->description_short !!}</p>
+                              </div>
 					      </div>
 					   </div>
 			@endforeach	
