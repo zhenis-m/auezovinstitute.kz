@@ -10,7 +10,7 @@
 }
 
 #myFooter {
-    background-color: #333333;
+    background-color: #00435d;
     color: white;
     padding-top: 30px;
 
@@ -21,14 +21,18 @@
 }
 
 #myFooter .footer-copyright {
-    background-color: #1e1e1e;
+    background-color: #00435d;
     padding-top: 3px;
     padding-bottom: 3px;
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 1200px;
+    margin: 0 auto;
 }
 
 #myFooter .row {
     margin-bottom: 0px;
+    position: relative;
 }
 
 #myFooter .navbar-brand {
@@ -38,7 +42,7 @@
 
 #myFooter .footer-copyright p {
     margin: 10px;
-    color: #6f6f6f;
+    color: #fff;
     opacity: 0.8;
 }
 
@@ -63,7 +67,7 @@
 }
 
 #myFooter a {
-    color: #6f6f6f;
+    color: #fff;
     text-decoration: none;
     opacity: 0.8;
 }
@@ -86,7 +90,7 @@
 
 #myFooter .social-networks a {
     font-size: 20px;
-    color: #6f6f6f;
+    color: #fff;
     padding: 4px;
     transition: 0.2s;
 }
@@ -168,12 +172,34 @@ body{
 .row{
     width: 1200px;
     display: flex;
+    position: relative;
+}
+
+.logo__footer {
+    background-color: #fff;
+    position: absolute;
+    width: 15%;
+    height: 156px;
+    padding: 20px;
+    margin-top: -40px;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 5px 20px -5px #000;
+}
+
+.logo__footer a {
+    width: 80%;
+}
+
+.logo__footer a img {
+    width: 100%;
 }
 
 .row-right{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin: 0 auto;
 }
 
@@ -184,19 +210,24 @@ body{
 .social-networks ul li {
     width: 35px;
     height: 35px;
-    background: #4d4c4c;
-    border-radius: 50%;
+    /*background: #4d4c4c;*/
+    /*border-radius: 50%;*/
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-left: 4px;
 }
 
-.col-sm-3-mod ul {
+.col-sm-6-mod ul {
     display: flex;
 }
 
-.col-sm-3-mod ul li {
-    margin-right: 20px;
+.col-sm-6-mod ul li {
+    margin-right: 40px;
+    list-style-type: square;
 }
+
+.col-sm-3-mod ul li {
+
+}
+
 

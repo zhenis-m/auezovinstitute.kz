@@ -3,7 +3,6 @@
         <div class="header__nav__logo">
             <div class="logo">
                 <a href="{{ URL::to('/') }}"><img src="../../images/logo-litart2.png"></a>
-
             </div>
             <div class="nav">
                 <ul class="menu">
