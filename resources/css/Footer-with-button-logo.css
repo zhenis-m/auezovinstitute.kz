@@ -165,14 +165,17 @@ body{
 }
 
 
-.container {
-
+.container__footer {
+    width: 1200px;
+    margin: 0 auto;
 }
 
 .row{
     width: 1200px;
     display: flex;
     position: relative;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .logo__footer {

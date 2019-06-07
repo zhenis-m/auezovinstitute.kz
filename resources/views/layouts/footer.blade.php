@@ -7,7 +7,7 @@
 
 
 <footer id="myFooter">
-    <div class="container">
+    <div class="container__footer">
         <div class="row">
 {{--            <div class="col-sm-3">--}}
 {{--                <img src="../../images/footer-logo.png" alt="">--}}
