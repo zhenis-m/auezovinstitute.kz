@@ -142,29 +142,14 @@
         <div class="books__button">
             <a href="{{ URL::to('/books') }}" class="books__button__link">{{ trans('main.all_books') }}</a>
         </div>
-{{--        <div class="cbooks_wrap">--}}
-{{--            <div class="books__blog">--}}
-{{--                <div class="books__blog__book">--}}
-{{--                    <img src="../../images/book1.jpg">--}}
-{{--                    <p>Мировой <br>литературный <br>процесс XXI века</p>--}}
-{{--                </div>--}}
-{{--                <div class="books__blog__book">--}}
-{{--                    <img src="../../images/book2.jpg">--}}
-{{--                    <p>Абай Кунанбаев<br>в мировом<br>литературоведении</p>--}}
-{{--                </div>--}}
-{{--                <div class="books__blog__book">--}}
-{{--                    <img src="../../images/book3.jpg">--}}
-{{--                    <p>Адам жөне табиғат.<br>Қазақ әдебиетінің<br>антологиясы</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="books__text">--}}
-{{--                <p>Изданы совместно с московским издательством «Художественная литература» два тома «Льется песня под домбру» (2009) и «Небосвод над моей головой» (2010). В тома включены шедевры устного народного творчества и памятники казахской литературы, ряд которых относится к вершинам древней и средневековой культуры.</p>--}}
-{{--                <a href="{{ URL::to('/books') }}">{{ trans('main.all_books') }}</a>--}}
-{{--            </div>--}}
-{{--        </div>--}}
     </div>
 
     @include('main.partials.map')
+    <style>
+        .logo__footer-mod {
+            margin-top: -46px;
+        }
+    </style>
 
 @endsection
 

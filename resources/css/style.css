@@ -7,6 +7,12 @@ p, a, h1, h2, h3 {
 	font-family: 'OpenSans-Regular';
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
 	background-color: #f9f9f9 !important;
 }
@@ -1037,4 +1043,7 @@ body {
 .py-4 {
 	margin-top: 46px;
     background-color: #f9f9f9;
+    min-height: calc(100vh - 190px);
 }
+
+

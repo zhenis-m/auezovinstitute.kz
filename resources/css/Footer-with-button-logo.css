@@ -69,7 +69,6 @@
 #myFooter a {
     color: #fff;
     text-decoration: none;
-    opacity: 0.8;
 }
 
 #myFooter a:hover,
@@ -162,6 +161,7 @@ body{
 #myFooter{
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
+
 }
 
 
@@ -178,13 +178,19 @@ body{
     margin-right: 0;
 }
 
+.container__footer__row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 .logo__footer {
     background-color: #fff;
     position: absolute;
-    width: 15%;
+    width: 13%;
     height: 156px;
     padding: 20px;
     margin-top: -40px;
+    margin-left: 82px;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
@@ -227,6 +233,10 @@ body{
 .col-sm-6-mod ul li {
     margin-right: 40px;
     list-style-type: square;
+}
+
+.col-sm-3-mod {
+    padding: 0 5px 0 0 !important;
 }
 
 .col-sm-3-mod ul li {

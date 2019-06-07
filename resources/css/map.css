@@ -115,20 +115,27 @@ iframe {
 
 
 /*---------------------------------------------*/
-.container {
+.container__contacts {
     width: 1200px;
-    padding: 0 !important;
-    
+    margin: 0 auto;
 
 }
 
 .container-contact100 i {
-    color: #537AF9;
+    color: #57a2be;
 }
-.line {
-    width: 1200px;
-    border-top: 2px solid #ccc;
-    margin: 0 auto;
+
+.container-contact100 {
+    display: flex;
+}
+
+.text__contacts {
+    width: 25%;
+    margin-right: 40px;
+}
+
+.text__contacts p {
+    margin: 0;
 }
 
 .tittle{
@@ -141,39 +148,64 @@ iframe {
     flex-direction: column;
     padding-right: 5%;
     padding-top: 0;
-    margin-left: -15px;
 }
 
-.info{
+.info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-bottom: 40px;
+    justify-content: space-around;
+    padding: 30px 0;
     line-height: 2.5em
+}
+
+.info div ul {
+    padding: 0;
+}
+
+.info div ul li:last-child {
+    margin-left: 20px;
 }
 
 #maptitle{
     display: flex;
-    margin-left: -15px;
     border: none;
     align-items: center;
 }
 
 #maptitle i {
-    font-size: 18px;
+    font-size: 24px;
+    color: #57a2be;
 }
 #maptitle p {
     font-size: 24px;
     margin-bottom: 0;
+    text-transform: uppercase;
+    color: #05435c;
 }
 
 .iconstyle {
     /*border-top: 2px solid #ccc;*/
-    padding-top: 60px;
+    /*padding-top: 60px;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
 .iconstyle i {
     color: #537AF9;
+    font-size: 22px;
 }
+
+.line {
+    width: 72%;
+    border-top: 2px solid #ccc;
+}
+
+.line2 {
+    width: 80%;
+    border-top: 2px solid #ccc;
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ Contact ]*/
 
@@ -185,11 +217,11 @@ iframe {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: top;
     padding-bottom: 120px;
     margin: 0 auto;
+    margin-top: 40px;
 
 }
 
@@ -200,7 +232,8 @@ iframe {
     padding: 30px 0 80px 0;
     border: 2px solid #e7ebed;
     padding: 30px;
-    margin-right: -15px;
+    box-shadow: 0 0 10px -9px #000;
+    border-radius: 5px;
 }
 
 
@@ -219,9 +252,11 @@ iframe {
     color: #43383e;
     line-height: 1.2;
     text-align: center;
-    padding-bottom: 35px;
 }
 
+.contact100-form-title span i {
+    color: #57a2be;
+}
 
 
 /*------------------------------------------------------------------
@@ -230,9 +265,24 @@ iframe {
 .wrap-input100 {
     width: 100%;
     position: relative;
-    background-color: #f9f9f9;
     margin-bottom: 17px;
-    border-radius: 3px;
+    border: solid 1px #9ec1d2;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.wrap-input100 i {
+    font-size: 20px;
+}
+
+.textera_icon {
+    position: absolute;
+    margin: 20px 15px;
+}
+
+.input100-mod {
+
 }
 
 .label-input100 {
@@ -243,7 +293,7 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 58px;
+    width: 45px;
     height: 62px;
     position: absolute;
     top: 0;
@@ -268,13 +318,14 @@ iframe {
 /*---------------------------------------------*/
 input.input100 {
     height: 62px;
-    padding: 0 20px 0 58px;
+    padding: 15px 20px 15px 40px;
 }
 
 
 textarea.input100 {
     min-height: 109px;
-    padding: 19px 20px 0 23px;
+    padding: 20px 20px 0 40px;
+    position: relative;
 }
 
 
@@ -340,7 +391,7 @@ textarea.input100 {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: flex-end;
     padding-top: 13px;
 
 }
@@ -351,7 +402,6 @@ textarea.input100 {
     z-index: 1;
     border-radius: 3px;
     overflow: hidden;
-    width: 100%;
 }
 
 .contact100-form-bgbtn {
@@ -381,14 +431,12 @@ textarea.input100 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px;
     min-width: 100%;
-    height: 62px;
-
     font-family: 'OpenSans-Regular';
     font-size: 16px;
     color: #fff;
-    background-color: #227dc7;
+    background-color: #00435d;
     line-height: 1.2;
 }
 
@@ -467,6 +515,4 @@ textarea.input100 {
         opacity: 1;
     }
 }
-
-
 
