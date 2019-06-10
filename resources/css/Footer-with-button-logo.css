@@ -30,6 +30,14 @@
     margin: 0 auto;
 }
 
+#myFooter .footer-copyright p a {
+    text-decoration: underline;
+}
+
+#myFooter .footer-copyright p a:hover {
+    color: #000;
+}
+
 #myFooter .row {
     margin-bottom: 0px;
     position: relative;

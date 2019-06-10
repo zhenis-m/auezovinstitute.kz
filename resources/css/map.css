@@ -219,7 +219,7 @@ iframe {
     display: flex;
     justify-content: flex-start;
     align-items: top;
-    padding-bottom: 120px;
+    padding-bottom: 60px;
     margin: 0 auto;
     margin-top: 40px;
 
@@ -516,3 +516,12 @@ textarea.input100 {
     }
 }
 
+
+.wrap__contacts {
+    padding: 20px 0;
+}
+
+.wrap__message {
+    background-color: #efefef;
+    padding: 20px 0;
+}

@@ -1,0 +1,37 @@
+.wrap__edu {
+    margin-top: 70px;
+}
+
+.section {
+    padding: 40px 0;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #000;
+}
+
+.section__head {
+    text-align: center;
+}
+
+.section__img {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.section__img img {
+
+}
+
+.section__text {
+
+}
+
+.bold {
+    font-weight: bold;
+}

@@ -205,6 +205,7 @@
             flex-direction: column;
             align-items: center;
             margin: 0 10px 10px;
+            text-align: center;
         }
 
         .item__link__block__text__name h4 {
