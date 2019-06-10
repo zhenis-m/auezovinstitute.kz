@@ -30,7 +30,7 @@ Route::group([
     
     Route::group(['prefix'=>'/', 'namespace'=>'main'], function (){
         Route::get('/', 'MainController@index');
-        Route::get('/main/museum', 'MuseumController@museum');
+//        Route::get('/main/museum', 'MuseumController@museum');
         Route::get('/main/map', 'MapController@map');
         Route::get('/main/education', 'MainController@education');
     });
@@ -80,6 +80,9 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], 
     Route::resource('/departments', 'DepartmentsController', ['as'=>'admin']);
     Route::resource('/directors', 'DirectorController', ['as'=>'admin']);
     Route::resource('/banners', 'BannerController', ['as'=>'admin']);
+    Route::group(['prefix' => 'user_managment', 'namespace' => 'UserManagment'], function() {
+        Route::resource('/user', 'UserController', ['as'=>'admin.user_managment']);
+    });
 });
 
 
