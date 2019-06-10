@@ -1057,7 +1057,7 @@ body {
 }
 
 .wrap__content {
-	margin-top: 46px;
+	margin-top: 80px;
     background-color: #f9f9f9;
     min-height: calc(100vh - 190px);
     padding-bottom: 0 !important;
