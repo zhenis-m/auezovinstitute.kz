@@ -40,7 +40,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
 
-                <ul class="nav navbar-nav nav">
+                <ul class="navbar-nav">
                     <li class="dropdown">
                         <a href="#" class="nav-link " data-toggle="dropdown"
                         role="button" aria-expanded="false">Меню</a>
@@ -59,7 +59,7 @@
                     </li>
                 </ul>
 
-                <ul class="nav navbar-nav  nav">
+                <ul class="navbar-nav">
                     <a href="{{url('/admin')}}" class="nav-link"
                        role="button" aria-expanded="false">Панель состояния</a>
                 </ul>
