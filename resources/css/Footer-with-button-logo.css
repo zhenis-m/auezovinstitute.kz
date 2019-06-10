@@ -168,6 +168,7 @@ body{
 .container__footer {
     width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .row{
@@ -190,7 +191,6 @@ body{
     height: 156px;
     padding: 20px;
     margin-top: -40px;
-    margin-left: 82px;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
