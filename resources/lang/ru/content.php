@@ -14,5 +14,6 @@ return [
     'structure' => 'Структура',
     'to_learn_more' => 'Узнать больше',
     'all_books' => 'Все книги',
+    'author' => 'Автор: ',
     
 ];

@@ -47,6 +47,38 @@
 }
 .news__state__text {
     width: 100%;
+    display: flex;
+}
+
+.news__state__text .news__books__img {
+    margin: 0 60px 20px 0;
+}
+
+.news__state__text .news__books__img img {
+    width: 100%;
+}
+
+.news__state__text__descr {
+    width: 70%;
+}
+
+.news__state__text__descr__aphtor {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.news__state__text__descr__aphtor p {
+    margin: 0 5px 0 0;
+    font-size: 1.6em !important;
+
+}
+
+.news__state__text__descr__items {
+    margin-bottom: 20px;
+}
+
+.news__state__text__descr .news__state__text__descr__items p {
+    margin-bottom: 0;
 }
 
 .news__state__text p {

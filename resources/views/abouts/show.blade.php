@@ -3,7 +3,7 @@
 @section('content')
     <div class="news_page__way">
         <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/
-        <a>{{ $about->title }}</a>
+        {{ $about->title }}
     </div>
 <div class="container_1">
     <div class="social_and_banner">

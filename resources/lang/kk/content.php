@@ -14,6 +14,7 @@ return [
     'structure' => 'Құрылымы',
     'to_learn_more' => 'Көбірек біліңіз',
     'all_books' => 'Барлық кітаптар',
+    'author' => 'Автор: ',
 
     
 ];

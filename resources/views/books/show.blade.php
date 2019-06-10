@@ -4,7 +4,7 @@
     <div class="news_page__way">
         <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/
         <a href="{{ URL::to('/books') }}">{{ trans('content.books') }}</a>&nbsp;/
-        <a href="#">{{ $bok->title }}</a>
+        {{ $bok->title }}
     </div>
     <div>
         <div class="news">
@@ -12,11 +12,18 @@
                 <div class="news__state__headline">
                     <h1>{{ $bok->title }}</h1>
                 </div>
-                <div class="news__books__img">
-                    <img src="{{ $bok ? asset('uploads/' . $bok->image_show) : ""}}" alt="">
-                </div>
                 <div class="news__state__text">
-                    {!! $bok->description !!}
+                    <div class="news__books__img">
+                        <img src="{{ $bok ? asset('uploads/' . $bok->image_show) : ""}}" alt="">
+                    </div>
+                    <div class="news__state__text__descr">
+                        <div class="news__state__text__descr__aphtor">
+                            <p>{{ trans('content.author') }}</p><p>{!! $bok->description_short !!}</p>
+                        </div>
+                        <div class="news__state__text__descr__items">
+                            <p>{!! $bok->description !!}</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="news__state__reader">
 {{--                    <a href="{{ URL::to('/reader/index') }}" target="_blank">Читать книгу</a>--}}

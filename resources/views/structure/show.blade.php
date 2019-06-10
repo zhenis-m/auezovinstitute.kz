@@ -4,7 +4,7 @@
     <div class="news_page__way">
         <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/
         <a href="{{ URL::to('structure/administration') }}">{{ trans('content.admins') }}</a>&nbsp;/
-        <a>{{ $director->title }}</a>
+        {{ $director->title }}
     </div>
 <div>
     <div class="container_1">
