@@ -20,14 +20,14 @@
                            
                     </div>
                 </div>
-                <div class="social-networks_admins">
-                    <ul>
-                        <li> <a href="https://www.google.ru/" target="_blank" class="google"><i class="fa fa-google-plus"></i></a> </li>
-                        <li> <a href="https://www.vk.com/" target="_blank" class="vk"><i class="fa fa-vk"></i></a>            </li>
-                        <li><a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li>  <a href="https://www.instagram.com/" target="_blank" class="inst"><i class="fa fa-instagram"></i></a> </li>
-                    </ul>
-                </div>
+{{--                <div class="social-networks_admins">--}}
+{{--                    <ul>--}}
+{{--                        <li> <a href="https://www.google.ru/" target="_blank" class="google"><i class="fa fa-google-plus"></i></a> </li>--}}
+{{--                        <li> <a href="https://www.vk.com/" target="_blank" class="vk"><i class="fa fa-vk"></i></a>            </li>--}}
+{{--                        <li><a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>--}}
+{{--                        <li>  <a href="https://www.instagram.com/" target="_blank" class="inst"><i class="fa fa-instagram"></i></a> </li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
                 <div class="director__content">
                     <div class="text_review">
                         <p class="desc">{!!  $director->description !!}</p>

@@ -39,7 +39,7 @@
                     <div class="social-networks">
                         <ul>
 {{--                            <li> <a href="https://www.google.ru/" target="_blank" class="google"><i class="fa fa-google-plus"></i></a> </li>--}}
-                            <li><a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fab fa-facebook-square"></i></a></li>
                             <li>  <a href="https://www.instagram.com/" target="_blank" class="inst"><i class="fa fa-instagram"></i></a> </li>
                             <li> <a href="https://www.vk.com/" target="_blank" class="vk"><i class="fa fa-vk"></i></a>            </li>
                         </ul>
@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="footer-copyright">
-        <p> Институт литературы и искусства им. М.О.Ауэзова КН МОН РК&copy; 2019</p>
+        <p><a href="http://auezovinstitute.kz">auezovinstitute.kz</a> КН МОН РК&copy; 2019</p>
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

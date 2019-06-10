@@ -54,7 +54,7 @@ body {
 }
 
 .logo {
-	width: 23%;
+	width: 24%;
 	padding: 20px;
 	background-color: #fff;
     position: absolute;
@@ -65,6 +65,11 @@ body {
     box-shadow: 0 5px 20px -5px #000;
     display: flex;
     align-items: center;
+}
+
+.logo a {
+    width: 90%;
+    margin: 0 auto;
 }
 
 .logo img {
@@ -196,7 +201,7 @@ body {
 
 .sub-menu li:hover {
 	background-color: #e9ecef;
-	transition: all 0.5s ease-in;
+	transition: all 0.3s ease-in;
     border: none;
 }
 
@@ -546,12 +551,16 @@ body {
 
 /*-------------- nwes style begin -----------------*/
 
+.wrap__news {
+    background-color: #efefef;
+}
+
 .nwes {
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
 	width: 1200px;
-	padding: 40px 0;
+	padding: 40px 0 20px;
 }
 
 .nwes__state {
@@ -706,7 +715,10 @@ body {
     height: 180px;
     width: 49%;
     text-decoration: none;
-    box-shadow: 0 3px 10px -7px #1a5972;
+    box-shadow: 0 0px 10px 0px #999;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 .nwes__blog__mini a:hover {
@@ -756,6 +768,7 @@ body {
 	border-radius: 5px;
     align-items: center;
     overflow: hidden;
+    background-color: #fff;
 }
 
 .new__mini__img {
@@ -783,6 +796,7 @@ body {
 	/*background: url("../../../auezovinstitute.kz/public/css/img/banner-trening2.jpg") no-repeat #f6f7fa center center;*/
 	margin: 0 auto;
 	width: 100%;
+    padding: 20px 0;
 	
 
 }
@@ -836,7 +850,6 @@ body {
 }
 
 .education__text {
-	width: 50%;
 	margin-top: 30px;
 }
 
@@ -909,10 +922,14 @@ body {
 
 /*-------------- Books style begin -----------------*/
 
+.wrap__books {
+    background-color: #efefef;
+}
+
 .books {
 	width: 1200px;
 	margin: 0 auto;
-	padding: 40px 0;
+	padding: 20px 0;
 }
 
 .books p {
@@ -924,7 +941,6 @@ body {
 	display: flex;
     justify-content: space-between;
 	align-items: center;
-	margin: 30px 0;
 }
 
 .books__haed .line {
@@ -1040,10 +1056,11 @@ body {
     padding-top: 60px;
 }
 
-.py-4 {
+.wrap__content {
 	margin-top: 46px;
     background-color: #f9f9f9;
     min-height: calc(100vh - 190px);
+    padding-bottom: 0 !important;
 }
 
 

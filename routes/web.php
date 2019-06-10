@@ -32,6 +32,7 @@ Route::group([
         Route::get('/', 'MainController@index');
         Route::get('/main/museum', 'MuseumController@museum');
         Route::get('/main/map', 'MapController@map');
+        Route::get('/main/education', 'MainController@education');
     });
     
   

@@ -29,7 +29,7 @@
         @include('layouts.header')
 
 
-        <main class="py-4">
+        <main class="wrap__content" id="wrap__content">
             @yield('content')
         </main>
         @include('layouts.footer')
