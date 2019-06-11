@@ -20,3 +20,4 @@ Thumbs.db
 .idea/*.xml
 public/uploads
 .idea/workspace.xml
+/public/uploads/
