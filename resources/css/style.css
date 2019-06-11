@@ -50,7 +50,6 @@ body {
 	align-items: center;
 	width: 1200px;
     background-color: #fff;
-    border: solid 1px #00435d;
     border-top: none;
     border-bottom: none;
 }
@@ -137,8 +136,7 @@ body {
     -webkit-border-radius: 0 0 10px 10px;
     -moz-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
-    border: solid 1px #00435d;
-    border-top: none;
+    box-shadow: 0 7px 10px -5px #999;
 }
 
 .fixed {
@@ -433,6 +431,7 @@ body {
 .header__local__item ul li:hover {
     border: solid 1px #2a5266;
 	text-decoration: none;
+    transition: all 0.5s;
 }
 
 .header__local__item ul li a:hover {
@@ -517,6 +516,7 @@ body {
 	/*background: url("../img/banner.png") no-repeat #F9F9F9 center center;*/
 	width: 100%;
 	margin: 0 auto;
+    height: 1000px;
 }
 
 .banner__img img {
