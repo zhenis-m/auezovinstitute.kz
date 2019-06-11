@@ -6,6 +6,14 @@
             </div>
         </div>
         <div class="header__wrap">
+            <div class="search search_clearfix">
+                <form action="{{ URL::to('search') }}" method="GET" class="searchform">
+                    <div class="search__text">
+                        <input type="text" value="" placeholder="{{ trans('main.search') }}" name="search"/>
+                    </div>
+                    <input type="image" src="../../images/search.png"/>
+                </form>
+            </div>
             <div class="header__local">
 {{--                <a href="#box" class="lang-flag {{ app()->getLocale() }}" onclick="openbox('box'); return false">{{ trans('header.language') }}</a>--}}
                 <div class="header__local__item">
@@ -19,14 +27,6 @@
                         @endforeach
                     </ul>
                 </div>
-            </div>
-            <div class="search search_clearfix">
-                <form action="{{ URL::to('search') }}" method="GET" class="searchform">
-                    <div class="search__text">
-                        <input type="text" value="" placeholder="{{ trans('main.search') }}" name="search"/>
-                    </div>
-                    <input type="image" src="../../images/search.png"/>
-                </form>
             </div>
         </div>
     </div>
@@ -148,7 +148,7 @@
 
     var avatarElem = document.getElementById('avatar');
 
-    var avatarSourceBottom = avatarElem.getBoundingClientRect().top + window.pageYOffset;
+    var avatarSourceBottom = avatarElem.getBoundingClientRect().top + window.pageYOffset + 9;
 
     window.onscroll = function() {
         if (avatarElem.classList.contains('fixed') && window.pageYOffset < avatarSourceBottom) {
