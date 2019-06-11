@@ -19,15 +19,8 @@
                                 </li>
                                 @endforeach
                                 </li>
-                            <li>
-                                <a href="{{ URL::to('/books') }}">{{ trans('header.books') }}</a>
-                            </li>
-                        </ul>
-                    </li>
 
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">{{ trans('header.structure') }} <i class="fas fa-chevron-down"></i></a>
-                        <ul class="sub-menu sub-menu2-mod">
+
                             <li>
                                 <a href="{{ URL::to('/structure/administration') }}">{{ trans('header.admins') }}</a>
                             </li>
@@ -37,6 +30,14 @@
                             </li>
                         </ul>
                     </li>
+
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">{{ trans('header.science') }} <i class="fas fa-chevron-down"></i></a>
+                        <ul class="sub-menu sub-menu2-mod">
+
+                        </ul>
+                    </li>
+
                     <li class="menu-item">
                         <a href="#" class="menu-link">{{ trans('header.culture') }} <i class="fas fa-chevron-down"></i></a>
                         <ul class="sub-menu sub-menu3-mod">
@@ -45,6 +46,9 @@
                                     <a href="{{ route('main.show', [ 'id' => $cultur->id ]) }}">{{ $cultur->title }}</a>
                                 </li>
                             @endforeach
+                            <li>
+                                <a href="{{ URL::to('/books') }}">{{ trans('header.books') }}</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>

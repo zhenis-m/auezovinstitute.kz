@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Список страниц @endslot
             @slot('parent') Главная @endslot
-            @slot('active')  &nbsp;/ Культурное наследие @endslot
+            @slot('active')  &nbsp;/ Издания и Публикации @endslot
         @endcomponent
 
         <hr>

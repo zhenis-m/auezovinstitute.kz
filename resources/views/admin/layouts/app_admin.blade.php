@@ -45,15 +45,15 @@
                         <a href="#" class="nav-link " data-toggle="dropdown"
                         role="button" aria-expanded="false">Меню</a>
                         <ul class="dropdown-menu admin__panel" role="menu">
-                            <li><a class="dropdown-item" href="{{route('admin.banners.index')}}">Баннер</a></li>
+{{--                            <li><a class="dropdown-item" href="{{route('admin.banners.index')}}">Баннер</a></li>--}}
                             <li><a class="dropdown-item" href="{{route('admin.books.index')}}">Книги</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.articles.index')}}">Новости</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.insts.index')}}">Институт</a></li>
-                            <li><a class="dropdown-item" href="{{route('admin.cultures.index')}}">Культурное наследие</a></li>
+                            <li><a class="dropdown-item" href="{{route('admin.cultures.index')}}">Издания и Публикации</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.departments.index')}}">Отделы института</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.directors.index')}}">Администрация института</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.user_managment.user.index')}}">Управление пользователями</a></li>
-{{--                            <li><a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a></li>--}}
+{{--                            <li><a class="dropdown-item" href="{{route('admin.category.index')}}">Категории научных проектов</a></li>--}}
                             <li><a class="dropdown-item" href="{{url('/')}}">Назад к сайту</a></li>
                         </ul>
                     </li>
