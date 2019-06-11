@@ -135,16 +135,16 @@ class BookController extends Controller
         $data['ebook_show'] = Storage::disk('uploads')->put('book/'. $book ->id, $ebook);
         }
 
-
         $audio = $request->file('audio');
 
-        //Store image & put image path & image name in the dataset.
         if($audio !== null) {
             $data['audio'] = $audio->getClientOriginalName();
             $data['audio_show'] = Storage::disk('uploads')->put('book/'. $book ->id, $audio);
         }
+//        Store image & put image path & image name in the dataset.
+//        Update article with given data.
 
-        //Update article with given data.
+
         $book->update($data);
 
         //Categories.
