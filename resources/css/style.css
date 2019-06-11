@@ -45,7 +45,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	width: 1200px;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 .header__nav__logo {
@@ -97,10 +97,10 @@ body {
 }
 
 .menu-item:nth-child(3)  {
-    width: 220px;
+    width: 275px;
 }
 .menu-item:nth-child(3) .sub-menu li{
-    width: 220px;
+    width: 275px;
 }
 
 .menu-item:last-child {
@@ -124,6 +124,8 @@ body {
 .header__menu {
     width: 1200px;
     margin: 0 auto;
+    margin-top: 10px;
+    border-top: solid 2px #fff;
 }
 
 .nav {
@@ -356,8 +358,8 @@ body {
 /*-------------- вариант 2 -----------------*/
 
 .header__local {
-	/*margin-right: 20px;*/
-	/*width: 190px;*/
+	display: flex;
+    align-items: center;
 }
 
 .header__local .lang-flag {
@@ -385,24 +387,25 @@ body {
 
 .header__local__item {
 	width: 100%;
-	/*background-color: #d3d9df;*/
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	margin-top: 5px;
 }
 
 .header__local__item ul {
     display: flex;
+    margin: 0;
+}
+
+.header__local__item ul li {
+    margin: 0 5px 0 0;
 }
 
 .header__local__item ul li a {
 	color: #000;
-	padding: 10px 13px;
+	padding: 8px 13px;
     background-color: #d3d9df;
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;
 	border-radius: 50px;
+    font-size: 1.2em;
 }
 
 .header__local__item ul li a:hover {
@@ -1068,7 +1071,7 @@ body {
 }
 
 .wrap__content {
-	margin-top: 80px;
+	margin-top: 130px;
     background-color: #f9f9f9;
     min-height: calc(100vh - 190px);
     padding-bottom: 0 !important;

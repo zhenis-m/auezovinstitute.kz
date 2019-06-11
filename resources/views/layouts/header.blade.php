@@ -53,7 +53,7 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-link">{{ trans('header.science') }}</a>
+                    <a href="{{ route('sciences.index') }}" class="menu-link">{{ trans('header.science') }}</a>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="menu-link">{{ trans('header.culture') }} <i class="fas fa-chevron-down"></i></a>
@@ -124,6 +124,15 @@
     //
     // window.onscroll = function() {
     //     document.getElementById('box').style.display = "none";
+    // }
+
+    // function color(box) {
+    //     var background = document.getElementById('box').style.background;
+    //     if (background == "#d3d9df") {
+    //         document.getElementById('box').style.background = "#1e5f79";
+    //     } else {
+    //         document.getElementById('box').style.background = "#d3d9df";
+    //     }
     // }
 
 
