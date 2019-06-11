@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div class="header__menu">
+    <div id="avatar" class="header__menu">
         <div class="nav">
             <ul class="menu">
                 <li class="menu-item">
@@ -134,6 +134,29 @@
     //         document.getElementById('box').style.background = "#d3d9df";
     //     }
     // }
+
+    // window.onscroll = function() {
+    //     if (window.onscroll > 100px) {
+    //         document.getElementById('nav').style.marginTop = "-14px";
+    //     } else {
+    //         document.getElementById('nav').style.marginTop = "74px";
+    //     }
+    //
+    //     var scrolled =  document.documentElement.scrollTop;
+    //     document.getElementById('nav').style.marginTop = 0;
+    // }
+
+    var avatarElem = document.getElementById('avatar');
+
+    var avatarSourceBottom = avatarElem.getBoundingClientRect().top + window.pageYOffset;
+
+    window.onscroll = function() {
+        if (avatarElem.classList.contains('fixed') && window.pageYOffset < avatarSourceBottom) {
+            avatarElem.classList.remove('fixed');
+        } else if (window.pageYOffset > avatarSourceBottom) {
+            avatarElem.classList.add('fixed');
+        }
+    };
 
 
 </script>

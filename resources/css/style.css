@@ -31,12 +31,13 @@ body {
 /*------- подключение шрифтов --------*/
 
 .header {
-	/*background-color: #F9F9F9;*/
-	background-color: #00435d;
-	z-index: 2;
-	box-shadow: 0 5px 10px rgb(0,0,0,.25);
-	position: fixed;
+	/*background-color: #00435d;*/
+	/*z-index: 2;*/
+	/*box-shadow: 0 5px 10px rgb(0,0,0,.25);*/
 	width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header__nav {
@@ -46,6 +47,7 @@ body {
 	align-items: center;
 	width: 1200px;
     padding: 15px 0;
+    background-color: #fff;
 }
 
 .header__nav__logo {
@@ -59,14 +61,15 @@ body {
 	width: 24%;
 	padding: 20px;
 	background-color: #fff;
-    position: absolute;
-    height: 82px;
-    -webkit-border-radius: 0 0 5px 5px;
-    -moz-border-radius: 0 0 5px 5px;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 5px 10px -4px #999;
+    /*position: absolute;*/
+    /*height: 82px;*/
+    /*-webkit-border-radius: 0 0 5px 5px;*/
+    /*-moz-border-radius: 0 0 5px 5px;*/
+    /*border-radius: 0 0 5px 5px;*/
+    /*box-shadow: 0 5px 10px -4px #999;*/
     display: flex;
     align-items: center;
+    z-index: 20;
 }
 
 .logo a {
@@ -123,9 +126,17 @@ body {
 
 .header__menu {
     width: 1200px;
-    margin: 0 auto;
-    margin-top: 10px;
     border-top: solid 2px #fff;
+    z-index: 19;
+    background-color: #f3f3f3;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
 }
 
 .nav {
@@ -141,7 +152,7 @@ body {
 	display: flex;
     justify-content: space-between;
 	padding: 0;
-	background-color: #00435d;
+	background-color: #f3f3f3;
 	border-radius: 5px;
     width: 100%;
     margin: 10px 0;
@@ -154,7 +165,7 @@ body {
 }
 .menu li a {
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 	display: block;
 	padding: 8px 10px;
     text-transform: uppercase;
