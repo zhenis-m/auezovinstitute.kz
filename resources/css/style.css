@@ -15,6 +15,7 @@ html, body {
 
 body {
 	background-color: #f9f9f9 !important;
+    /*background-image: url("../../public/images/baner-books.jpg");*/
 }
 /*------- подключение шрифтов --------*/
 
@@ -38,15 +39,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 18;
 }
 
 .header__nav {
 	margin: 0 auto !important;
 	display: flex;
+    z-index: 18;
 	justify-content: space-between;
 	align-items: center;
 	width: 1200px;
-    padding: 15px 0;
     background-color: #fff;
 }
 
@@ -494,12 +496,13 @@ body {
 .banner {
 	background-color: #F9F9F9;
 	z-index: 1;
+    overflow: hidden;
 }
 
 .banner__img {
 	/*background: url("../img/banner.png") no-repeat #F9F9F9 center center;*/
-	height: 404px;
-	width: 1200px;
+	height: 604px;
+	width: 100%;
 	margin: 0 auto;
 	position: relative;
 }
@@ -507,6 +510,7 @@ body {
 .banner__img img {
 	width: 100%;
 	height: auto;
+    margin-top: -440px;
 }
 
 .headline {
@@ -1082,10 +1086,10 @@ body {
 }
 
 .wrap__content {
-	margin-top: 130px;
     background-color: #f9f9f9;
     min-height: calc(100vh - 190px);
     padding-bottom: 0 !important;
+    margin-top: -150px;
 }
 
 

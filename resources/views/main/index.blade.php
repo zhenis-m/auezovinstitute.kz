@@ -4,7 +4,7 @@
 
     <div class="banner">
         <div class="banner__img">
-            <img src="../../images/banner.png">
+            <img src="../../images/baner-books.jpg">
             <div class="headline">
                 <p class="bold">{{ trans('main.title') }}</p>
                 <p>Мухтар Ауэзов</p>
