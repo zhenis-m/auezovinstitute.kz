@@ -51,6 +51,7 @@
                             <li><a class="dropdown-item" href="{{route('admin.insts.index')}}">Институт</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.cultures.index')}}">Издания и Публикации</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.departments.index')}}">Отделы института</a></li>
+                            <li><a class="dropdown-item" href="{{route('admin.sciences.index')}}">Научные проекты</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.directors.index')}}">Администрация института</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.user_managment.user.index')}}">Управление пользователями</a></li>
 {{--                            <li><a class="dropdown-item" href="{{route('admin.category.index')}}">Категории научных проектов</a></li>--}}

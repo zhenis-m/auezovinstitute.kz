@@ -32,10 +32,10 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="#" class="menu-link">{{ trans('header.science') }} <i class="fas fa-chevron-down"></i></a>
-                        <ul class="sub-menu sub-menu2-mod">
+                        <a href="{{ route('sciences.index') }}" class="menu-link">{{ trans('header.science') }}</a>
+{{--                        <ul class="sub-menu sub-menu2-mod">--}}
 
-                        </ul>
+{{--                        </ul>--}}
                     </li>
 
                     <li class="menu-item">

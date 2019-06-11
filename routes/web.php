@@ -64,6 +64,11 @@ Route::group([
         Route::get('/{id}', 'DepController@show')->name('departments.show');
     });
 
+    Route::group(['prefix'=>'sciences', 'namespace'=>'Science'], function (){
+        Route::get('/', 'ScController@index')->name('sciences.index');
+        Route::get('/{id}', 'ScController@show')->name('sciences.show');
+    });
+
     Route::group(['prefix'=>'structure', 'namespace'=>'structure'], function (){
         Route::get('/administration', 'AdministrationController@administration');
         Route::get('/{id}', 'DirController@show')->name('structure.show');
@@ -78,6 +83,7 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], 
     Route::resource('/cultures', 'CultureController', ['as'=>'admin']);
     Route::resource('/insts', 'InstController', ['as'=>'admin']);
     Route::resource('/departments', 'DepartmentsController', ['as'=>'admin']);
+    Route::resource('/sciences', 'ScienceController', ['as'=>'admin']);
     Route::resource('/directors', 'DirectorController', ['as'=>'admin']);
     Route::resource('/banners', 'BannerController', ['as'=>'admin']);
     Route::group(['prefix' => 'user_managment', 'namespace' => 'UserManagment'], function() {
