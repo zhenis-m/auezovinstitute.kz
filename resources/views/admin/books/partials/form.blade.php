@@ -65,6 +65,12 @@
     <img class="col-sm-6" id="preview" src="{{ $book ? asset('uploads/' . $book->ebook_show) : ""}}">
 </div>
 
+<div class="form-group">
+    <label for="">загрузить аудио книгу</label>
+    <input data-preview="#preview" name="audio" type="file" id="audio">{{$book->audio ?? ""}}
+    <img class="col-sm-6" id="preview" src="{{ $book ? asset('uploads/' . $book->audio_show) : ""}}">
+</div>
+
 
 <label for="">Мета Заголовок</label>
 <input type="text" class="form-control" name="meta_title" placeholder="Мета заголовок" value="{{$book->meta_title ?? ""}}">

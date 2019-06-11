@@ -47,6 +47,7 @@ class BookController extends Controller
 
         $image = $request->file('image');
         $ebook = $request->file('ebook');
+        $audio = $request->file('audio');
         //Save article
         $book = Book::create($request->all());
         //Upload image and store image path in the image_show attribute.
@@ -60,6 +61,12 @@ class BookController extends Controller
         $book->ebook = $ebook->getClientOriginalName();
         $book->ebook_show = Storage::disk('uploads')->put('book/' . $book->id, $ebook);
         $book->save();
+        }
+
+        if($audio !== null) {
+            $book->audio = $audio->getClientOriginalName();
+            $book->audio_show = Storage::disk('uploads')->put('book/' . $book->id, $audio);
+            $book->save();
         }
         //Categories
         if ($request->input('categories')) :
@@ -126,6 +133,15 @@ class BookController extends Controller
         if($ebook !== null) {
         $data['ebook'] = $ebook->getClientOriginalName();
         $data['ebook_show'] = Storage::disk('uploads')->put('book/'. $book ->id, $ebook);
+        }
+
+
+        $audio = $request->file('audio');
+
+        //Store image & put image path & image name in the dataset.
+        if($audio !== null) {
+            $data['audio'] = $audio->getClientOriginalName();
+            $data['audio_show'] = Storage::disk('uploads')->put('book/'. $book ->id, $audio);
         }
 
         //Update article with given data.
