@@ -1,5 +1,5 @@
-{{--@extends('admin.layouts.app_admin')--}}
-@extends('adminlte::page')
+@extends('admin.layouts.app_admin')
+{{--@extends('adminlte::page')--}}
 @section('content')
     <div class="container">
         <section class="content">
