@@ -68,7 +68,7 @@ Route::group([
         Route::get('/{id}', 'DepController@show')->name('departments.show');
     });
 
-    Route::group(['prefix'=>'sciences', 'namespace'=>'Science'], function (){
+    Route::group(['prefix'=>'sciences', 'namespace'=>'science'], function (){
         Route::get('/', 'ScController@index')->name('sciences.index');
         Route::get('/{id}', 'ScController@show')->name('sciences.show');
     });
