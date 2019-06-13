@@ -19,7 +19,7 @@
                 <div class="header__local__item">
                     <ul>
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                            <li class="lang-flag {{ $localeCode }}" data="{{ $localeCode }}">
+                            <li id="box" class="lang-flag {{ $localeCode }} {{ app()->getLocale() == $localeCode ? 'active' : '' }}" data="{{ $localeCode }}">
                                 <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                                     {{ $properties['name'] }}
                                 </a>
@@ -128,25 +128,6 @@
     //     document.getElementById('box').style.display = "none";
     // }
 
-    // function color(box) {
-    //     var background = document.getElementById('box').style.background;
-    //     if (background == "#d3d9df") {
-    //         document.getElementById('box').style.background = "#1e5f79";
-    //     } else {
-    //         document.getElementById('box').style.background = "#d3d9df";
-    //     }
-    // }
-
-    // window.onscroll = function() {
-    //     if (window.onscroll > 100px) {
-    //         document.getElementById('nav').style.marginTop = "-14px";
-    //     } else {
-    //         document.getElementById('nav').style.marginTop = "74px";
-    //     }
-    //
-    //     var scrolled =  document.documentElement.scrollTop;
-    //     document.getElementById('nav').style.marginTop = 0;
-    // }
 
     var avatarElem = document.getElementById('avatar');
 
@@ -159,6 +140,10 @@
             avatarElem.classList.add('fixed');
         }
     };
+
+    function color() {
+        document.getElementsByClassName('{{ app()->getLocale() }}').style.border = "solid 1px #000";
+    }
 
 
 </script>

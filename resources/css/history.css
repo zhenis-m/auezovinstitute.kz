@@ -26,6 +26,7 @@
 .new__state__date {
     padding: 10px 20px;
     display: flex;
+    justify-content: flex-start !important;
     align-items: center;
     font-size: 12px;
     color: #bfc8cf;
@@ -101,6 +102,12 @@
 .social_and_banner{
     display: flex;
     justify-content: center;
+    width: 1200px;
+}
+
+.social_and_banner img {
+    width: 100%;
+    height: auto;
 }
 
 .read_more{

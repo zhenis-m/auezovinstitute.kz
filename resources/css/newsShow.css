@@ -9,7 +9,9 @@
     font-weight: lighter;
 }
 
-
+.culrure__wrap {
+    margin-top: 160px;
+}
 
 
 .news_page__way {
@@ -47,7 +49,6 @@
 }
 .news__state__text {
     width: 100%;
-    display: flex;
 }
 
 .news__state__text .news__books__img {
