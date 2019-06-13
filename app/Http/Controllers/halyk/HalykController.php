@@ -1,22 +1,24 @@
 <?php
 
-namespace App\Http\Controllers\Science;
+namespace App\Http\Controllers\halyk;
 
+
+use App\HalykUniversity;
+use App\Culture;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Culture;
 use App\Inst;
-use App\Science;
 
-class ScController extends Controller
+class HalykController extends Controller
 {
     public function index()
     {
-        $sciences = Science::all()->where('locale', \App::getLocale());
+
+        $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
-        return view('sciences.index', [
-            'sciences' => $sciences,
+        return view('halyks.index', [
+            'halyks' => $halyks,
             'aboutses' => $aboutses,
             'cultures' => $cultures,
         ]);
@@ -26,11 +28,13 @@ class ScController extends Controller
 
     public function show($id)
     {
-        $science = Science::where('id', $id)->first();
+        $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $halyk = HalykUniversity::where('id', $id)->first();
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
-        return view('sciences.show', [
-            'science' => $science,
+        return view('halyks.show', [
+            'halyks' => $halyks,
+            'halyk' => $halyk,
             'aboutses' => $aboutses,
             'cultures' => $cultures,
         ]);

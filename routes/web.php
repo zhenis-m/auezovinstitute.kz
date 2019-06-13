@@ -42,12 +42,16 @@ Route::group([
         Route::get('/', 'NewsController@index')->name('news.index');
         Route::get('/{id}', 'NewsController@show')->name('news.show');
     });
+
+    Route::group(['prefix'=>'halyks', 'namespace'=>'halyk'], function (){
+        Route::get('/', 'HalykController@index')->name('halyks.index');
+        Route::get('/{id}', 'HalykController@show')->name('halyks.show');
+    });
     
     Route::group(['prefix'=>'books', 'namespace'=>'books'], function (){
         Route::get('/', 'BooksController@index')->name('books.index');
         Route::get('/{id}', 'BooksController@show')->name('books.show');
     });
-
 
     Route::group(['prefix'=>'reader', 'namespace'=>'books'], function (){
         Route::get('/{id}', 'BooksController@show_book')->name('reader.index');
@@ -79,6 +83,7 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], 
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category', 'CategoryController', ['as'=>'admin']);
     Route::resource('/articles', 'ArticleController', ['as'=>'admin']);
+    Route::resource('/halyks', 'HalykUniversityController', ['as'=>'admin']);
     Route::resource('/books', 'BookController', ['as'=>'admin']);
     Route::resource('/cultures', 'CultureController', ['as'=>'admin']);
     Route::resource('/insts', 'InstController', ['as'=>'admin']);

@@ -43,27 +43,43 @@
                 <ul class="navbar-nav">
                     <li class="dropdown">
                         <a href="#" class="nav-link " data-toggle="dropdown"
-                        role="button" aria-expanded="false">Меню</a>
+                        role="button" aria-expanded="false">Институт</a>
                         <ul class="dropdown-menu admin__panel" role="menu">
-{{--                            <li><a class="dropdown-item" href="{{route('admin.banners.index')}}">Баннер</a></li>--}}
-                            <li><a class="dropdown-item" href="{{route('admin.books.index')}}">Книги</a></li>
+                            <li><a class="dropdown-item" href="{{route('admin.insts.index')}}">Создание подразделов</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.articles.index')}}">Новости</a></li>
-                            <li><a class="dropdown-item" href="{{route('admin.insts.index')}}">Институт</a></li>
-                            <li><a class="dropdown-item" href="{{route('admin.cultures.index')}}">Издания и Публикации</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.departments.index')}}">Отделы института</a></li>
-                            <li><a class="dropdown-item" href="{{route('admin.sciences.index')}}">Научные проекты</a></li>
                             <li><a class="dropdown-item" href="{{route('admin.directors.index')}}">Администрация института</a></li>
-                            <li><a class="dropdown-item" href="{{route('admin.user_managment.user.index')}}">Управление пользователями</a></li>
-{{--                            <li><a class="dropdown-item" href="{{route('admin.category.index')}}">Категории научных проектов</a></li>--}}
-                            <li><a class="dropdown-item" href="{{url('/')}}">Назад к сайту</a></li>
                         </ul>
                     </li>
                 </ul>
 
+                <li><a class="dropdown-item" href="{{route('admin.sciences.index')}}">Научные проекты</a></li>
+
+
+
                 <ul class="navbar-nav">
-                    <a href="{{url('/admin')}}" class="nav-link"
-                       role="button" aria-expanded="false">Панель состояния</a>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link " data-toggle="dropdown"
+                           role="button" aria-expanded="false">Издания и Публикации</a>
+                        <ul class="dropdown-menu admin__panel" role="menu">
+                            <li><a class="dropdown-item" href="{{route('admin.cultures.index')}}">Список страниц</a></li>
+                            <li><a class="dropdown-item" href="{{route('admin.books.index')}}">Книги</a></li>
+                        </ul>
+                    </li>
                 </ul>
+
+
+                <li><a class="dropdown-item" href="{{route('admin.halyks.index')}}">Народный Университет</a></li>
+
+{{--                <li><a class="dropdown-item" href="#">Керуен</a></li>--}}
+{{--                <li><a class="dropdown-item" href="#">Алтын қор</a></li>--}}
+{{--                <li><a class="dropdown-item" href="#">Дом музея Ауезова</a></li>--}}
+
+
+
+
+
+
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
@@ -78,12 +94,19 @@
                             </li>
                         @endif
                     @else
+                        <ul class="navbar-nav">
+                            <a href="{{url('/admin')}}" class="nav-link"
+                               role="button" aria-expanded="false">Панель состояния</a>
+                        </ul>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
-
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                <a class="dropdown-item" href="{{route('admin.user_managment.user.index')}}">Управление пользователями</a>
+                                <a class="dropdown-item" href="{{url('/')}}">Назад к сайту</a>
+                                <hr>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
