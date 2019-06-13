@@ -35,7 +35,7 @@
 	font-size: 18px;
 }
 .pnwes__state a p {
-	font-size: 18px;
+	font-size: 24px;
 }
 
 .pnwes__state a:hover {
@@ -130,20 +130,60 @@
 
 .pnwes__page {
 	width: 100%;
-	margin: 20px 0; 
+	margin: 40px 0;
 	display: flex;
 	flex-wrap: wrap;
+    justify-content: flex-start;
 }
+
+.pnwes__page a {
+    width: 32%;
+    margin-right: 15px;
+}
+
+.pnwes__page a:hover {
+    text-decoration: none;
+}
+
 .pnwes__page__block {
-	width: 30%;
-	margin: 20px 20px;
+    height: 100%;
 	border: 1px solid #bfc8cf; 
 	border-radius: 5px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+    box-shadow: 0 0 10px 2px #999;
 }
+
+.pnwes__page__block p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #999;
+}
+
+.pnwes__page__block h4 {
+    margin: 10px 0;
+    font-size: 1.6em;
+    color: #000;
+}
+
+/*.pnwes__page__block:hover .pnwes__page__block__wrap .departmens__link p {*/
+/*    transition: all 0.3s ease-in;*/
+/*}*/
+
+/*.pnwes__page__block:hover .pnwes__page__block__wrap .departmens__link h4 {*/
+/*    transition: all 0.3s ease-in;*/
+/*}*/
+
+.pnwes__page__block:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px -2px #999;
+    transition: all 0.3s ease-in;
+    border: 1px solid #42adc7;
+    text-decoration: none;
+}
+
 .pnwes__page__block__wrap {
 	height: 90%;
 }
@@ -240,4 +280,42 @@
 }
 /*-------------- news style end -----------------*/
 
+.pnwes__page .news__link {
+    width: 32%;
+    margin-right: 15px;
+}
 
+.pnwes__page__state {
+    height: 400px;
+    margin: 20px 0;
+    border: 1px solid #bfc8cf;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px -2px #999;
+}
+
+.pnwes__page__state:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in;
+}
+
+.pnwes__page__state__wrap {
+    height: 90%;
+    overflow: hidden;
+}
+
+.pnwes__page__state__wrap__img {
+    height: 70%;
+    overflow: hidden;
+}
+
+.pnwes__page__state__wrap__img img{
+    width: 100%;
+}
+
+.pnwes__page__state__text {
+    padding: 5px 10px;
+    display: flex;
+}

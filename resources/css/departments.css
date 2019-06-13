@@ -101,3 +101,7 @@
     text-decoration: none;
     color: #97a5b2;
 }
+
+.departmens__link a p {
+    margin: 0;
+}

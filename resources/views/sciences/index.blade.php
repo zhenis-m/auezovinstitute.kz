@@ -9,15 +9,16 @@
     </div>
         <div class="pnwes__page">
             @foreach ($sciences as $science)
-            <div class="pnwes__page__block">
-                <div class="pnwes__page__block__wrap">
-                    <div class="pnwes__page__block__title">
-                        <a href="{{ route('sciences.show', [ 'id' => $science->id ]) }}">{{ $science->title }}</a>
-                        <p>{!! $science->description_short !!}</p>
+                <a href="{{ route('sciences.show', [ 'id' => $science->id ]) }}">
+                    <div class="pnwes__page__block">
+                        <div class="pnwes__page__block__wrap">
+                            <div class="pnwes__page__block__title">
+                                <h4>{{ $science->title }}</h4>
+                                <p>{!! $science->description_short !!}</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
+                </a>
             @endforeach
         </div>
     </div>

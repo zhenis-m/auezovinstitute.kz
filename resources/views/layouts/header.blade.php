@@ -74,6 +74,9 @@
                         </li>
                     @endforeach
                 <li class="menu-item">
+                    <a href="#" class="menu-link">{{ trans('header.university') }}</a>
+                </li>
+                <li class="menu-item">
                     <a href="#" class="menu-link">{{ trans('header.keruen') }}</a>
                 </li>
                 <li class="menu-item">
@@ -140,10 +143,6 @@
             avatarElem.classList.add('fixed');
         }
     };
-
-    function color() {
-        document.getElementsByClassName('{{ app()->getLocale() }}').style.border = "solid 1px #000";
-    }
 
 
 </script>
