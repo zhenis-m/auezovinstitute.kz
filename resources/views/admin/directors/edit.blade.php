@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Редактирование профиля @endslot
             @slot('parent') Главная @endslot
-            @slot('active') &nbsp;/ профиль @endslot
+            @slot('active') Профиль @endslot
         @endcomponent
 
         <hr />

@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Создание книги @endslot
             @slot('parent') Главная @endslot
-            @slot('active') &nbsp;/ Книги @endslot
+            @slot('active') Книги @endslot
         @endcomponent
 
         <hr />

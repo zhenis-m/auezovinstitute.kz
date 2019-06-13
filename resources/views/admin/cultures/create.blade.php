@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Создание страницы @endslot
             @slot('parent') Главная @endslot
-            @slot('active') &nbsp;/ Издания и Публикации @endslot
+            @slot('active') Издания и Публикации @endslot
         @endcomponent
 
         <hr />

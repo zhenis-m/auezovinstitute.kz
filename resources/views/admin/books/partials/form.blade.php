@@ -35,20 +35,16 @@
 
 <label for="">Slug (Уникальное значение)</label>
 <input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$book->slug ?? ""}}" readonly=""><br>
-
-
-
-<div class="form-group">
-    <label for="">Изображение</label>
-    <input data-preview="#preview" name="image" type="file" id="image">{{$book->image ?? ""}}
-    <img class="col-sm-6" id="preview" src="{{ $book ? asset('uploads/' . $book->image_show) : ""}}">
-</div>
-
-<!-- {{--<div class="form-group">--}}
-{{--    <label for="">Изображение</label>--}}
-{{--    <input data-preview="#preview" name="image" type="file" id="image">{{$book->image ?? ""}}--}}
-{{--    <img class="col-sm-6" id="preview"  src="">--}}
-{{--</div>--}} -->
+    
+    <div class="form-group" style="margin-left: 20px;">
+        <label for="">Изображение</label>
+        <input data-preview="#preview" name="image" type="file" id="image">
+        @if(empty($book->image_show))
+            <img style="display: none;" class="col-sm-6" id="preview" src="{{ $book ? asset('uploads/' . $book->image_show) : ""}}">
+        @else
+            <img style="padding-top: 30px;" class="col-sm-3" id="preview" src="{{ $book ? asset('uploads/' . $book->image_show) : ""}}">
+        @endif
+    </div>
 
 
 <label for="">Укажите автора</label>

@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Список пользователей @endslot
             @slot('parent') Главная @endslot
-            @slot('active')  &nbsp;/ Пользователи @endslot
+            @slot('active') Пользователи @endslot
         @endcomponent
 
         <hr>
@@ -35,14 +35,14 @@
 
                             <a class="btn btn-default" href="{{route('admin.user_managment.user.edit', $user)}}"><i class="fa fa-edit"></i></a>
 
-                            <button type="submit" class="btn"><i class="fas fa-trash-alt"></i></button>
+                            <button type="submit" class="btn"><i class="fa fa-fw fa-trash"></i></button>
                         </form>
 
                     </td>
                 </tr>
             @empty
                 <tr>
-                    <td colspan="3" class="text-center"><h2>Данные отсутсвуют</h2></td>
+                    <td colspan="6" class="text-center"><h2>Данные отсутсвуют</h2></td>
                 </tr>
             @endforelse
             </tbody>

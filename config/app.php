@@ -236,7 +236,7 @@ return [
         //Our packages
         Unisharp\Ckeditor\ServiceProvider::class,
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
-
+        'LteAdmin' => JeroenNoten\LaravelAdminLte\ServiceProvider::class,
 
     ],
 

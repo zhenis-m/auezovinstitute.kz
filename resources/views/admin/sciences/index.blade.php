@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Список научных проектов @endslot
             @slot('parent') Главная @endslot
-            @slot('active')  &nbsp;/ Научные проекты @endslot
+            @slot('active') Научные проекты @endslot
         @endcomponent
 
         <hr>
@@ -37,14 +37,14 @@
 
                             <a class="btn btn-default" href="{{route('admin.sciences.edit', $science)}}"><i class="fa fa-edit"></i></a>
 
-                            <button type="submit" class="btn"><i class="fas fa-trash-alt"></i></button>
+                            <button type="submit" class="btn"><i class="fa fa-fw fa-trash"></i></button>
                         </form>
 
                     </td>
                 </tr>
             @empty
                 <tr>
-                    <td colspan="3" class="text-center"><h2>Данные отсутсвуют</h2></td>
+                    <td colspan="6" class="text-center"><h2>Данные отсутсвуют</h2></td>
                 </tr>
             @endforelse
             </tbody>

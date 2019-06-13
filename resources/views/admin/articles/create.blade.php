@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Создание новости @endslot
             @slot('parent') Главная @endslot
-            @slot('active') &nbsp;/ Новости @endslot
+            @slot('active') Новости @endslot
         @endcomponent
 
         <hr />

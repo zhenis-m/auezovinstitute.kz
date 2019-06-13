@@ -38,14 +38,15 @@
 <input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$inst->slug ?? ""}}" readonly=""><br>
 
 
-
-<div class="form-group">
+<div class="form-group" style="margin-left: 20px;">
     <label for="">Изображение</label>
-    <input data-preview="#preview" name="image" type="file" id="image">{{$inst->image ?? ""}}
-    <img class="col-sm-6" id="preview" src="{{ $inst ? asset('uploads/' . $inst->image_show) : ""}}">
+    <input data-preview="#preview" name="image" type="file" id="image">
+    @if(empty($inst->image_show))
+        <img style="display: none;" class="col-sm-6" id="preview" src="{{ $inst ? asset('uploads/' . $inst->image_show) : ""}}">
+    @else
+        <img style="padding-top: 30px;" class="col-sm-3" id="preview" src="{{ $inst ? asset('uploads/' . $inst->image_show) : ""}}">
+    @endif
 </div>
-
-
 
 
 <label for="">Краткое описание</label>
