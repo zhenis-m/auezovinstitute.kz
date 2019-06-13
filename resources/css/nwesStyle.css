@@ -137,7 +137,8 @@
 }
 
 .pnwes__page a {
-    width: 30%;
+    width: 32%;
+    margin-right: 15px;
 }
 
 .pnwes__page a:hover {
@@ -167,15 +168,13 @@
     color: #000;
 }
 
-.pnwes__page__block:hover .pnwes__page__block__wrap .departmens__link p {
-    color: #42adc7;
-    transition: all 0.3s ease-in;
-}
+/*.pnwes__page__block:hover .pnwes__page__block__wrap .departmens__link p {*/
+/*    transition: all 0.3s ease-in;*/
+/*}*/
 
-.pnwes__page__block:hover .pnwes__page__block__wrap .departmens__link h4 {
-    color: #42adc7;
-    transition: all 0.3s ease-in;
-}
+/*.pnwes__page__block:hover .pnwes__page__block__wrap .departmens__link h4 {*/
+/*    transition: all 0.3s ease-in;*/
+/*}*/
 
 .pnwes__page__block:hover {
     cursor: pointer;
