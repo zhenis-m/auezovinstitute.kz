@@ -139,9 +139,5 @@
         }
     };
 
-    function color() {
-        document.getElementsByClassName('{{ app()->getLocale() }}').style.border = "solid 1px #000";
-    }
-
 
 </script>

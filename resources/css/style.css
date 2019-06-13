@@ -106,10 +106,10 @@ body {
 }
 
 .menu-item:nth-child(3)  {
-    width: 275px;
+    width: 285px;
 }
 .menu-item:nth-child(3) .sub-menu li{
-    width: 275px;
+    width: 285px;
 }
 
 .menu-item:last-child {
@@ -775,7 +775,7 @@ body {
 }
 
 .new__state__date .new__state__date__wrap:last-child{
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .nwes__blog__mini {
