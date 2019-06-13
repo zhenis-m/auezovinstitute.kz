@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Создание научных проектов @endslot
             @slot('parent') Главная @endslot
-            @slot('active') &nbsp;/ Научные проекты @endslot
+            @slot('active') Научные проекты @endslot
         @endcomponent
 
         <hr />

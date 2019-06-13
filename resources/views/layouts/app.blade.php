@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="shortcut icon" href="../../images/auezov.png" type="image/png" style="height: 180%">
-{{--    <title>{{ config('app.name', 'Laravel') }}</title>--}}
+    {{--    <title>{{ config('app.name', 'Laravel') }}</title>--}}
     <title>Институт им. М. Ауэзова</title>
 
     <!-- Scripts -->
@@ -25,14 +25,14 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        @include('layouts.header')
+<div id="app">
+    @include('layouts.header')
 
 
-        <main class="wrap__content" id="wrap__content">
-            @yield('content')
-        </main>
-        @include('layouts.footer')
-    </div>
+    <main class="wrap__content" id="wrap__content">
+        @yield('content')
+    </main>
+    @include('layouts.footer')
+</div>
 </body>
 </html>

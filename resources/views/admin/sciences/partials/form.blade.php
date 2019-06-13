@@ -36,15 +36,15 @@
 <label for="">Slug (Уникальное значение)</label>
 <input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$science->slug ?? ""}}" readonly=""><br>
 
-
-
-<div class="form-group">
+<div class="form-group" style="margin-left: 20px;">
     <label for="">Изображение</label>
-    <input data-preview="#preview" name="image" type="file" id="image">{{$science->image ?? ""}}
-    <img class="col-sm-6" id="preview" src="{{ $science ? asset('uploads/' . $science->image_show) : ""}}">
+    <input data-preview="#preview" name="image" type="file" id="image">
+    @if(empty($science->image_show))
+        <img style="display: none;" class="col-sm-6" id="preview" src="{{ $science ? asset('uploads/' . $science->image_show) : ""}}">
+    @else
+        <img style="padding-top: 30px;" class="col-sm-3" id="preview" src="{{ $science ? asset('uploads/' . $science->image_show) : ""}}">
+    @endif
 </div>
-
-
 
 
 <label for="">Краткое описание</label>

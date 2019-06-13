@@ -39,13 +39,15 @@
 
 
 
-<div class="form-group">
+<div class="form-group" style="margin-left: 20px;">
     <label for="">Изображение</label>
-    <input data-preview="#preview" name="image" type="file" id="image">{{$director->image ?? ""}}
-    <img class="col-sm-6" id="preview" src="{{ $director ? asset('uploads/' . $director->image_show) : ""}}">
+    <input data-preview="#preview" name="image" type="file" id="image">
+    @if(empty($director->image_show))
+        <img style="display: none;" class="col-sm-6" id="preview" src="{{ $director ? asset('uploads/' . $director->image_show) : ""}}">
+    @else
+        <img style="padding-top: 30px;" class="col-sm-3" id="preview" src="{{ $director ? asset('uploads/' . $director->image_show) : ""}}">
+    @endif
 </div>
-
-
 
 
 <label for="">Краткое описание</label>

@@ -37,14 +37,15 @@
 <input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$department->slug ?? ""}}" readonly=""><br>
 
 
-
-<div class="form-group">
+<div class="form-group" style="margin-left: 20px;">
     <label for="">Изображение</label>
-    <input data-preview="#preview" name="image" type="file" id="image">{{$department->image ?? ""}}
-    <img class="col-sm-6" id="preview" src="{{ $department ? asset('uploads/' . $department->image_show) : ""}}">
+    <input data-preview="#preview" name="image" type="file" id="image">
+    @if(empty($department->image_show))
+        <img style="display: none;" class="col-sm-6" id="preview" src="{{ $department ? asset('uploads/' . $department->image_show) : ""}}">
+    @else
+        <img style="padding-top: 30px;" class="col-sm-3" id="preview" src="{{ $department ? asset('uploads/' . $department->image_show) : ""}}">
+    @endif
 </div>
-
-
 
 
 <label for="">Краткое описание</label>

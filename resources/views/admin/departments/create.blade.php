@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Создание отдела института @endslot
             @slot('parent') Главная @endslot
-            @slot('active') &nbsp;/ отдел @endslot
+            @slot('active') Отдел @endslot
         @endcomponent
 
         <hr />

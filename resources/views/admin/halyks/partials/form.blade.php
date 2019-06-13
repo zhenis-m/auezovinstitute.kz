@@ -36,13 +36,15 @@
 <input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$halyk->slug ?? ""}}" readonly=""><br>
 
 
-
-<div class="form-group">
+<div class="form-group" style="margin-left: 20px;">
     <label for="">Изображение</label>
-    <input data-preview="#preview" name="image" type="file" id="image">{{$halyk->image ?? ""}}
-    <img class="col-sm-6" id="preview" src="{{ $halyk ? asset('halyk/' . $halyk->image_show) : ""}}">
+    <input data-preview="#preview" name="image" type="file" id="image">
+    @if(empty($halyk->image_show))
+        <img style="display: none;" class="col-sm-6" id="preview" src="{{ $halyk ? asset('uploads/' . $halyk->image_show) : ""}}">
+    @else
+        <img style="padding-top: 30px;" class="col-sm-3" id="preview" src="{{ $halyk ? asset('uploads/' . $halyk->image_show) : ""}}">
+    @endif
 </div>
-
 
 
 

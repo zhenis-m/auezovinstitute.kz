@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Создание страницы @endslot
             @slot('parent') Главная @endslot
-            @slot('active') &nbsp;/ новая страница @endslot
+            @slot('active') Новая страница @endslot
         @endcomponent
 
         <hr />
