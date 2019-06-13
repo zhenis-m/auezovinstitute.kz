@@ -52,6 +52,7 @@ body {
     background-color: #fff;
     border-top: none;
     border-bottom: none;
+    opacity: 0.9;
 }
 
 .header__nav__logo {
@@ -84,6 +85,7 @@ body {
 .logo img {
 	width: 100%;
 	height: auto;
+    opacity: 1;
 }
 
 /*-------------- menu style begin -----------------*/
@@ -137,6 +139,7 @@ body {
     -moz-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 7px 10px -5px #999;
+    opacity: 0.9;
 }
 
 .fixed {
@@ -272,6 +275,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 40%;
 }
 
 /*.header__lang {*/
@@ -402,6 +406,7 @@ body {
 
 .header__local__item {
 	width: 100%;
+    margin: 0 10px 0 0;
 }
 
 .header__local__item ul {
@@ -418,7 +423,7 @@ body {
 }
 
 .header__local__item ul li a {
-	color: ##2a5266;
+	color: #2a5266;
     background: none;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -426,6 +431,9 @@ body {
     font-size: 1.2em;
     text-transform: uppercase;
     line-height: 2;
+}
+.header__local__item ul .active {
+    border: solid 1px #2a5266;
 }
 
 .header__local__item ul li:hover {
@@ -465,7 +473,7 @@ body {
 }
 
 .search__text {
-      width: 80%;
+      width: 90%;
       height: 20px;
       float: left;
 }
@@ -499,7 +507,7 @@ body {
 .search__wrap {
 	width: 1200px;
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 160px;
 }
 /*-------------- serch style end -----------------*/
 
@@ -508,15 +516,15 @@ body {
 .banner {
 	background-color: #F9F9F9;
 	z-index: 1;
-    overflow: hidden;
-    margin-top: -535px;
+    /*overflow: hidden;*/
+    margin-top: -350px;
 }
 
 .banner__img {
 	/*background: url("../img/banner.png") no-repeat #F9F9F9 center center;*/
 	width: 100%;
 	margin: 0 auto;
-    height: 1000px;
+    /*height: 1000px;*/
 }
 
 .banner__img img {
@@ -526,8 +534,27 @@ body {
 }
 
 .headline {
-	margin-top: -30%;
-    margin-left: 10%;
+	/*margin-top: -35%;*/
+    /*margin-left: 10%;*/
+    display: flex;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: -300px;
+}
+
+.headline__color {
+    background-color: #1a5972;
+    opacity: 0.9;
+}
+
+.headline__color__text {
+    margin: 20px;
+    padding: 0 20px;
+    border-left: solid 4px #fff;
+}
+
+.headline__color__text p {
+
 }
 
 .headline a {
@@ -555,6 +582,7 @@ body {
 	margin-top: 20px;
 	font-size: 16px;
 	font-family: 'OpenSans-Regular';
+    color: #fff;
 }
 
 .block__text {
@@ -588,12 +616,19 @@ body {
     line-height: 1;
 }
 
+@media (min-width: 1300px) {
+    .headline {
+        margin-left: 10%;
+    }
+}
+
 /*-------------- banner style end -----------------*/
 
 /*-------------- nwes style begin -----------------*/
 
 .wrap__news {
     background-color: #efefef;
+    position: relative;
 }
 
 .nwes {

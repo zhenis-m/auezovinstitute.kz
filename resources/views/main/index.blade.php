@@ -4,15 +4,19 @@
 
     <div class="banner">
         <div class="banner__img">
-            <img src="../../images/baner-books.jpg">
-            <div class="headline">
-                <p class="bold">{{ trans('main.title') }}</p>
-                <p>Мухтар Ауэзов</p>
-            </div>
+            <img src="../../images/magazine2.jpg">
         </div>
     </div>
 {{--           @include('layouts.banner')--}}
     <div class="wrap__news">
+        <div class="headline">
+            <div class="headline__color">
+                <div class="headline__color__text">
+                    <p class="bold">{{ trans('main.title') }}</p>
+                    <p>Мухтар Ауэзов</p>
+                </div>
+            </div>
+        </div>
         <div class="nwes">
             <div class="nwes__state">
                 <a href="{{ URL::to('/news') }}"><p><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;{{ trans('main.news') }}</p></a>

@@ -5,7 +5,7 @@
     <div class="pnwes">
         <div class="dep__way">
         <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/&nbsp;
-        <a>{{ trans('content.science') }}</a>
+        <a>{{ trans('header.science') }}</a>
     </div>
         <div class="pnwes__page">
             @foreach ($sciences as $science)

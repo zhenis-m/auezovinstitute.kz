@@ -6,6 +6,7 @@
 	flex-direction: column;
 	margin: 0 auto;
 	width: 1200px;
+    margin-top: 160px;
 }
 
 .pnwes__way {
@@ -81,6 +82,7 @@
 .pnew__state__date {
 	padding: 10px 20px;
 	display: flex;
+    justify-content: flex-start;
 	align-items: center;
 	font-size: 12px;
 	color: #bfc8cf;
@@ -134,7 +136,6 @@
 }
 .pnwes__page__block {
 	width: 30%;
-	height: 400px;
 	margin: 20px 20px;
 	border: 1px solid #bfc8cf; 
 	border-radius: 5px;
