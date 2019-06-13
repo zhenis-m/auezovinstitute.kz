@@ -35,7 +35,7 @@
 	font-size: 18px;
 }
 .pnwes__state a p {
-	font-size: 18px;
+	font-size: 24px;
 }
 
 .pnwes__state a:hover {
@@ -133,17 +133,58 @@
 	margin: 20px 0; 
 	display: flex;
 	flex-wrap: wrap;
+    justify-content: space-around;
 }
+
+.pnwes__page a {
+    width: 30%;
+}
+
+.pnwes__page a:hover {
+    text-decoration: none;
+}
+
 .pnwes__page__block {
-	width: 30%;
-	margin: 20px 20px;
+    height: 100%;
 	border: 1px solid #bfc8cf; 
 	border-radius: 5px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+    box-shadow: 0 0 10px 2px #999;
 }
+
+.pnwes__page__block p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #999;
+}
+
+.pnwes__page__block h4 {
+    margin: 10px 0;
+    font-size: 1.6em;
+    color: #000;
+}
+
+.pnwes__page__block:hover .pnwes__page__block__wrap .departmens__link p {
+    color: #42adc7;
+    transition: all 0.3s ease-in;
+}
+
+.pnwes__page__block:hover .pnwes__page__block__wrap .departmens__link h4 {
+    color: #42adc7;
+    transition: all 0.3s ease-in;
+}
+
+.pnwes__page__block:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px -2px #999;
+    transition: all 0.3s ease-in;
+    border: 1px solid #42adc7;
+    text-decoration: none;
+}
+
 .pnwes__page__block__wrap {
 	height: 90%;
 }

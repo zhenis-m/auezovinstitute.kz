@@ -74,6 +74,9 @@
                         </li>
                     @endforeach
                 <li class="menu-item">
+                    <a href="#" class="menu-link">{{ trans('header.university') }}</a>
+                </li>
+                <li class="menu-item">
                     <a href="#" class="menu-link">{{ trans('header.keruen') }}</a>
                 </li>
                 <li class="menu-item">
