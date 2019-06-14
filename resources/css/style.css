@@ -97,6 +97,14 @@ body {
     width: 180px;
 }
 
+.menu-item:first-child:hover .menu-link {
+    box-shadow: inset 0 0 0 1px #1a5972;
+}
+
+.menu-item:nth-child(3):hover .menu-link {
+    box-shadow: inset 0 0 0 1px #1a5972;
+}
+
 .menu-item:first-child .sub-menu li {
     width: 180px;
 }
@@ -127,7 +135,7 @@ body {
 
 .menu-item:hover .menu-link {
     /*border: solid 1px #1a5972;*/
-    box-shadow: inset 0 0 0 1px #1a5972;
+    box-shadow: none;
 }
 
 .header__menu {
@@ -146,6 +154,11 @@ body {
 .fixed {
     position: fixed;
     top: 0;
+}
+
+.header__blank {
+    display: none;
+    height: 62px;
 }
 
 .nav {
@@ -445,11 +458,6 @@ body {
 
 .header__local__item ul li a:hover {
     text-decoration: none;
-}
-
-.header__blank {
-    display: none;
-    height: 62px;
 }
 
 /*-------------- header__lang style end -----------------*/
