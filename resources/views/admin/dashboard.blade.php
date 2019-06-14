@@ -119,6 +119,7 @@
                     <a href="{{route('admin.articles.index')}}" class="btn btn-sm btn-default btn-flat pull-right">Посмотреть все</a>
                 </div>
 
+
 {{--        <div class="row">--}}
 {{--            <div class="col-sm-12">--}}
 {{--                <a class="btn btn-secondary btn-block" href="{{route('admin.banners.index')}}">Баннер</a>            --}}

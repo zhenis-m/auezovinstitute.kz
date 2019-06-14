@@ -71,14 +71,21 @@
                         </li>
                     </ul>
                 </li>
+
                 @foreach ($halyks as $halyk)
                     <li class="menu-item">
                         <a href="{{ route('halyks.show', [ 'id' => $halyk->id ]) }}" class="menu-link">{{ trans('header.university') }}</a>
                     </li>
                 @endforeach
-                <li class="menu-item">
-                    <a href="#" class="menu-link">{{ trans('header.keruen') }}</a>
-                </li>
+
+
+
+                @foreach ($keruens as $keruen)
+                    <li class="menu-item">
+                        <a href="{{ route('keruens.show', [ 'id' => $keruen->id ]) }}"  class="menu-link">{{ trans('header.keruen') }}</a>
+                    </li>
+                @endforeach
+
                 <li class="menu-item">
                     <a href="#" class="menu-link">{{ trans('header.gold') }}</a>
                 </li>
