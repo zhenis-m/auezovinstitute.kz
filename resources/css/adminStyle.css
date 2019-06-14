@@ -100,6 +100,7 @@
 	display: flex;
     flex-direction: column;
     align-items: center;
+    height: 450px;
 }
 
 .structur__admins__men a {
@@ -107,7 +108,8 @@
 	color: #000;
 }
 .structur__admins__men__photo {
-
+    height: 60%;
+    overflow: hidden;
 }
 .structur__admins__men__name {
 	display: flex;
@@ -115,6 +117,12 @@
 	justify-content: space-between;
 	align-items: center;
     text-align: center;
+    height: 30%;
+}
+
+.structur__admins__men__name__text {
+    height: 100%;
+    overflow: hidden;
 }
 
 .structur__admins__men__name__text p {
