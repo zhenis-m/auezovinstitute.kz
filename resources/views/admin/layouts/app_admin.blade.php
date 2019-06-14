@@ -146,7 +146,7 @@
                         </li>
 
                         <li class="">
-                            <a href="#">
+                            <a href="{{route('admin.keruens.index')}}">
                                 <i class="fa fa-fw fa-folder"></i>
                                 <span>Керуен</span>
                             </a>

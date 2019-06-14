@@ -1,28 +1,25 @@
 <?php
-namespace App\Http\Controllers\news;
-use App\Article;
-use App\Culture;
+
+namespace App\Http\Controllers\keruen;
+
 use App\HalykUniversity;
 use App\Keruen;
 use Illuminate\Http\Request;
+use App\Culture;
 use App\Http\Controllers\Controller;
 use App\Inst;
 
-class NewsController extends Controller
+class KeruenController extends Controller
 {
     public function index()
     {
-
-       // $newses = Article::orderBy('id', 'desc')->where('locale', app()->getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
-        $newses = Article::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
-        return view('news.index', [
+        return view('keruens.index', [
             'keruens' => $keruens,
             'halyks' => $halyks,
-            'newses' => $newses,
             'aboutses' => $aboutses,
             'cultures' => $cultures,
         ]);
@@ -32,17 +29,21 @@ class NewsController extends Controller
 
     public function show($id)
     {
-        $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
-        $news = Article::where('id', $id)->first();
+        $keruen = Keruen::where('id', $id)->first();
+        $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $halyk = HalykUniversity::where('id', $id)->first();
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
-        return view('news.show', [
+        return view('keruens.show', [
+            'keruen' => $keruen,
             'keruens' => $keruens,
             'halyks' => $halyks,
-            'news' => $news,
+            'halyk' => $halyk,
             'aboutses' => $aboutses,
             'cultures' => $cultures,
         ]);
     }
+
+
 }

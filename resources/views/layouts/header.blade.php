@@ -73,9 +73,15 @@
                             <a href="{{ route('halyks.show', [ 'id' => $halyk->id ]) }}">{{ trans('header.university') }}</a>
                         </li>
                     @endforeach
-                <li class="menu-item">
-                    <a href="#" class="menu-link">{{ trans('header.keruen') }}</a>
-                </li>
+
+                @foreach ($keruens as $keruen)
+                    <li>
+                        <a href="{{ route('keruens.show', [ 'id' => $keruen->id ]) }}">{{ trans('header.keruen') }}</a>
+                    </li>
+                @endforeach
+{{--                <li class="menu-item">--}}
+{{--                    <a href="#" class="menu-link">{{ trans('header.keruen') }}</a>--}}
+{{--                </li>--}}
                 <li class="menu-item">
                     <a href="#" class="menu-link">{{ trans('header.gold') }}</a>
                 </li>
