@@ -30,6 +30,9 @@
             </div>
         </div>
     </div>
+    <div class="header__blank">
+
+    </div>
     <div id="avatar" class="header__menu">
         <div class="nav">
             <ul class="menu">
@@ -68,14 +71,11 @@
                         </li>
                     </ul>
                 </li>
-                 @foreach ($halyks as $halyk)
-                        <li>
-                            <a href="{{ route('halyks.show', [ 'id' => $halyk->id ]) }}">{{ trans('header.university') }}</a>
-                        </li>
-                    @endforeach
-                <li class="menu-item">
-                    <a href="#" class="menu-link">{{ trans('header.university') }}</a>
-                </li>
+                @foreach ($halyks as $halyk)
+                    <li class="menu-item">
+                        <a href="{{ route('halyks.show', [ 'id' => $halyk->id ]) }}" class="menu-link">{{ trans('header.university') }}</a>
+                    </li>
+                @endforeach
                 <li class="menu-item">
                     <a href="#" class="menu-link">{{ trans('header.keruen') }}</a>
                 </li>
@@ -131,18 +131,25 @@
     //     document.getElementById('box').style.display = "none";
     // }
 
-
+    // блок который фиксируется с верху
     var avatarElem = document.getElementById('avatar');
 
-    var avatarSourceBottom = avatarElem.getBoundingClientRect().top + window.pageYOffset + 9;
+    // пустой блок с такойже высотой для подставления фиксировоному блоку
+    var headerBlank = document.getElementsByClassName('header__blank');
+
+    var avatarSourceBottom = avatarElem.getBoundingClientRect().top + window.pageYOffset;
+
 
     window.onscroll = function() {
         if (avatarElem.classList.contains('fixed') && window.pageYOffset < avatarSourceBottom) {
             avatarElem.classList.remove('fixed');
+            headerBlank[0].style.display = 'none';
         } else if (window.pageYOffset > avatarSourceBottom) {
             avatarElem.classList.add('fixed');
+            headerBlank[0].style.display = 'block';
         }
     };
+
 
 
 </script>

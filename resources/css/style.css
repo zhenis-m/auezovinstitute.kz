@@ -139,7 +139,8 @@ body {
     -moz-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 7px 10px -5px #999;
-    opacity: 0.9;
+    /*opacity: 0.9;*/
+    height: 62px;
 }
 
 .fixed {
@@ -444,6 +445,11 @@ body {
 
 .header__local__item ul li a:hover {
     text-decoration: none;
+}
+
+.header__blank {
+    display: none;
+    height: 62px;
 }
 
 /*-------------- header__lang style end -----------------*/
