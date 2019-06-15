@@ -142,3 +142,13 @@
 ..text_review p {
     font-size: 1.6em;
 }
+
+.director__admin__text .aphtor {
+    margin-top: 20px;
+    color: #44474a;
+}
+
+
+.director__content .text_review .desc {
+    color: #44474a;
+}

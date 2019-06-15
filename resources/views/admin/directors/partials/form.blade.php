@@ -10,7 +10,7 @@
     @endif
 </select>
 
-<label for="">Заголовок</label>
+<label for="">Ф.И.О.</label>
 <input type="text" class="form-control" name="title" placeholder="Заголовок новости" value="{{$director->title ?? ""}}" required><br>
 
 <!-- <label for="">Выбрать язык поста</label>
@@ -50,7 +50,7 @@
 </div>
 
 
-<label for="">Краткое описание</label>
+<label for="">Должность</label>
 <textarea class="form-control" id="description_short" name="description_short">{{$director->description_short ?? ""}}</textarea>
 
 <label for="">Полное описание</label>

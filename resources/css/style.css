@@ -136,6 +136,7 @@ body {
 .menu-item:hover .menu-link {
     /*border: solid 1px #1a5972;*/
     box-shadow: none;
+    color: #000;
 }
 
 .header__menu {

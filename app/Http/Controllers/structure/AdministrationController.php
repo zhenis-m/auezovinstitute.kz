@@ -19,7 +19,7 @@ class AdministrationController extends Controller
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
-        $directors = Director::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $directors = Director::orderBy('id', 'asc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         return view('structure.administration', [
             'keruens' => $keruens,
             'halyks' => $halyks,

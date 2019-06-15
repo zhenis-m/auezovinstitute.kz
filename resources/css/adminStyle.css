@@ -154,7 +154,10 @@
 	border: 1px solid #537af9;
 }
 
-
+.structur__admins__men__name__text .aphtor {
+    margin-top: -10px;
+    color: #8db2d8;
+}
 
 /*-------------- nwes style end -----------------*/
 
@@ -169,6 +172,5 @@
 	margin-left: 0 !important;
 	color: #000 !important;
 }
-
 
 /*-------------- admin-panel style end -----------------*/

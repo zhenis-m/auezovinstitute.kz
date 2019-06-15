@@ -8,7 +8,7 @@
 			<a>{{ trans('content.books') }}</a>
 		</div>
 		<div class="pnwes__state">
-			<a href="#"><p><i class="fas fa-folder-open"></i>&nbsp;&nbsp;{{ trans('content.all_books') }}</p></a>
+			<p><i class="fas fa-folder-open"></i>&nbsp;&nbsp;{{ trans('content.all_books') }}</p>
 		</div>
 		<div class="books__page">
 			@foreach ($books as $bok)

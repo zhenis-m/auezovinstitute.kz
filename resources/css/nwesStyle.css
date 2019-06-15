@@ -29,6 +29,10 @@
 	color: #537AF9;
 }
 
+.pnwes__state p {
+    font-size: 24px;
+}
+
 .pnwes__state a {
 	text-decoration: none;
 	color: #000;

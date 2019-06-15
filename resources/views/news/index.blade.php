@@ -8,7 +8,7 @@
 			<a>{{ trans('content.news') }}</a>
 		</div>
 		<div class="pnwes__state">
-			<a href="#"><p><i class="fas fa-folder-open"></i>&nbsp;&nbsp;{{ trans('content.all_news') }}</p></a>
+			<p><i class="fas fa-folder-open"></i>&nbsp;&nbsp;{{ trans('content.all_news') }}</p>
 		</div>
 		<div class="pnwes__page">
 			@foreach ($newses as $news)

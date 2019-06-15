@@ -8,7 +8,7 @@
 				<a>{{ trans('content.admins') }}</a>
 			</div>
 			<div class="structur__state">
-				<a href="#"><p><i class="fas fa-users"></i>&nbsp;&nbsp;{{ trans('content.structure') }}</p></a>
+				<p><i class="fas fa-users"></i>&nbsp;&nbsp;{{ trans('content.structure') }}</p>
 			</div>
             <div class="structur__admins__wrap">
                 @foreach ($directors as $director)
