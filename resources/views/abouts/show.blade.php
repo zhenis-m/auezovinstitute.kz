@@ -19,10 +19,10 @@
                 <div>
                     <h1 style="margin-top:15px; font-size: 3em;">{{ $about->title }}</h1>
                     <img src="{{ $about ? asset('uploads/' . $about->image_show) : ""}}" alt="">
-                    <div class="new__state__date">
-                        <i class="far fa-calendar-alt"></i><p>&nbsp;&nbsp;12.02.2019&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                        {{--                <i class="far fa-eye"></i><p>&nbsp;&nbsp;1222</p>--}}
-                    </div>
+{{--                    <div class="new__state__date">--}}
+{{--                        <i class="far fa-calendar-alt"></i><p>&nbsp;&nbsp;12.02.2019&nbsp;&nbsp;&nbsp;&nbsp;</p>--}}
+{{--                        --}}{{--                <i class="far fa-eye"></i><p>&nbsp;&nbsp;1222</p>--}}
+{{--                    </div>--}}
                     <div class="history_content">
                         <div class="text_review">
                             <p class="desc">{!! $about->description !!}</p>

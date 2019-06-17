@@ -45,7 +45,7 @@
                                             </div>
                                         </div>
                                         <div class="new__state__date">
-                                            <div class="new__state__date__wrap"><i class="far fa-calendar-check"></i><p>&nbsp;&nbsp;{{ $newsValue->created_at }}&nbsp;&nbsp;</p></div>
+                                            <div class="new__state__date__wrap"><i class="far fa-calendar-check"></i><p>&nbsp;&nbsp;{{ $newsValue->created_at->toDateString() }}&nbsp;&nbsp;</p></div>
 {{--                                            <div class="new__state__date__wrap"><i class="far fa-eye"></i><p>&nbsp;&nbsp;1222</p></div>--}}
                                         </div>
                                     </div>
