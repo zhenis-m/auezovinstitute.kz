@@ -7,6 +7,7 @@ use App\HalykUniversity;
 use App\Inst;
 use App\Category;
 use App\Keruen;
+use App\Museum;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,12 +15,14 @@ class AboutController extends Controller
 {
     public function index()
     {
+        $museums = Museum::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('abouts.index', [
+            'museums' =>  $museums,
             'altyns' =>  $altyns,
             'keruens' => $keruens,
             'halyks' => $halyks,
@@ -32,6 +35,7 @@ class AboutController extends Controller
 
     public function show($id)
     {
+        $museums = Museum::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
@@ -39,6 +43,7 @@ class AboutController extends Controller
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('abouts.show', [
+            'museums' =>  $museums,
             'altyns' =>  $altyns,
             'keruens' => $keruens,
             'halyks' => $halyks,

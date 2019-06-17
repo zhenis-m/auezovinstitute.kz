@@ -57,6 +57,11 @@ Route::group([
         Route::get('/', 'AltynController@index')->name('altyns.index');
         Route::get('/{id}', 'AltynController@show')->name('altyns.show');
     });
+
+    Route::group(['prefix'=>'museums', 'namespace'=>'museum'], function (){
+        Route::get('/', 'MuseumController@index')->name('museums.index');
+        Route::get('/{id}', 'MuseumController@show')->name('museums.show');
+    });
     
     Route::group(['prefix'=>'books', 'namespace'=>'books'], function (){
         Route::get('/', 'BooksController@index')->name('books.index');

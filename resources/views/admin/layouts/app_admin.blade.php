@@ -162,11 +162,12 @@
 
 
                         <li class="">
-                            <a href="#">
+                            <a href="{{route('admin.museums.index')}}">
                                 <i class="fa fa-fw fa-folder"></i>
                                 <span>Дом музея Ауезова</span>
                             </a>
                         </li>
+
                         <li class="header">Настройки</li>
 
                         <li class="">

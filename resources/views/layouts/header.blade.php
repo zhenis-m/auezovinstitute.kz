@@ -91,10 +91,13 @@
                         <a href="{{ route('altyns.show', [ 'id' => $altyn->id ]) }}"  class="menu-link">{{ trans('header.gold') }}</a>
                     </li>
                 @endforeach
-                
-                <li class="menu-item">
-                    <a href="#" class="menu-link">{{ trans('header.museum') }}</a>
-                </li>
+
+
+                @foreach ($museums as $museum)
+                    <li class="menu-item">
+                        <a href="{{ route('museums.show', [ 'id' => $museum->id ]) }}"  class="menu-link">{{ trans('header.museum') }}</a>
+                    </li>
+                @endforeach
             </ul>
         </div>
     </div>
