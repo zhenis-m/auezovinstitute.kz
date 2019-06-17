@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\banners;
 
+use App\Altyn;
 use App\Culture;
 use App\HalykUniversity;
 use App\Keruen;
@@ -14,13 +15,14 @@ class bannersBannersoutController extends Controller
      public function index()
     {
 
-       // $newses = Article::orderBy('id', 'desc')->where('locale', app()->getLocale())->where('published', 1)->paginate(12);
+        $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $banners = Banner::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('layouts.banner', [
+            'altyns' =>  $altyns,
             'keruens' => $keruens,
             'halyks' => $halyks,
             'banners' => $banners,
@@ -33,12 +35,14 @@ class bannersBannersoutController extends Controller
 
     public function show($id)
     {
+        $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $banner = Banner::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('main.show', [
+            'altyns' =>  $altyns,
             'keruens' => $keruens,
             'halyks' => $halyks,
             'banner' => $banner,

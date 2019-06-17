@@ -86,9 +86,12 @@
                     </li>
                 @endforeach
 
-                <li class="menu-item">
-                    <a href="#" class="menu-link">{{ trans('header.gold') }}</a>
-                </li>
+                @foreach ($altyns as $altyn)
+                    <li class="menu-item">
+                        <a href="{{ route('altyns.show', [ 'id' => $altyn->id ]) }}"  class="menu-link">{{ trans('header.gold') }}</a>
+                    </li>
+                @endforeach
+                
                 <li class="menu-item">
                     <a href="#" class="menu-link">{{ trans('header.museum') }}</a>
                 </li>

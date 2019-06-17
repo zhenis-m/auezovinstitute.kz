@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\main;
+use App\Altyn;
 use App\Article;
 use App\Book;
 use App\Culture;
@@ -16,6 +17,7 @@ class MainController extends Controller
     public function index()
     {
         // dd(app()->getLocale());
+        $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $banner = Banner::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
@@ -25,6 +27,7 @@ class MainController extends Controller
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('main.index', [
+            'altyns' =>  $altyns,
             'keruens' => $keruens,
             'halyks' => $halyks,
             'banner' => $banner,
@@ -38,6 +41,7 @@ class MainController extends Controller
 
     public function show($id)
     {
+        $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $banner = Banner::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
@@ -46,6 +50,7 @@ class MainController extends Controller
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         $aboutses = Inst::orderBy('id', 'desc')->where('published', 1)->where('locale', \App::getLocale())->paginate(12);
         return view('culture.show', [
+            'altyns' =>  $altyns,
             'keruens' => $keruens,
             'halyks' => $halyks,
             'banner' => $banner,
@@ -58,6 +63,7 @@ class MainController extends Controller
 
     public function education()
     {
+        $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         // dd(app()->getLocale());
         $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
@@ -68,6 +74,7 @@ class MainController extends Controller
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('main.partials.education', [
+            'altyns' =>  $altyns,
             'keruens' => $keruens,
             'halyks' => $halyks,
             'banner' => $banner,

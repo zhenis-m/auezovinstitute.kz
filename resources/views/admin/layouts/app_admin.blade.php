@@ -152,12 +152,14 @@
                             </a>
                         </li>
 
+
                         <li class="">
-                            <a href="#">
+                            <a href="{{route('admin.altyns.index')}}">
                                 <i class="fa fa-fw fa-folder"></i>
                                 <span>Алтын қор</span>
                             </a>
                         </li>
+
 
                         <li class="">
                             <a href="#">
