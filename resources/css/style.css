@@ -1154,4 +1154,6 @@ body {
     margin-top: -150px;
 }
 
-
+.search__wrap h2 {
+    margin: 20px 0;
+}

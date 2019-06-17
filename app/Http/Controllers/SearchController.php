@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Altyn;
 use App\Article;
+use App\Book;
 use App\Culture;
 use App\HalykUniversity;
 use App\Inst;
@@ -22,6 +23,12 @@ class SearchController extends Controller
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('locale', \App::getLocale())->get();
       
         $article = Article::where('title', 'LIKE', '%' . $query . '%')->where('locale', \App::getLocale())->get();
+        $books = Book::where('title', 'LIKE', '%' . $query . '%')->where('locale', \App::getLocale())->get();
+
+//        $metas = array(
+//            $article = Article::where('title', 'LIKE', '%' . $query . '%')->where('locale', \App::getLocale())->get(),
+//            $books = Book::where('title', 'LIKE', '%' . $query . '%')->where('locale', \App::getLocale())->get()
+//        );
         
       return  view('search', [
           'altyns' =>  $altyns,
@@ -30,6 +37,8 @@ class SearchController extends Controller
           'newses' => $article,
           'aboutses' => $aboutses,
           'cultures' => $cultures,
+          'books' => $books,
       ]);
     }
 }
+

@@ -3,6 +3,7 @@
 @section('content')
     <div class="search__wrap">
         <h1>{{ trans('search.title') }}</h1>
+        <h2>{{ trans('header.news') }}</h2>
         <div class="pnwes__page">
             @foreach ($newses as $news)
                 <a class="news__link" href="{{ route('news.show', [ 'id' => $news->id ]) }}">
@@ -20,6 +21,18 @@
                         </div>
                     </div>
                 </a>
+            @endforeach
+        </div>
+        <h2>{{ trans('header.books') }}</h2>
+        <div class="books__page">
+            @foreach ($books as $bok)
+                <div class="books__show">
+                    <a class="" href="{{ route('books.show', [ 'id' => $bok->id ]) }}">
+                        <img src="{{ $bok ? asset('uploads/' . $bok->image_show) : ""}}">
+                        <p class="book__name">{{ $bok->title }}</p>
+                        <p class="aphtor">{!! $bok->description_short !!}</p>
+                    </a>
+                </div>
             @endforeach
         </div>
     </div>

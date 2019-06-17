@@ -4,7 +4,6 @@
     <div class="culrure__wrap">
         <div class="news_page__way">
             <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/
-            <a href="{{ URL::to('/altyns') }}">{{ trans('content.news') }}</a>&nbsp;/
             {{ $altyn->title }}
         </div>
         <div>
@@ -23,7 +22,7 @@
                     </div>
                     <div class="news__state__date">
                         <div class="pnew__state__date">
-                            <i class="far fa-calendar-alt"></i><p>&nbsp;&nbsp;{{ $altyn->created_at }}&nbsp;&nbsp;</p>
+                            <i class="far fa-calendar-alt"></i><p>&nbsp;&nbsp;{{ $altyn->created_at->toDateString() }}&nbsp;&nbsp;</p>
                             {{--                        <i class="far fa-eye"></i><p>&nbsp;&nbsp;1222</p>--}}
                         </div>
                     </div>
