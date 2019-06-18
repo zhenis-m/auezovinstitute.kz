@@ -5,7 +5,7 @@
         <div class="news_page__way">
             <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/
             <a href="{{ URL::to('scp') }}">{{ trans('header.science') }}</a>&nbsp;/
-            <a href="{{ URL::to('/thehirds') }}">{{ trans('content.financing_program') }}</a>&nbsp;/
+            <a href="{{ URL::to('/thehirds') }}">{{ trans('content.state_tasks') }}</a>&nbsp;/
             {{ $thehird->title }}
         </div>
         <div>

@@ -25,8 +25,7 @@
                 <a href="{{ route('thehirds.index') }}">
                     <div class="project__page__block">
                         <div class="project__page__block__text">
-{{--                            {{ trans('content.financing_program') }}--}}
-                            <p>ЪЬЪ</p>
+                            {{ trans('content.state_tasks') }}
                         </div>
                     </div>
                 </a>

@@ -6,7 +6,7 @@
         <div class="dep__way">
         <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/&nbsp;
         <a href="{{ URL::to('scp') }}">{{ trans('header.science') }}</a>&nbsp;/&nbsp;
-            {{ trans('content.financing_program') }}
+            {{ trans('content.state_tasks') }}
     </div>
         <div class="pnwes__page">
             @foreach ($thehirds as $thehird)
