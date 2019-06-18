@@ -7,6 +7,7 @@ use App\HalykUniversity;
 use App\Keruen;
 use App\Museum;
 use App\SecondScience;
+use App\Thehird;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Culture;
@@ -17,6 +18,7 @@ class ScController extends Controller
 {
     public function index()
     {
+        $thehirds = Thehird::all()->where('locale', \App::getLocale());
         $seconds = SecondScience::all()->where('locale', \App::getLocale());
         $museums = Museum::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
@@ -26,6 +28,7 @@ class ScController extends Controller
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('sciences.index', [
+            'thehirds' => $thehirds,
             'seconds' => $seconds,
             'museums' =>  $museums,
             'altyns' =>  $altyns,
@@ -41,6 +44,7 @@ class ScController extends Controller
 
     public function show($id)
     {
+        $thehirds = Thehird::all()->where('locale', \App::getLocale());
         $seconds = SecondScience::all()->where('locale', \App::getLocale());
         $museums = Museum::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
@@ -50,6 +54,7 @@ class ScController extends Controller
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
         return view('sciences.show', [
+            'thehirds' => $thehirds,
             'seconds' => $seconds,
             'museums' =>  $museums,
             'altyns' =>  $altyns,

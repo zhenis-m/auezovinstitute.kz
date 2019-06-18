@@ -129,7 +129,7 @@
                             <ul class="treeview-menu">
                                 <li class=""><a href="{{route('admin.sciences.index')}}"><i class="fa fa-fw fa-circle-o "></i><span>Гранты МОН РК</span></a></li>
                                 <li class=""><a href="{{route('admin.seconds.index')}}"><i class="fa fa-fw fa-circle-o "></i><span>Целевое финансирование</span></a></li>
-                                <li class=""><a href="#"><i class="fa fa-fw fa-circle-o "></i><span>Государственные задания</span></a></li>
+                                <li class=""><a href="{{route('admin.thehirds.index')}}"><i class="fa fa-fw fa-circle-o "></i><span>Государственные задания</span></a></li>
                             </ul>
                         </li>
 

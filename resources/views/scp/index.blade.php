@@ -22,6 +22,14 @@
                         </div>
                     </div>
                 </a>
+                <a href="{{ route('thehirds.index') }}">
+                    <div class="project__page__block">
+                        <div class="project__page__block__text">
+{{--                            {{ trans('content.financing_program') }}--}}
+                            <p>ЪЬЪ</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

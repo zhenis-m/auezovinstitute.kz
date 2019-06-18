@@ -14,7 +14,7 @@ use App\Culture;
 use App\Inst;
 use App\SecondScience;
 
-class SecondController extends Controller
+class ThehirdController extends Controller
 {
     public function index()
     {
@@ -27,7 +27,7 @@ class SecondController extends Controller
         $seconds = SecondScience::all()->where('locale', \App::getLocale());
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
-        return view('seconds.index', [
+        return view('thehirds.index', [
             'thehirds' => $thehirds,
             'sciences' => $sciences,
             'museums' => $museums,
@@ -48,18 +48,18 @@ class SecondController extends Controller
         $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
-        $second = SecondScience::where('id', $id)->first();
+        $thehird = Thehird::where('id', $id)->first();
         $science = Science::where('id', $id)->first();
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
-        return view('seconds.show', [
+        return view('thehirds.show', [
             'thehirds' => $thehirds,
+            'thehird' => $thehird,
             'science' => $science,
             'museums' => $museums,
             'altyns' => $altyns,
             'keruens' => $keruens,
             'halyks' => $halyks,
-            'second' => $second,
             'aboutses' => $aboutses,
             'cultures' => $cultures,
         ]);

@@ -5,14 +5,14 @@
     <div class="container">
 
         @component('admin.components.breadcrumb')
-            @slot('title') Программа целевого финансирования @endslot
+            @slot('title') Государственные задания @endslot
             @slot('parent') Главная @endslot
-            @slot('active') Программа целевого финансирования @endslot
+            @slot('active') Государственные задания @endslot
         @endcomponent
 
         <hr>
 
-        <a href="{{route('admin.seconds.create')}}" class="btn btn-primary pull-right">
+        <a href="{{route('admin.thehirds.create')}}" class="btn btn-primary pull-right">
             <i class="fa fa-plus-square-o"></i> Создать статью</a>
             <div><br></div>
             <div></div>
@@ -24,18 +24,18 @@
             <th class="text-right">Действие</th>
             </thead>
             <tbody>
-            @forelse($seconds as $second)
+            @forelse($thehirds as $thehird)
                 <tr>
-                    <td>{{$second->title}}</td>
-                    <td>{{$second->locale}}</td>
-                    <td>{{$second->published}}</td>
+                    <td>{{$thehird->title}}</td>
+                    <td>{{$thehird->locale}}</td>
+                    <td>{{$thehird->published}}</td>
                     <td class="text-right">
-                        <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.seconds.destroy',
-                        $second)}}" method="post">
+                        <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.thehirds.destroy',
+                        $thehird)}}" method="post">
                             <input type="hidden" name="_method" value="DELETE">
                             {{ csrf_field() }}
 
-                            <a class="btn btn-default" href="{{route('admin.seconds.edit', $second)}}"><i class="fa fa-edit"></i></a>
+                            <a class="btn btn-default" href="{{route('admin.thehirds.edit', $thehird)}}"><i class="fa fa-edit"></i></a>
 
                             <button type="submit" class="btn"><i class="fa fa-fw fa-trash"></i></button>
                         </form>
@@ -52,7 +52,7 @@
             <tfoot>
             <tr colspan="3">
                 <ul class="pagination pull-right">
-                    {{$seconds->links()}}
+                    {{$thehirds->links()}}
                 </ul>
             </tr>
             </tfoot>
