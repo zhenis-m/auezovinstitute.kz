@@ -89,6 +89,11 @@ Route::group([
         Route::get('/{id}', 'ScController@show')->name('sciences.show');
     });
 
+
+    Route::group(['prefix'=>'scp', 'namespace'=>'science'], function (){
+        Route::get('/', 'ScpController@index')->name('scp.index');
+    });
+
     Route::group(['prefix'=>'structure', 'namespace'=>'structure'], function (){
         Route::get('/administration', 'AdministrationController@administration');
         Route::get('/{id}', 'DirController@show')->name('structure.show');
