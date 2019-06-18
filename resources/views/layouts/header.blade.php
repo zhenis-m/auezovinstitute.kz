@@ -56,7 +56,7 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="{{ route('sciences.index') }}" class="menu-link">{{ trans('header.science') }}</a>
+                    <a href="{{ route('scp.index') }}" class="menu-link">{{ trans('header.science') }}</a>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="menu-link">{{ trans('header.culture') }} <i class="fas fa-chevron-down"></i></a>

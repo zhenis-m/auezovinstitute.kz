@@ -5,7 +5,8 @@
     <div class="pnwes">
         <div class="dep__way">
         <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/&nbsp;
-        <a>{{ trans('header.science') }}</a>
+        <a href="{{ URL::to('scp') }}">{{ trans('header.science') }}</a>&nbsp;/&nbsp;
+        <a>Грантовое финансирование МОН РК</a>
     </div>
         <div class="pnwes__page">
             @foreach ($sciences as $science)
