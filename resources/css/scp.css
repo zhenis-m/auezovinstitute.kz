@@ -1,0 +1,53 @@
+.wrap__project {
+    margin: 160px auto 0;
+}
+
+.project {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+}
+
+.project__page {
+    width: 100%;
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.project__page a {
+    width: 32%;
+    margin-right: 15px;
+    color: #333;
+}
+
+.project__page a .project__page__block:hover {
+    box-shadow: 0 0 10px -2px #999;
+    border: 1px solid #9fbdd4;
+    transition: all 0.3s ease-in;
+}
+
+.project__page a:hover {
+    text-decoration: none;
+}
+
+.project__page__block {
+    height: 100%;
+    border: 1px solid #bfc8cf;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 2px #999;
+    padding: 10px 20px;
+}
+
+.project__page__block__text {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+

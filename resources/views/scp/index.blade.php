@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>
-        <div class="pnwes">
+    <div class="wrap__project">
+        <div class="project">
             <div class="dep__way">
-                <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>;
-                <a></a>
+                <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/&nbsp;
+                {{ trans('header.science') }}
             </div>
-            <div class="pnwes__page">
+            <div class="project__page">
                     <a href="{{ route('sciences.index') }}">
-                        <div class="pnwes__page__block">
-                            <div class="pnwes__page__block__wrap">
-                                {{ trans('header.science') }}
+                        <div class="project__page__block">
+                            <div class="project__page__block__text">
+                                {{ trans('content.grant_funding') }}
                             </div>
                         </div>
                     </a>

@@ -4,7 +4,8 @@
     <div class="culrure__wrap">
         <div class="news_page__way">
             <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/
-            <a href="{{ URL::to('/sciences') }}">{{ trans('header.science') }}</a>&nbsp;/
+            <a href="{{ URL::to('scp') }}">{{ trans('header.science') }}</a>&nbsp;/
+            <a href="{{ URL::to('/sciences') }}">{{ trans('content.grant_funding') }}</a>&nbsp;/
             {{ $science->title }}
         </div>
         <div>
