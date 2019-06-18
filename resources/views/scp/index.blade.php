@@ -11,10 +11,23 @@
                     <a href="{{ route('sciences.index') }}">
                         <div class="pnwes__page__block">
                             <div class="pnwes__page__block__wrap">
-                                {{ trans('header.science') }}
+{{--                                {{ trans('header.science') }}--}}
+                                <p>Грантовое финансирование МОН РK</p>
                             </div>
                         </div>
                     </a>
+            </div>
+
+
+            <div class="pnwes__page">
+                <a href="{{ route('seconds.index') }}">
+                    <div class="pnwes__page__block">
+                        <div class="pnwes__page__block__wrap">
+{{--                            {{ trans('header.science') }}--}}
+                            <p>Программа целевого финансирования</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

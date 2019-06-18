@@ -5,19 +5,19 @@
     <div class="container">
 
         @component('admin.components.breadcrumb')
-            @slot('title') Редактирование статьи Грантовое финансирование МОН РК @endslot
+            @slot('title') Редактирование статьи Программа целевого финансирования:@endslot
             @slot('parent') Главная @endslot
-            @slot('active') Грантовое финансирование МОН РК @endslot
+            @slot('active') Программа целевого финансирования @endslot
         @endcomponent
 
         <hr />
 
-        <form class="form-horizontal" action="{{route('admin.sciences.update', $science)}}" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" action="{{route('admin.seconds.update', $second)}}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_method" value="put">
             {{ csrf_field() }}
 
             {{-- Form include --}}
-            @include('admin.sciences.partials.form')
+            @include('admin.seconds.partials.form')
 
             <input type="hidden" name="modified_by" value="{{Auth::id()}}">
         </form>
