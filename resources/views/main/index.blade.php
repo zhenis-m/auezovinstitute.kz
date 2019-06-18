@@ -12,7 +12,27 @@
         <div class="headline">
             <div class="headline__color">
                 <div class="headline__color__text">
-                    <p class="bold">{{ trans('main.title') }}</p>
+                    <p class="bold"><?php
+                    $quotes[] = trans('main.title');
+                    $quotes[] = trans('main.title2');
+                    $quotes[] = trans('main.title3');
+                    $quotes[] = trans('main.title4');
+                    $quotes[] = trans('main.title5');
+                    $quotes[] = trans('main.title6');
+                    $quotes[] = trans('main.title7');
+                    $quotes[] = trans('main.title8');
+                    $quotes[] = trans('main.title9');
+                    $quotes[] = trans('main.title10');
+                    $quotes[] = trans('main.title11');
+                    $quotes[] = trans('main.title12');
+                    $quotes[] = trans('main.title13');
+                    $quotes[] = trans('main.title14');
+                    $quotes[] = trans('main.title15');
+                    srand ((double) microtime() * 1000000);
+                    $random_number = rand(0,count($quotes)-1);
+                    echo
+                    ($quotes[$random_number]);
+                    ?></p>
                     <p>Мухтар Ауэзов</p>
                 </div>
             </div>

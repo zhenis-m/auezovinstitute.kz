@@ -16,10 +16,10 @@
                         <img src="{{ $keruen ? asset('uploads/' . $keruen->image_show) : ""}}" alt="">
                     </div>
                     <div class="news__state__text">
-                        {!! $keruen->description_short !!}
-                        <p>{{ trans('content.official_journal') }}<a href="http://keruenjournal.kz">http://keruenjournal.kz</a></p>
-                        <p>E-mail: <a href="http://auezovinstitute.kz">info@litart.kz</a></p>
-                        {!! $keruen->description !!}
+                        <p>{!! $keruen->description_short !!}</p>
+                        <p>{{ trans('content.official_journal') }}<a href="http://keruenjournal.kz">http://keruenjournal.kz</a><br>
+                        E-mail: <a href="http://auezovinstitute.kz">info@litart.kz</a></p>
+                        <p>{!! $keruen->description !!}</p>
                     </div>
                     <div class="news__state__date">
                         <div class="pnew__state__date">

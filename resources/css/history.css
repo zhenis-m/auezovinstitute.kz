@@ -37,14 +37,6 @@
     margin: 0;
 }
 
-.history_content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-
 .social-networks_1 {
     text-align: center;
     padding-top: 30px;
@@ -127,4 +119,35 @@
     color: #97a5b2;
 }
 
+.history__wrap {
 
+}
+
+.history {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.history_headline {
+    width: 100%;
+    text-align: center;
+}
+
+.history_headline h1 {
+    font-size: 3em;
+}
+
+.history_headline img {
+    width: 80%;
+    height: auto;
+    margin: 30px 0;
+}
+
+.history_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    padding: 0 0 40px 0;
+
+}

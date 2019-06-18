@@ -89,6 +89,7 @@
 .news__state__text p {
     font-size: 1.2em;
     font-family: 'OpenSans-Regular';
+    color: #000;
 }
 
 .news__state__img {

@@ -6,8 +6,8 @@
             <a href="{{ URL::to('/') }}">{{ trans('content.main') }}</a>&nbsp;/
             {{ $about->title }}
         </div>
-        <div class="container_1">
-            <div class="social_and_banner">
+        <div class="history__wrap">
+            <div class="history">
 {{--                <div class="social-networks_1">--}}
 {{--                    <ul>--}}
 {{--                        <li> <a href="https://www.google.ru/" target="_blank" class="google"><i class="fa fa-google-plus"></i></a> </li>--}}
@@ -16,7 +16,7 @@
 {{--                        <li>  <a href="https://www.instagram.com/" target="_blank" class="inst"><i class="fa fa-instagram"></i></a> </li>--}}
 {{--                    </ul>--}}
 {{--                </div>--}}
-                <div>
+                <div class="history_headline">
                     <h1 style="margin-top:15px; font-size: 3em;">{{ $about->title }}</h1>
                     <img src="{{ $about ? asset('uploads/' . $about->image_show) : ""}}" alt="">
 {{--                    <div class="new__state__date">--}}
