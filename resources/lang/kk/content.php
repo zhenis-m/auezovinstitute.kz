@@ -15,6 +15,7 @@ return [
     'to_learn_more' => 'Көбірек біліңіз',
     'all_books' => 'Барлық кітаптар',
     'author' => 'Автор: ',
+    'official_journal' => 'Журналдың ресми сайты: ',
 
     
 ];

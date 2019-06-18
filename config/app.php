@@ -6,6 +6,8 @@ use Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider;
 
 return [
 
+    'Jenssegers\Date\DateServiceProvider',
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -84,7 +86,7 @@ return [
     |
     */
 
-    'locale' => 'kk',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +99,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'ru',
+    'fallback_locale' => 'kk',
 
     /*
     |--------------------------------------------------------------------------

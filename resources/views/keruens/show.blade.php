@@ -16,13 +16,14 @@
                         <img src="{{ $keruen ? asset('uploads/' . $keruen->image_show) : ""}}" alt="">
                     </div>
                     <div class="news__state__text">
-                        <?php
-                        echo nl2br( $keruen->description );
-                        ?>
+                        {!! $keruen->description_short !!}
+                        <p>{{ trans('content.official_journal') }}<a href="http://keruenjournal.kz">http://keruenjournal.kz</a></p>
+                        <p>E-mail: <a href="http://auezovinstitute.kz">info@litart.kz</a></p>
+                        {!! $keruen->description !!}
                     </div>
                     <div class="news__state__date">
                         <div class="pnew__state__date">
-                            <i class="far fa-calendar-alt"></i><p>&nbsp;&nbsp;{{ $keruen->created_at->toDateString() }}&nbsp;&nbsp;</p>
+                            <i class="far fa-calendar-alt"></i><p>&nbsp;&nbsp;{{ Date::parse($keruen->created_at)->format('j F Y г.') }}&nbsp;&nbsp;</p>
                             {{--                        <i class="far fa-eye"></i><p>&nbsp;&nbsp;1222</p>--}}
                         </div>
                     </div>

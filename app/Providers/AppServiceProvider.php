@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 use Illuminate\Support\Facades\Schema;
-
+use Jenssegers\Date\Date;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,5 +25,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        Date::setlocale(config('app.locale'));
     }
 }

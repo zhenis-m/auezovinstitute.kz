@@ -15,5 +15,6 @@ return [
     'to_learn_more' => 'Узнать больше',
     'all_books' => 'Все книги',
     'author' => 'Автор: ',
+    'official_journal' => 'Официальный сайт журнала: ',
     
 ];

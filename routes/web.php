@@ -58,6 +58,11 @@ Route::group([
         Route::get('/', 'AltynController@index')->name('altyns.index');
         Route::get('/{id}', 'AltynController@show')->name('altyns.show');
     });
+
+    Route::group(['prefix'=>'museums', 'namespace'=>'museum'], function (){
+        Route::get('/', 'MuseumController@index')->name('museums.index');
+        Route::get('/{id}', 'MuseumController@show')->name('museums.show');
+    });
     
     Route::group(['prefix'=>'books', 'namespace'=>'books'], function (){
         Route::get('/', 'BooksController@index')->name('books.index');
@@ -97,6 +102,7 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], 
     Route::resource('/halyks', 'HalykUniversityController', ['as'=>'admin']);
     Route::resource('/keruens', 'KeruenController', ['as'=>'admin']);
     Route::resource('/altyns', 'AltynController', ['as'=>'admin']);
+    Route::resource('/museums', 'MuseumController', ['as'=>'admin']);
     Route::resource('/books', 'BookController', ['as'=>'admin']);
     Route::resource('/cultures', 'CultureController', ['as'=>'admin']);
     Route::resource('/insts', 'InstController', ['as'=>'admin']);

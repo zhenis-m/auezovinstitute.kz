@@ -23,7 +23,7 @@
 					</div>
 				</div>
 				<div class="pnew__state__date">
-					<i class="far fa-calendar-alt"></i><p>&nbsp;&nbsp;{{ $keruen->created_at->toDateString() }}&nbsp;&nbsp;</p>
+					<i class="far fa-calendar-alt"></i><p>&nbsp;&nbsp;{{ Date::parse($keruen->created_at)->format('j F Y г.') }}&nbsp;&nbsp;</p>
 {{--                    <i class="far fa-eye"></i><p>&nbsp;&nbsp;1222</p>--}}
 				</div>
 			</div>
