@@ -8,13 +8,20 @@
                 {{ trans('header.science') }}
             </div>
             <div class="project__page">
-                    <a href="{{ route('sciences.index') }}">
-                        <div class="project__page__block">
-                            <div class="project__page__block__text">
-                                {{ trans('content.grant_funding') }}
-                            </div>
+                <a href="{{ route('sciences.index') }}">
+                    <div class="project__page__block">
+                        <div class="project__page__block__text">
+                            {{ trans('content.grant_funding') }}
                         </div>
-                    </a>
+                    </div>
+                </a>
+                <a href="{{ route('seconds.index') }}">
+                    <div class="project__page__block">
+                        <div class="project__page__block__text">
+                            {{ trans('content.financing_program') }}
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

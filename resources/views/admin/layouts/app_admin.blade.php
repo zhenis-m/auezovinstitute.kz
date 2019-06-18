@@ -119,11 +119,18 @@
                             </ul>
                         </li>
 
-                        <li class="">
-                            <a href="{{route('admin.sciences.index')}}">
-                                <i class="fa fa-fw fa-folder"></i>
+
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-fw fa-share "></i>
                                 <span>Научные проекты</span>
+                                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                             </a>
+                            <ul class="treeview-menu">
+                                <li class=""><a href="{{route('admin.sciences.index')}}"><i class="fa fa-fw fa-circle-o "></i><span>Гранты МОН РК</span></a></li>
+                                <li class=""><a href="{{route('admin.seconds.index')}}"><i class="fa fa-fw fa-circle-o "></i><span>Целевое финансирование</span></a></li>
+                                <li class=""><a href="#"><i class="fa fa-fw fa-circle-o "></i><span>Государственные задания</span></a></li>
+                            </ul>
                         </li>
 
                         <li class="treeview">

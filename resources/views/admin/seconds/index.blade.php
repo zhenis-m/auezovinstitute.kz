@@ -5,15 +5,15 @@
     <div class="container">
 
         @component('admin.components.breadcrumb')
-            @slot('title')  Грантовое финансирование МОН РК @endslot
+            @slot('title') Программа целевого финансирования@endslot
             @slot('parent') Главная @endslot
-            @slot('active') Грантовое финансирование МОН РК @endslot
+            @slot('active') Программа целевого финансирования: @endslot
         @endcomponent
 
         <hr>
 
-        <a href="{{route('admin.sciences.create')}}" class="btn btn-primary pull-right">
-            <i class="fa fa-plus-square-o"></i> Создать проект</a>
+        <a href="{{route('admin.seconds.create')}}" class="btn btn-primary pull-right">
+            <i class="fa fa-plus-square-o"></i> Создать статью</a>
             <div><br></div>
             <div></div>
         <table class="table table-striped">
@@ -24,18 +24,18 @@
             <th class="text-right">Действие</th>
             </thead>
             <tbody>
-            @forelse($sciences as $science)
+            @forelse($seconds as $second)
                 <tr>
-                    <td>{{$science->title}}</td>
-                    <td>{{$science->locale}}</td>
-                    <td>{{$science->published}}</td>
+                    <td>{{$second->title}}</td>
+                    <td>{{$second->locale}}</td>
+                    <td>{{$second->published}}</td>
                     <td class="text-right">
-                        <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.sciences.destroy',
-                        $science)}}" method="post">
+                        <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.seconds.destroy',
+                        $second)}}" method="post">
                             <input type="hidden" name="_method" value="DELETE">
                             {{ csrf_field() }}
 
-                            <a class="btn btn-default" href="{{route('admin.sciences.edit', $science)}}"><i class="fa fa-edit"></i></a>
+                            <a class="btn btn-default" href="{{route('admin.seconds.edit', $second)}}"><i class="fa fa-edit"></i></a>
 
                             <button type="submit" class="btn"><i class="fa fa-fw fa-trash"></i></button>
                         </form>
@@ -52,7 +52,7 @@
             <tfoot>
             <tr colspan="3">
                 <ul class="pagination pull-right">
-                    {{$sciences->links()}}
+                    {{$seconds->links()}}
                 </ul>
             </tr>
             </tfoot>

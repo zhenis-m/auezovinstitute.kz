@@ -6,56 +6,55 @@ use App\Altyn;
 use App\HalykUniversity;
 use App\Keruen;
 use App\Museum;
-use App\SecondScience;
+use App\Science;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Culture;
 use App\Inst;
-use App\Science;
+use App\SecondScience;
 
-class ScController extends Controller
+class SecondController extends Controller
 {
     public function index()
     {
-        $seconds = SecondScience::all()->where('locale', \App::getLocale());
+        $sciences = Science::all()->where('locale', \App::getLocale());
         $museums = Museum::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
-        $sciences = Science::all()->where('locale', \App::getLocale());
+        $seconds = SecondScience::all()->where('locale', \App::getLocale());
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
-        return view('sciences.index', [
-            'seconds' => $seconds,
-            'museums' =>  $museums,
-            'altyns' =>  $altyns,
+        return view('seconds.index', [
+            'sciences' => $sciences,
+            'museums' => $museums,
+            'altyns' => $altyns,
             'keruens' => $keruens,
             'halyks' => $halyks,
-            'sciences' => $sciences,
+            'seconds' => $seconds,
             'aboutses' => $aboutses,
             'cultures' => $cultures,
         ]);
     }
 
 
-
     public function show($id)
     {
-        $seconds = SecondScience::all()->where('locale', \App::getLocale());
         $museums = Museum::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $halyks = HalykUniversity::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
+        $second = SecondScience::where('id', $id)->first();
         $science = Science::where('id', $id)->first();
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
-        return view('sciences.show', [
-            'seconds' => $seconds,
-            'museums' =>  $museums,
-            'altyns' =>  $altyns,
+        return view('seconds.show', [
+            'science' => $science,
+            'museums' => $museums,
+            'altyns' => $altyns,
             'keruens' => $keruens,
             'halyks' => $halyks,
-            'science' => $science,
+            'second' => $second,
             'aboutses' => $aboutses,
             'cultures' => $cultures,
         ]);

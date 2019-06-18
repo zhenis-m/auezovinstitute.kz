@@ -89,6 +89,11 @@ Route::group([
         Route::get('/{id}', 'ScController@show')->name('sciences.show');
     });
 
+    Route::group(['prefix'=>'seconds', 'namespace'=>'science'], function (){
+        Route::get('/', 'SecondController@index')->name('seconds.index');
+        Route::get('/{id}', 'SecondController@show')->name('seconds.show');
+    });
+
 
     Route::group(['prefix'=>'scp', 'namespace'=>'science'], function (){
         Route::get('/', 'ScpController@index')->name('scp.index');
@@ -113,6 +118,7 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], 
     Route::resource('/insts', 'InstController', ['as'=>'admin']);
     Route::resource('/departments', 'DepartmentsController', ['as'=>'admin']);
     Route::resource('/sciences', 'ScienceController', ['as'=>'admin']);
+    Route::resource('/seconds', 'SecondScienceController', ['as'=>'admin']);
     Route::resource('/directors', 'DirectorController', ['as'=>'admin']);
     Route::resource('/banners', 'BannerController', ['as'=>'admin']);
     Route::group(['prefix' => 'user_managment', 'namespace' => 'UserManagment'], function() {

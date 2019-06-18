@@ -5,18 +5,18 @@
     <div class="container">
 
         @component('admin.components.breadcrumb')
-            @slot('title') Создание статьи Грантовое финансирование МОН РК @endslot
+            @slot('title') Создание статьи Программа целевого финансирования @endslot
             @slot('parent') Главная @endslot
-            @slot('active') Грантовое финансирование МОН РК @endslot
+            @slot('active') Программа целевого финансирования @endslot
         @endcomponent
 
         <hr />
 
-        <form class="form-horizontal" action="{{route('admin.sciences.store')}}" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" action="{{route('admin.seconds.store')}}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
 
             {{-- Form include --}}
-            @include('admin.sciences.partials.form')
+            @include('admin.seconds.partials.form')
 
             <input type="hidden" name="created_by" value="{{Auth::id()}}">
         </form>
