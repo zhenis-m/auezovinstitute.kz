@@ -108,6 +108,9 @@ Route::group([
         Route::get('/administration', 'AdministrationController@administration');
         Route::get('/{id}', 'DirController@show')->name('structure.show');
     });
+
+    Route::get('contact-us', 'ContactUSController@contactUS');
+    Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactSaveData']);
 });
 
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function (){

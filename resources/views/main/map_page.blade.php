@@ -42,7 +42,6 @@
             </div>
         </div>
     </div>
-
     <div class="wrap__message">
         <div class="container__contacts">
             <div class="tittle">
