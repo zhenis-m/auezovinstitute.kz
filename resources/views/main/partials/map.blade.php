@@ -41,7 +41,6 @@
         </div>
     </div>
 </div>
-
 <div class="wrap__message">
     <div class="container__contacts">
         <div class="tittle">
@@ -49,6 +48,10 @@
                 <span class="contact100-form-title" id="maptitle"><i class="fab fa-telegram-plane"></i>&nbsp;<p>{{ trans('main.write_to_us') }}</p></span>
                 {{--            <div class="line2"></div>--}}
             </div>
+
+            @include('contact-us')
+
+
             <div class="container-contact100">
                 <div class="text__contacts">
                     <p>{{ trans('main.write_to_us_text') }}</p>

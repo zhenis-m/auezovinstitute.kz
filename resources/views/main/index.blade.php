@@ -168,7 +168,6 @@
             </div>
         </div>
     </div>
-
     @include('main.partials.map')
     <style>
         .logo__footer-mod {
