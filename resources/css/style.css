@@ -3,7 +3,7 @@
 	padding: 0;
 }
 
-p, a, h1, h2, h3, h4 {
+p, a, h1, h2, h3, h4, input {
 	font-family: 'OpenSans-Regular';
 }
 
@@ -400,19 +400,23 @@ body {
 
 .search__text ::-webkit-input-placeholder {
         /* WebKit browsers */
-        color: #ccc; 
+    color: #ccc;
+    font-family: 'OpenSans-Regular';
 }
 .search__text :-moz-placeholder {
         /* Mozilla Firefox 4 to 18 */
-        color: #ccc; 
+    color: #ccc;
+    font-family: 'OpenSans-Regular';
 }
 .search__text ::-moz-placeholder {
         /* Mozilla Firefox 19+ */
-        color: #ccc; 
+    color: #ccc;
+    font-family: 'OpenSans-Regular';
 }
 .search__text :-ms-input-placeholder {
         /* Internet Explorer 10+ */
-        color: #ccc; 
+    color: #ccc;
+    font-family: 'OpenSans-Regular';
 }
 .search__text input {
         background: none;

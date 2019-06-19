@@ -75,25 +75,25 @@ textarea:focus, input:focus {
     border-color: transparent !important;
 }
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
+input:focus::-webkit-input-placeholder { color:transparent; font-family: 'OpenSans-Regular'; }
+input:focus:-moz-placeholder { color:transparent; font-family: 'OpenSans-Regular'; }
+input:focus::-moz-placeholder { color:transparent; font-family: 'OpenSans-Regular'; }
+input:focus:-ms-input-placeholder { color:transparent; font-family: 'OpenSans-Regular'; }
 
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
-textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
+textarea:focus::-webkit-input-placeholder { color:transparent; font-family: 'OpenSans-Regular'; }
+textarea:focus:-moz-placeholder { color:transparent; font-family: 'OpenSans-Regular'; }
+textarea:focus::-moz-placeholder { color:transparent; font-family: 'OpenSans-Regular'; }
+textarea:focus:-ms-input-placeholder { color:transparent; font-family: 'OpenSans-Regular'; }
 
-input::-webkit-input-placeholder { color: #999999;}
-input:-moz-placeholder { color: #999999;}
-input::-moz-placeholder { color: #999999;}
-input:-ms-input-placeholder { color: #999999;}
+input::-webkit-input-placeholder { color: #999999; font-family: 'OpenSans-Regular'; }
+input:-moz-placeholder { color: #999999; font-family: 'OpenSans-Regular';}
+input::-moz-placeholder { color: #999999; font-family: 'OpenSans-Regular';}
+input:-ms-input-placeholder { color: #999999; font-family: 'OpenSans-Regular';}
 
-textarea::-webkit-input-placeholder { color: #999999;}
-textarea:-moz-placeholder { color: #999999;}
-textarea::-moz-placeholder { color: #999999;}
-textarea:-ms-input-placeholder { color: #999999;}
+textarea::-webkit-input-placeholder { color: #999999; font-family: 'OpenSans-Regular';}
+textarea:-moz-placeholder { color: #999999; font-family: 'OpenSans-Regular';}
+textarea::-moz-placeholder { color: #999999; font-family: 'OpenSans-Regular';}
+textarea:-ms-input-placeholder { color: #999999; font-family: 'OpenSans-Regular';}
 
 /*---------------------------------------------*/
 button {
@@ -244,7 +244,6 @@ iframe {
 .contact100-form-title {
     max-width: 1200px;
     display: block;
-    font-family: 'SF-Pro-Text-Regular';
     font-size: 30px;
     color: #43383e;
     line-height: 1.2;
