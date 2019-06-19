@@ -157,6 +157,7 @@
 	justify-content: space-between;
     box-shadow: 0 0 10px -2px #999;
     transition: all 0.5s ease-out;
+    background-color: #188672;
 }
 
 .pnwes__page__block:hover {
@@ -170,13 +171,13 @@
 .pnwes__page__block p {
     margin: 0;
     font-size: 1.2em;
-    color: #999;
+    color: #fff;
 }
 
 .pnwes__page__block h4 {
     margin: 10px 0;
     font-size: 1.6em;
-    color: #000;
+    color: #fff;
 }
 
 /*.pnwes__page__block:hover .pnwes__page__block__wrap .departmens__link p {*/
