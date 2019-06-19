@@ -48,7 +48,7 @@
                             </li>
                         @endforeach
                         <li>
-                            <a href="{{ URL::to('/structure/administration') }}">{{ trans('header.admins') }}</a>
+                            <a href="{{ URL::to('/structure/administration') }}">{{ trans('header.leadership') }}</a>
                         </li>
                         <li>
                             <a href="{{ route('departments.index') }}">{{ trans('header.departmens') }}</a>

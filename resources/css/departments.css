@@ -1,5 +1,4 @@
 .container_departments{
-    font-family: 'OpenSans-Regular';
     max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 60px;
@@ -9,14 +8,6 @@
     align-items: flex-start;
 
 }
-
-.container_departments p, .container_departments a{
-    font-family: 'OpenSans-Regular';
-
-
-}
-
-
 
 .bar{
     display: flex;

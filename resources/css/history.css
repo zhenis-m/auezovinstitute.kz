@@ -1,17 +1,4 @@
-@font-face{
-    font-family: SF-Pro-Text-Regular;
-    src: url(fonts/SF-Pro-Text-Regular.otf);
-    font-weight: normal;
-}
-@font-face{
-    font-family: SF-Pro-Text-Light;
-    src: url(fonts/SF-Pro-Text-Regular.otf);
-    font-weight: lighter;
-}
 
-.container_1 p, .container_1 h1 {
-    font-family: 'OpenSans-Regular';
-}
 
 .container_1{
      max-width: 800px;

@@ -94,7 +94,6 @@
 
 .pnew__state__date p {
 	margin: 0;
-	font-family: 'OpenSans-Regular';
 }
 
 .pnwes__blog__mini {
@@ -151,7 +150,6 @@
 
 .pnwes__page__block {
     height: 100%;
-	border: 1px solid #bfc8cf; 
 	border-radius: 5px;
 	overflow: hidden;
 	display: flex;
@@ -184,7 +182,6 @@
     cursor: pointer;
     box-shadow: 0 0 10px -2px #999;
     transition: all 0.3s ease-in;
-    border: 1px solid #9fbdd4;
     text-decoration: none;
 }
 
@@ -240,8 +237,7 @@
 	color: #000;
 }
 
-.pnwes__page__block__text p{
-	font-family: 'OpenSans-Regular';
+.pnwes__page__block__text p {
 	margin-bottom: 0;
 }
 
@@ -324,3 +320,90 @@
     padding: 5px 10px;
     display: flex;
 }
+
+/*----------------- project sciences begin -----------------------*/
+
+.pnwes__page a .sciences {
+    background-color: #11599a;
+    box-shadow: 0 0 10px -1px #000;
+}
+
+.pnwes__page a .sciences:hover {
+    box-shadow: 0 0 10px -5px #000;
+    transition: all 0.5s ease-in;
+}
+
+.pnwes__page a .sciences .pnwes__page__block__wrap {
+
+}
+
+.pnwes__page a .sciences .pnwes__page__block__wrap .pnwes__page__block__title {
+
+}
+
+.pnwes__page a .sciences .pnwes__page__block__wrap .pnwes__page__block__title h4 {
+    color: #fff;
+}
+
+.pnwes__page a .sciences .pnwes__page__block__wrap .pnwes__page__block__title p {
+    color: #fff;
+}
+/*----------------- project sciences end -----------------------*/
+
+/*----------------- project seconds begin -----------------------*/
+
+.pnwes__page a .seconds {
+    background-color: #008c66;
+    box-shadow: 0 0 10px -1px #000;
+}
+
+.pnwes__page a .seconds:hover {
+    box-shadow: 0 0 10px -5px #000;
+    transition: all 0.5s ease-in;
+}
+
+.pnwes__page a .seconds .pnwes__page__block__wrap {
+
+}
+
+.pnwes__page a .seconds .pnwes__page__block__wrap .pnwes__page__block__title {
+
+}
+
+.pnwes__page a .seconds .pnwes__page__block__wrap .pnwes__page__block__title h4 {
+    color: #fff;
+}
+
+.pnwes__page a .seconds .pnwes__page__block__wrap .pnwes__page__block__title p {
+    color: #fff;
+}
+/*----------------- project seconds end -----------------------*/
+
+/*----------------- project thehirds begin -----------------------*/
+
+.pnwes__page a .thehirds {
+    background-color: #5f1992;
+    box-shadow: 0 0 10px -1px #000;
+}
+
+.pnwes__page a .thehirds:hover {
+    box-shadow: 0 0 10px -5px #000;
+    transition: all 0.5s ease-in;
+}
+
+.pnwes__page a .thehirds .pnwes__page__block__wrap {
+
+}
+
+.pnwes__page a .thehirds .pnwes__page__block__wrap .pnwes__page__block__title {
+
+}
+
+.pnwes__page a .thehirds .pnwes__page__block__wrap .pnwes__page__block__title h4 {
+    color: #fff;
+}
+
+.pnwes__page a .thehirds .pnwes__page__block__wrap .pnwes__page__block__title p {
+    color: #fff;
+}
+/*----------------- project thehirds end -----------------------*/

@@ -11,7 +11,7 @@
         <div class="pnwes__page">
             @foreach ($thehirds as $thehird)
                 <a href="{{ route('thehirds.show', [ 'id' => $thehird->id ]) }}">
-                    <div class="pnwes__page__block">
+                    <div class="pnwes__page__block thehirds">
                         <div class="pnwes__page__block__wrap">
                             <div class="pnwes__page__block__title">
                                 <h4>{{ $thehird->title }}</h4>

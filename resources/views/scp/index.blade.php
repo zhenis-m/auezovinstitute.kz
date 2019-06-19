@@ -8,21 +8,21 @@
                 {{ trans('header.science') }}
             </div>
             <div class="project__page">
-                <a href="{{ route('sciences.index') }}">
+                <a class="bg__first" href="{{ route('sciences.index') }}">
                     <div class="project__page__block">
                         <div class="project__page__block__text">
                             {{ trans('content.grant_funding') }}
                         </div>
                     </div>
                 </a>
-                <a href="{{ route('seconds.index') }}">
+                <a class="bg__nth" href="{{ route('seconds.index') }}">
                     <div class="project__page__block">
                         <div class="project__page__block__text">
                             {{ trans('content.financing_program') }}
                         </div>
                     </div>
                 </a>
-                <a href="{{ route('thehirds.index') }}">
+                <a class="bg__last" href="{{ route('thehirds.index') }}">
                     <div class="project__page__block">
                         <div class="project__page__block__text">
                             {{ trans('content.state_tasks') }}

@@ -11,7 +11,7 @@
         <div class="pnwes__page">
             @foreach ($sciences as $science)
                 <a href="{{ route('sciences.show', [ 'id' => $science->id ]) }}">
-                    <div class="pnwes__page__block">
+                    <div class="pnwes__page__block sciences">
                         <div class="pnwes__page__block__wrap">
                             <div class="pnwes__page__block__title">
                                 <h4>{{ $science->title }}</h4>

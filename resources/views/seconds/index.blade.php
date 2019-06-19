@@ -11,7 +11,7 @@
         <div class="pnwes__page">
             @foreach ($seconds as $second)
                 <a href="{{ route('seconds.show', [ 'id' => $second->id ]) }}">
-                    <div class="pnwes__page__block">
+                    <div class="pnwes__page__block seconds">
                         <div class="pnwes__page__block__wrap">
                             <div class="pnwes__page__block__title">
                                 <h4>{{ $second->title }}</h4>

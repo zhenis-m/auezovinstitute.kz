@@ -19,13 +19,11 @@
 
 .project__page a {
     width: 32%;
-    margin-right: 15px;
-    color: #333;
+    margin-right: 1%;
 }
 
 .project__page a .project__page__block:hover {
     box-shadow: 0 0 10px -2px #999;
-    border: 1px solid #9fbdd4;
     transition: all 0.3s ease-in;
 }
 
@@ -35,19 +33,36 @@
 
 .project__page__block {
     height: 100%;
-    border: 1px solid #bfc8cf;
-    border-radius: 5px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 0 10px 2px #999;
+    box-shadow: 0 0 10px -1px #000;
     padding: 10px 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #d87722;
 }
 
 .project__page__block__text {
     font-size: 1.2em;
     text-align: center;
+    color: #fff;
 }
 
+/*синий - #5595d0*/
+/*красный – #de4e4e*/
+/*зелёный – #689e6f*/
 
+.bg__first .project__page__block{
+    background-color: #11599a;
+}
+
+.bg__nth .project__page__block {
+    background-color: #008c66;
+}
+
+.bg__last .project__page__block {
+    background-color: #5f1992;
+}

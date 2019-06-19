@@ -17,7 +17,7 @@
                         <img src="{{ $depart ? asset('uploads/' . $depart->image_show) : ""}}" alt="">
                     </div>
                     <div class="news__state__text">
-                        {!!  $depart->description !!}
+                        {!! $depart->description !!}
                     </div>
                     <div class="news__state__date">
                         <div class="pnew__state__date">
