@@ -36,7 +36,6 @@
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
             border-radius: 5px;
-            transition: all 0.3s ease-out;
         }
 
         #mixedSlider .MS-content .item:hover {
