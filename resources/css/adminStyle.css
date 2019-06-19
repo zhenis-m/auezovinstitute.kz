@@ -66,6 +66,7 @@
     border-radius: 5px;
 	margin: 20px 0;
     box-shadow: 0 0 10px -2px #999;
+    transition: all 0.3s ease-out;
 }
 
 .structur__admins:hover {

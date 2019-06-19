@@ -14,17 +14,17 @@
     margin: 40px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .project__page a {
     width: 32%;
-    margin-right: 1%;
 }
 
 .project__page a .project__page__block:hover {
-    box-shadow: 0 0 10px -2px #999;
+    /*box-shadow: 0px 3px 10px -2px #000;*/
     transition: all 0.3s ease-in;
+    transform: scale(1.02);
 }
 
 .project__page a:hover {
@@ -36,13 +36,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 0 10px -1px #000;
+    box-shadow: 0px 3px 10px -2px #000;
     padding: 10px 20px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     overflow: hidden;
     background-color: #d87722;
+    transition: all 0.3s ease-out;
 }
 
 .project__page__block__text {

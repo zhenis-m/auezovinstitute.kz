@@ -141,7 +141,7 @@
 
 .pnwes__page a {
     width: 32%;
-    margin-right: 15px;
+    margin-right: 1.33%;
 }
 
 .pnwes__page a:hover {
@@ -155,19 +155,29 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+    box-shadow: 0 0 10px -2px #999;
+    transition: all 0.5s ease-out;
+    background-color: #188672;
+}
+
+.pnwes__page__block:hover {
+    cursor: pointer;
     box-shadow: 0 0 10px 2px #999;
+    transition: all 0.5s ease-in;
+    transform: scale(1.05);
+    text-decoration: none;
 }
 
 .pnwes__page__block p {
     margin: 0;
     font-size: 1.2em;
-    color: #999;
+    color: #fff;
 }
 
 .pnwes__page__block h4 {
     margin: 10px 0;
     font-size: 1.6em;
-    color: #000;
+    color: #fff;
 }
 
 /*.pnwes__page__block:hover .pnwes__page__block__wrap .departmens__link p {*/
@@ -177,13 +187,6 @@
 /*.pnwes__page__block:hover .pnwes__page__block__wrap .departmens__link h4 {*/
 /*    transition: all 0.3s ease-in;*/
 /*}*/
-
-.pnwes__page__block:hover {
-    cursor: pointer;
-    box-shadow: 0 0 10px -2px #999;
-    transition: all 0.3s ease-in;
-    text-decoration: none;
-}
 
 .pnwes__page__block__wrap {
 	height: 90%;
@@ -295,6 +298,8 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px -2px #999;
+    transition: all 0.3s ease-out;
+
 }
 
 .pnwes__page__state:hover {
@@ -325,12 +330,11 @@
 
 .pnwes__page a .sciences {
     background-color: #11599a;
-    box-shadow: 0 0 10px -1px #000;
+    transition: all 0.5s ease-out;
 }
 
 .pnwes__page a .sciences:hover {
-    box-shadow: 0 0 10px -5px #000;
-    transition: all 0.5s ease-in;
+    transform: scale(1.05);
 }
 
 .pnwes__page a .sciences .pnwes__page__block__wrap {
@@ -354,12 +358,11 @@
 
 .pnwes__page a .seconds {
     background-color: #008c66;
-    box-shadow: 0 0 10px -1px #000;
+    transition: all 0.5s ease-out;
 }
 
 .pnwes__page a .seconds:hover {
-    box-shadow: 0 0 10px -5px #000;
-    transition: all 0.5s ease-in;
+    transform: scale(1.05);
 }
 
 .pnwes__page a .seconds .pnwes__page__block__wrap {
@@ -383,12 +386,11 @@
 
 .pnwes__page a .thehirds {
     background-color: #5f1992;
-    box-shadow: 0 0 10px -1px #000;
+    transition: all 0.5s ease-out;
 }
 
 .pnwes__page a .thehirds:hover {
-    box-shadow: 0 0 10px -5px #000;
-    transition: all 0.5s ease-in;
+    transform: scale(1.05);
 }
 
 .pnwes__page a .thehirds .pnwes__page__block__wrap {
