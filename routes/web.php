@@ -31,7 +31,7 @@ Route::group([
     Route::group(['prefix'=>'/', 'namespace'=>'main'], function (){
         Route::get('/', 'MainController@index');
 //        Route::get('/main/museum', 'MuseumController@museum');
-        Route::get('/main/map', 'MapController@map');
+        Route::get('/main/map_page', 'MapController@map_page');
         Route::get('/main/education', 'MainController@education');
     });
     

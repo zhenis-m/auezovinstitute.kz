@@ -172,7 +172,7 @@
     @include('main.partials.map')
     <style>
         .logo__footer-mod {
-            margin-top: -46px;
+            margin-top: -52px;
         }
     </style>
 

@@ -7,5 +7,5 @@ return [
     'admins' => 'Әкімшілік',
     'departmens' => 'Кафедралар',
     'contacts' => 'Байланыс',
-    
+    'leadership' => 'Басшылық',
 ];

@@ -7,5 +7,5 @@ return [
     'admins' => 'Администрация',
     'departmens' => 'Отделы',
     'contacts' => 'Контакты',
-    
+    'leadership' => 'Руководство',
 ];

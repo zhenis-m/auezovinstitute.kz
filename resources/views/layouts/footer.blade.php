@@ -16,13 +16,36 @@
 {{--                <img src="../../images/footer-logo.png" alt="">--}}
 {{--            </div>--}}
             <div class="row-right">
-                <div class="col-sm-6 col-sm-6-mod">
+                <div class="col-sm-8 col-sm-8-mod">
                     <ul>
-                        <li><a href="{{ URL::to('/structure/administration') }}">{{ trans('footer.admins') }}</a></li>
+                        <li><a href="{{ URL::to('/structure/administration') }}">{{ trans('footer.leadership') }}</a></li>
                         <li><a href="{{ route('departments.index') }}">{{ trans('footer.departmens') }}</a></li>
                         <li><a href="{{ URL::to('/books') }}">{{ trans('footer.books') }}</a></li>
                         <li><a href="{{ URL::to('/news') }}">{{ trans('footer.news') }}</a></li>
-                        <li><a href="{{ URL::to('/main/map') }}">{{ trans('footer.contacts') }}</a></li>
+                        <li><a href="{{ URL::to('/main/map_page') }}">{{ trans('footer.contacts') }}</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="{{ route('scp.index') }}">{{ trans('header.science') }}</a></li>
+                        @foreach ($halyks as $halyk)
+                            <li class="menu-item">
+                                <a href="{{ route('halyks.show', [ 'id' => $halyk->id ]) }}" class="menu-link">{{ trans('header.university') }}</a>
+                            </li>
+                        @endforeach
+                        @foreach ($keruens as $keruen)
+                            <li class="menu-item">
+                                <a href="{{ route('keruens.show', [ 'id' => $keruen->id ]) }}"  class="menu-link">{{ trans('header.keruen') }}</a>
+                            </li>
+                        @endforeach
+                        @foreach ($altyns as $altyn)
+                            <li class="menu-item">
+                                <a href="{{ route('altyns.show', [ 'id' => $altyn->id ]) }}"  class="menu-link">{{ trans('header.gold') }}</a>
+                            </li>
+                        @endforeach
+                        @foreach ($museums as $museum)
+                            <li class="menu-item">
+                                <a href="{{ route('museums.show', [ 'id' => $museum->id ]) }}"  class="menu-link">{{ trans('header.museum') }}</a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
 {{--                <div class="col-sm-3 col-sm-3-mod">--}}
@@ -35,7 +58,7 @@
 {{--                        <li><a href="{{ URL::to('/footer/international') }}">Международные связи</a></li>--}}
 {{--                    </ul>--}}
 {{--                </div>--}}
-                <div class="col-sm-3 col-sm-3-mod">
+                <div class="col-sm-2 col-sm-2-mod">
                     <div class="social-networks">
                         <ul>
 {{--                            <li> <a href="https://www.google.ru/" target="_blank" class="google"><i class="fa fa-google-plus"></i></a> </li>--}}

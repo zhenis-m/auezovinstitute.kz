@@ -92,5 +92,6 @@ class MainController extends Controller
             'cultures' => $cultures
         ]);
     }
+
 }
 

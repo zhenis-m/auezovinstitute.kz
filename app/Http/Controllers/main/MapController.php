@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\main;
 
 use App\Altyn;
+use App\Article;
+use App\Banner;
+use App\Book;
 use App\Culture;
 use App\HalykUniversity;
 use App\Inst;
@@ -13,7 +16,7 @@ use App\Http\Controllers\Controller;
 
 class MapController extends Controller
 {
-    public function map()
+    public function map_page()
     {
         $museums = Museum::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $altyns = Altyn::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
@@ -21,7 +24,7 @@ class MapController extends Controller
         $keruens = Keruen::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $aboutses = Inst::orderBy('id', 'desc')->where('locale', \App::getLocale())->where('published', 1)->paginate(12);
         $cultures = Culture::orderBy('id', 'desc')->where('locale', \App::getLocale())->get();
-        return view('main.map', [
+        return view('main.map_page', [
             'museums' =>  $museums,
             'altyns' =>  $altyns,
             'keruens' => $keruens,
@@ -52,4 +55,5 @@ class MapController extends Controller
             'aboutses' => $aboutses,
         ]);
     }
+
 }

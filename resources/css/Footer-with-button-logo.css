@@ -185,7 +185,7 @@ body{
     background-color: #fff;
     position: absolute;
     width: 13%;
-    height: 156px;
+    height: 191px;
     padding: 20px;
     margin-top: -40px;
     -webkit-border-radius: 5px 5px 0 0;
@@ -223,20 +223,20 @@ body{
     align-items: center;
 }
 
-.col-sm-6-mod ul {
+.col-sm-8-mod ul {
     display: flex;
 }
 
-.col-sm-6-mod ul li {
+.col-sm-8-mod ul li {
     margin-right: 40px;
     list-style-type: square;
 }
 
-.col-sm-3-mod {
+.col-sm-2-mod {
     padding: 0 5px 0 0 !important;
 }
 
-.col-sm-3-mod ul li {
+.col-sm-2-mod ul li {
 
 }
 
