@@ -46,7 +46,7 @@
                                 <!-- mini logo for sidebar mini 50x50 pixels -->
                                 <span class="logo-mini">{!! config('adminlte.logo_mini', '<b>A</b>LT') !!}</span>
                                 <!-- logo for regular state and mobile devices -->
-                                <span class="logo-lg">{!! 'AuezovAdmin' !!}</span>
+                                <span class="logo-lg">{!! 'Admin' !!}</span>
                             </a>
 
                             <!-- Header Navbar -->

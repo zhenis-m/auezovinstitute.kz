@@ -61,17 +61,16 @@
                 <li class="menu-item">
                     <a href="#" class="menu-link">{{ trans('header.culture') }} <i class="fas fa-chevron-down"></i></a>
                     <ul class="sub-menu sub-menu3-mod">
+                        <li>
+                            <a href="{{ URL::to('/books') }}">{{ trans('header.books') }}</a>
+                        </li>
                         @foreach ($cultures as $cultur)
                             <li>
                                 <a href="{{ route('main.show', [ 'id' => $cultur->id ]) }}">{{ $cultur->title }}</a>
                             </li>
                         @endforeach
-                        <li>
-                            <a href="{{ URL::to('/books') }}">{{ trans('header.books') }}</a>
-                        </li>
                     </ul>
                 </li>
-
                 @foreach ($halyks as $halyk)
                     <li class="menu-item">
                         <a href="{{ route('halyks.show', [ 'id' => $halyk->id ]) }}" class="menu-link">{{ trans('header.university') }}</a>
