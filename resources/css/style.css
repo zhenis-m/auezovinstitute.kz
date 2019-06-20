@@ -87,6 +87,33 @@ body {
     opacity: 1;
 }
 
+.header__nav__logo  .social-networks {
+
+}
+
+.header__nav__logo  .social-networks ul li {
+    margin-right: 10px;
+}
+
+.header__nav__logo  .social-networks ul li a {
+    color: #1a5972;
+    font-size: 1.6em;
+}
+
+.header__nav__logo  .social-networks ul li .facebook:hover {
+    color: #0074bd;
+}
+
+.header__nav__logo  .social-networks ul li .inst:hover {
+    color: #bd6300;
+}
+
+.header__nav__logo  .social-networks ul li .youtube:hover {
+    color: #d80000;
+}
+
+
+
 /*-------------- menu style begin -----------------*/
 
 .menu-item {

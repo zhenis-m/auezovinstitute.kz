@@ -4,6 +4,14 @@
             <div class="logo">
                 <a href="{{ URL::to('/') }}"><img src="../../images/logo-litart2.png"></a>
             </div>
+            <div class="social-networks">
+                <ul>
+                    {{--                            <li> <a href="https://www.google.ru/" target="_blank" class="google"><i class="fa fa-google-plus"></i></a> </li>--}}
+                    <li><a href="https://www.facebook.com/litart/ " target="_blank" class="facebook"><i class="fab fa-facebook-square"></i></a></li>
+                    <li>  <a href="https://www.instagram.com/auezovlitart/" target="_blank" class="inst"><i class="fa fa-instagram"></i></a> </li>
+                    <li> <a href="https://www.youtube.com/channel/UC9JHx3xUONV6inEUzbjUjAQ " target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>            </li>
+                </ul>
+            </div>
         </div>
         <div class="header__wrap">
             <div class="search search_clearfix">
