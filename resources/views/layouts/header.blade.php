@@ -48,7 +48,10 @@
                     <a href="#" class="menu-link">Институт <i class="fas fa-chevron-down"></i></a>
                     <ul class="sub-menu sub-menu-mod">
                         <li>
-                            <a href="{{ URL::to('/news') }}">{{ trans('header.news') }}</a>
+                            <a href="{{ URL::to('/structure/administration') }}">{{ trans('header.leadership') }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('departments.index') }}">{{ trans('header.departmens') }}</a>
                         </li>
                         @foreach ($aboutses as $abouts)
                             <li>
@@ -56,10 +59,7 @@
                             </li>
                         @endforeach
                         <li>
-                            <a href="{{ URL::to('/structure/administration') }}">{{ trans('header.leadership') }}</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('departments.index') }}">{{ trans('header.departmens') }}</a>
+                            <a href="{{ URL::to('/news') }}">{{ trans('header.news') }}</a>
                         </li>
                     </ul>
                 </li>
