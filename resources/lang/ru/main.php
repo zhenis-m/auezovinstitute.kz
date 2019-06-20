@@ -27,6 +27,7 @@ return [
     'write_to_us' => 'Написать нам',
     'to_send' => 'Отправить',
     'name' => 'Имя',
+    'theme' => 'Тема',
     'your_message' => 'Ваше сообщение',
     'search' => 'Поиск',
     'language' => 'Русский',

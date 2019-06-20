@@ -43,7 +43,7 @@ class ContactUsController extends Controller
             ), function($message) use ($request)
             {
                 $message->from('info@litart.kz');
-                $message->to('zhenis.m@bilimmail.kz', 'Admin')->subject($request->get('subject'));
+                $message->to('auezovinstitute.info@gmail.com', 'Admin')->subject($request->get('subject'));
             });
 
       return back()->with('success', 'Thanks for contacting us!');

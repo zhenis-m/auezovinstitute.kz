@@ -49,44 +49,7 @@
                     <span class="contact100-form-title" id="maptitle"><i class="fab fa-telegram-plane"></i>&nbsp;<p>{{ trans('main.write_to_us') }}</p></span>
                     {{--            <div class="line2"></div>--}}
                 </div>
-                <div class="container-contact100">
-                    <div class="text__contacts">
-                        <p>{{ trans('main.write_to_us_text') }}</p>
-                        <p>{{ trans('main.write_to_us_text2') }}</p>
-                    </div>
-                    <div class="wrap-contact100">
-                        <form class="contact100-form validate-form">
-                            <div class="wrap-input100 validate-input" data-validate="Name is required">
-                                <input class="input100" id="name" type="text" name="name" placeholder="{{ trans('main.name') }}">
-                                <label class="label-input100" for="name">
-                                    <span class="lnr lnr-user"></span>
-                                    <i class="far fa-user"></i>
-                                </label>
-                            </div>
-
-                            <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                                <input class="input100" id="email" type="text" name="email" placeholder="Email">
-                                <label class="label-input100" for="email">
-                                    <span class="lnr lnr-envelope"></span>
-                                    <i class="far fa-envelope"></i>
-                                </label>
-                            </div>
-
-                            <div class="wrap-input100 validate-input" data-validate = "Message is required">
-                                <i class="far fa-comment-alt textera_icon"></i>
-                                <textarea class="input100 input100-mod" name="message" placeholder="{{ trans('main.your_message') }}"></textarea>
-                            </div>
-                            <div class="container-contact100-form-btn">
-                                <div class="wrap-contact100-form-btn">
-                                    <div class="contact100-form-bgbtn"></div>
-                                    <button class="contact100-form-btn">
-                                        {{ trans('main.to_send') }}
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                @include('contact-us')
             </div>
         </div>
     </div>
