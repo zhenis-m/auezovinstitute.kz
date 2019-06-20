@@ -91,6 +91,10 @@ body {
 
 }
 
+.header__nav__logo  .social-networks ul {
+    margin-bottom: 0;
+}
+
 .header__nav__logo  .social-networks ul li {
     margin-right: 10px;
 }
