@@ -1,25 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <div class="banner">
-        <div class="banner__img">
-            <img src="<?php
-            $image[] = "../../images/magazine.jpg";
-            $image[] = "../../images/magazine2.jpg";
-            $image[] = "../../images/magazine3.jpg";
-            $image[] = "../../images/magazine4.jpg";
-            $image[] = "../../images/magazine5.jpg";
-            $image[] = "../../images/magazine6.jpg";
-            $image[] = "../../images/magazine2.jpg";
-            srand ((double) microtime() * 1000000);
-            $random_number = rand(0,count($image)-1);
-            echo
-            ($image[$random_number]);
-            ?>">
-        </div>
-    </div>
-{{--           @include('layouts.banner')--}}
+           @include('layouts.banner')
     <div class="wrap__news">
         <div class="headline">
             <div class="headline__color">
