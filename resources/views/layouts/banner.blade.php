@@ -16,19 +16,19 @@
 {{--            <a href=""><img src="https://unsplash.it/1200/800?image=961"></a>--}}
 {{--            <a href=""><img src="https://unsplash.it/1200/800?image=959"></a>--}}
             @foreach ($banners as $banner)
-                <a href=""><img src="{{ $banner ? asset('uploads/' . $banner->image_show) : ""}}"></a>
+                <a style="pointer-events: none;"><img src="{{ $banner ? asset('uploads/' . $banner->image_show) : ""}}"></a>
             @endforeach
         </div>
-        <div class="kai_banner_bottombtns">
-            @foreach ($banners as $banner)
-                <span class="highlight" style='background-image:url({{$banner ? asset('uploads/' . $banner->image_show) : ""}})'></span>
-            @endforeach
+{{--        <div class="kai_banner_bottombtns">--}}
+{{--            @foreach ($banners as $banner)--}}
+{{--                <span class="highlight" style='background-image:url({{$banner ? asset('uploads/' . $banner->image_show) : ""}})'></span>--}}
+{{--            @endforeach--}}
 {{--            <span class="highlight" style='background-image:url(https://unsplash.it/1200/800?image=986)'></span>--}}
 {{--            <span style='background-image:url(https://unsplash.it/1200/800?image=990)'></span>--}}
 {{--            <span style='background-image:url(https://unsplash.it/1200/800?image=973)'></span>--}}
 {{--            <span style='background-image:url(https://unsplash.it/1200/800?image=961)'></span>--}}
 {{--            <span style='background-image:url(https://unsplash.it/1200/800?image=959)'></span>--}}
-        </div>
+{{--        </div>--}}
         <div class="kai_banner_prevbtn side_btn"></div>
         <div class="kai_banner_nextbtn side_btn"></div>
     </div>
