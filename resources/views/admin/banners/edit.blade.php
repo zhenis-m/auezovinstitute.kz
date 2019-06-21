@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Редактирование баннера @endslot
             @slot('parent') Главная @endslot
-            @slot('active') &nbsp;/ баннер @endslot
+            @slot('active') &nbsp; баннер @endslot
         @endcomponent
 
         <hr />

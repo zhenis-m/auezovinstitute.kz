@@ -7,7 +7,7 @@
         @component('admin.components.breadcrumb')
             @slot('title') Создание картинки баннера @endslot
             @slot('parent') Главная @endslot
-            @slot('active') &nbsp;/ новый баннер @endslot
+            @slot('active') &nbsp; новый баннер @endslot
         @endcomponent
 
         <hr />

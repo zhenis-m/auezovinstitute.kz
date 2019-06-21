@@ -176,7 +176,12 @@
                         </li>
 
                         <li class="header">Настройки</li>
-
+                        <li class="">
+                            <a href="{{route('admin.banners.index')}}">
+                                <i class="fa fa-fw fa-user"></i>
+                                <span>Баннеры</span>
+                            </a>
+                        </li>
                         <li class="">
                             <a href="{{route('admin.user_managment.user.index')}}">
                                 <i class="fa fa-fw fa-user"></i>
