@@ -38,8 +38,9 @@
 
 
 
-<div class="form-group">
-    <label for="">Изображение</label>
+<div class="form-group" style="padding-left: 20px">
+    <label for="">Загрузка изображения</label><br>
+    <label for="">Для корректного отображения баннера требуется изображение с разрешнием от 1600х900px или более...</label>
     <input data-preview="#preview" name="image" type="file" id="image">{{$banner->image ?? ""}}
     <img class="col-sm-6" id="preview" src="{{ $banner ? asset('uploads/' . $banner->image_show) : ""}}">
 </div>
