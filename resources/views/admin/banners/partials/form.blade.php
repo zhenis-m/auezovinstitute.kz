@@ -50,8 +50,8 @@
 {{--<label for="">маленький текст</label>--}}
 {{--<textarea class="form-control" id="description_short" name="description_short">{{$banner->description_short ?? ""}}</textarea>--}}
 
-<label for="">описание</label>
-<textarea class="form-control" id="description" name="description">{{$banner->description ?? ""}}</textarea>
+{{--<label for="">описание</label>--}}
+{{--<textarea class="form-control" id="description" name="description">{{$banner->description ?? ""}}</textarea>--}}
 
 {{--<hr />--}}
 

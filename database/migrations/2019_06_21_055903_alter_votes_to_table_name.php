@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BannerRef extends Migration
+class AlterVotesToTableName extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class BannerRef extends Migration
     public function up()
     {
         Schema::table('banners', function($table) {
-            $table->text('description')->nullable();
+            $table->text('description')->nullable()->change();
         });
     }
 
@@ -26,7 +26,7 @@ class BannerRef extends Migration
     public function down()
     {
         Schema::table('banners', function($table) {
-            $table->text('description')->nullable();
+            $table->text('description')->nullable()->change();
         });
     }
 }
