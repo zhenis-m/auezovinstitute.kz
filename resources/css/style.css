@@ -97,10 +97,12 @@ body {
 
 .header__nav__logo  .social-networks ul li {
     margin-right: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
 }
 
 .header__nav__logo  .social-networks ul li a {
-    color: #1a5972;
+    color: #fff;
     font-size: 1.6em;
 }
 
